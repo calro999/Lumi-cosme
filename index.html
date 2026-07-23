@@ -1,19 +1,40 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>おすすめコスメ＆ビューティー セレクション総合トップ</title>
-  <meta name="description" content="SNSで話題の厳選コスメ・美容アイテムの特設LP総合リンク集。">
+  <title>Lumi Cosme (ルミコスメ) | SNS話題のトレンドコスメ厳選メディア</title>
+  <meta name="description" content="SNSで話題の人気コスメや美容・ボディケアアイテムをテーマごとに紹介する特設リンク集メディア。">
+  <meta name="keywords" content="コスメ, 美容, トレンドコスメ, 夏コスメ, SNS話題, ルミコスメ">
+
+  <!-- SEO & Canonical -->
+  <link rel="canonical" href="https://lumi-cosme.vercel.app/">
+  <meta name="robots" content="index, follow">
+
+  <!-- OGP (SNSシェア最適化 / 日本人向け) -->
+  <meta property="og:site_name" content="Lumi Cosme (ルミコスメ)">
+  <meta property="og:title" content="Lumi Cosme | SNS話題のトレンドコスメ厳選メディア">
+  <meta property="og:description" content="SNSで大人気！最新のトレンドコスメやリアルなおすすめアイテムをまとめた特設リンク集。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lumi-cosme.vercel.app/">
+  <meta property="og:image" content="https://lumi-cosme.vercel.app/2.jpg">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lumi Cosme | SNS話題のトレンドコスメ厳選メディア">
+  <meta name="twitter:description" content="SNSで大人気！最新のトレンドコスメやリアルなおすすめアイテムをまとめた特設リンク集。">
+  <meta name="twitter:image" content="https://lumi-cosme.vercel.app/2.jpg">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- ヘッダー -->
   <header class="site-header">
-    <div class="header-badge">✨ BEAUTY HUB</div>
-    <h1 class="site-title">おすすめコスメ 特集一覧</h1>
-    <p class="site-subtitle">SNSで今話題の美容・ボディケア厳選コレクション</p>
+    <div class="header-badge">✨ BEAUTY SELECTION</div>
+    <h1 class="site-title">Lumi Cosme 特集一覧</h1>
+    <p class="site-subtitle">SNSで話題沸騰中のトレンドコスメ・ボディケア厳選コレクション</p>
   </header>
 
   <!-- メインコンテンツ -->
@@ -21,17 +42,17 @@
     <div class="hub-grid">
 
       <!-- 夏コスメLPへのリンクカード -->
-      <a href="summer-cosme.html" class="hub-card">
-        <span class="hub-card-tag">🔥 人気No.1 特集</span>
+      <a href="/summer-cosme" class="hub-card">
+        <span class="hub-card-tag">🔥 人気No.1 夏の厳選特集</span>
         <h2 class="hub-card-title">☀️ 夏コスメおすすめ3選</h2>
         <p class="hub-card-desc">紫外線予報UVスプレー、靴消臭スプレー、リフレアクリーム！夏の汗・UV・ニオイ対策神アイテム厳選。</p>
       </a>
 
-      <!-- 将来的な拡張用の予備カード例（コメントアウトまたはお知らせ） -->
+      <!-- 将来的な拡張用の予備カード例 -->
       <div class="hub-card" style="opacity: 0.7; cursor: default;">
-        <span class="hub-card-tag" style="background: #e0e0e0; color: #666;">COMING SOON</span>
-        <h3 class="hub-card-title">💧 スキンケア・保湿特集</h3>
-        <p class="hub-card-desc">新案件LP準備中...</p>
+        <span class="hub-card-tag" style="background: #e0e0e0; color: #666;">準備中</span>
+        <h3 class="hub-card-title">💧 スキンケア・透明感保湿特集</h3>
+        <p class="hub-card-desc">新案件LPを準備中...</p>
       </div>
 
     </div>
@@ -39,7 +60,7 @@
 
   <!-- フッター -->
   <footer class="site-footer">
-    <p>&copy; 2026 BEAUTY SELECTION HUB. All rights reserved.</p>
+    <p>&copy; 2026 Lumi Cosme. All rights reserved.</p>
   </footer>
 
 </body>
