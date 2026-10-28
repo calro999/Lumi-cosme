@@ -588,3 +588,24 @@ body.theme-lip {
 }
 body.theme-lip .site-title { color: #881337; }
 body.theme-lip .header-badge { background: linear-gradient(90deg, #be123c, #fb7185); }
+
+/* 美容液・ブースター：サファイアブルー・ロイヤルインディゴ */
+body.theme-serum {
+  --bg-gradient: linear-gradient(180deg, #f0f7ff 0%, #ffffff 40%, #e0e7ff 80%, #ffffff 100%);
+}
+body.theme-serum .site-title { color: #1e3a8a; }
+body.theme-serum .header-badge { background: linear-gradient(90deg, #2563eb, #6366f1); }
+
+/* ヘアケア：ボタニカルフォレスト・エメラルドグリーン */
+body.theme-hair {
+  --bg-gradient: linear-gradient(180deg, #f0fdf4 0%, #ffffff 40%, #dcfce7 80%, #ffffff 100%);
+}
+body.theme-hair .site-title { color: #14532d; }
+body.theme-hair .header-badge { background: linear-gradient(90deg, #16a34a, #10b981); }
+
+/* ハンドケア：ウォームピーチ・テラコッタコーラル */
+body.theme-hand {
+  --bg-gradient: linear-gradient(180deg, #fffaf5 0%, #ffffff 40%, #ffedd5 80%, #ffffff 100%);
+}
+body.theme-hand .site-title { color: #9a3412; }
+body.theme-hand .header-badge { background: linear-gradient(90deg, #ea580c, #f97316); }
