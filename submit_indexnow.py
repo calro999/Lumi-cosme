@@ -13,6 +13,9 @@ with open("indexnow_key.txt", "r", encoding="utf-8") as f:
 HOST = "lumi-cosme.vercel.app"
 URL_LIST = [
     f"https://{HOST}/",
+    f"https://{HOST}/winter-lotion",
+    f"https://{HOST}/winter-cleansing",
+    f"https://{HOST}/winter-day-cream",
     f"https://{HOST}/winter-serum-booster",
     f"https://{HOST}/winter-face-mask",
     f"https://{HOST}/winter-moisture-cream",

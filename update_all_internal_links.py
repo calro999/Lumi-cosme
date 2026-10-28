@@ -3,6 +3,27 @@ import re
 
 ALL_ARTICLES = [
     {
+        "url": "/winter-lotion",
+        "file": "winter-lotion.html",
+        "title": "💧 保湿力の強さで肌乾燥とさようなら！冬の乾きを満たす高保湿化粧水＆とろみ浸透ローション10選",
+        "desc": "硬くなった冬肌をヒタヒタに満たす！イプサ、アクセーヌ、エスト、カルテHDなど浸透ナノカプセル＆エクトイン配合。",
+        "footer_name": "高保湿化粧水"
+    },
+    {
+        "url": "/winter-cleansing",
+        "file": "winter-cleansing.html",
+        "title": "洗うほど肌がモチモチ潤う！冬の粉吹き・つっぱりを防ぐ高保湿クレンジング＆濃密バーム10選",
+        "desc": "冬の脱脂乾燥をストップ！DUO、カバーマーク、シュウウエムラなど落としながらうるおいを守る神クレンジング。",
+        "footer_name": "クレンジング"
+    },
+    {
+        "url": "/winter-day-cream",
+        "file": "winter-day-cream.html",
+        "title": "☀️ 暖房乾燥と冬紫外線をダブル遮断！一日中しっとり続く高保湿UV美容液＆朝用デイクリーム10選",
+        "desc": "エアコン直風と冬UVA波から肌を死守！カネボウ クリームインデイ、ランコム、オルビスなど夕方までツヤ肌キープ。",
+        "footer_name": "朝用UVクリーム"
+    },
+    {
         "url": "/winter-serum-booster",
         "file": "winter-serum-booster.html",
         "title": "💧 浸透力を底上げする高保湿・導入先行美容液おすすめ10選",
@@ -103,19 +124,17 @@ for target_article in ALL_ARTICLES:
       </div>
     </section>"""
 
-    # 置換
+    # 関連記事セクションの置換
     if '<section id="related"' in content:
         content = re.sub(r'<section id="related".*?</section>', new_related_section, content, flags=re.DOTALL)
-    else:
-        content = content.replace('</main>', f'{new_related_section}\n  </main>')
-
-    # フッターリンク置換
+    
+    # フッターリンクの置換
     if '<div class="footer-links">' in content:
         content = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, content, flags=re.DOTALL)
 
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(content)
 
-    print(f"Updated internal links for {file_path}")
+    print(f"Updated internal links and footer in: {file_path}")
 
-print("All article files successfully updated with comprehensive internal cross-links!")
+print("\nAll articles internal links updated successfully!")

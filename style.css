@@ -631,3 +631,25 @@ body.theme-eye {
 body.theme-eye .site-title { color: #701a75; }
 body.theme-eye .header-badge { background: linear-gradient(90deg, #a21caf, #c026d3); }
 
+/* 高保湿化粧水＆浸透ローション：ピュアアクア・マリンブルー */
+body.theme-lotion {
+  --bg-gradient: linear-gradient(180deg, #f0f9ff 0%, #ffffff 40%, #e0f2fe 80%, #ffffff 100%);
+}
+body.theme-lotion .site-title { color: #0369a1; }
+body.theme-lotion .header-badge { background: linear-gradient(90deg, #0284c7, #38bdf8); }
+
+/* 高保湿クレンジング＆濃密バーム：アプリコットメルティ・ハニーウォーム */
+body.theme-cleansing {
+  --bg-gradient: linear-gradient(180deg, #fffbeb 0%, #ffffff 40%, #fef3c7 80%, #ffffff 100%);
+}
+body.theme-cleansing .site-title { color: #b45309; }
+body.theme-cleansing .header-badge { background: linear-gradient(90deg, #d97706, #f59e0b); }
+
+/* 高保湿UV美容液＆朝用デイクリーム：モーニングサングロウ・ローズヴェール */
+body.theme-daycream {
+  --bg-gradient: linear-gradient(180deg, #fff1f2 0%, #ffffff 40%, #ffe4e6 80%, #ffffff 100%);
+}
+body.theme-daycream .site-title { color: #be123c; }
+body.theme-daycream .header-badge { background: linear-gradient(90deg, #e11d48, #fb7185); }
+
+
