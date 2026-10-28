@@ -14,9 +14,12 @@ HOST = "lumi-cosme.vercel.app"
 URL_LIST = [
     f"https://{HOST}/",
     f"https://{HOST}/winter-serum-booster",
+    f"https://{HOST}/winter-face-mask",
     f"https://{HOST}/winter-moisture-cream",
+    f"https://{HOST}/winter-eye-cream",
     f"https://{HOST}/winter-base-makeup",
     f"https://{HOST}/winter-lip-care",
+    f"https://{HOST}/winter-body-care",
     f"https://{HOST}/winter-hair-care",
     f"https://{HOST}/winter-hand-care",
     f"https://{HOST}/summer-cosme"
