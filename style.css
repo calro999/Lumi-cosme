@@ -653,3 +653,24 @@ body.theme-daycream .site-title { color: #be123c; }
 body.theme-daycream .header-badge { background: linear-gradient(90deg, #e11d48, #fb7185); }
 
 
+
+/* 高保湿乳液＆エマルジョン：シルキーブロッサム・ソフトピンク */
+body.theme-emulsion {
+  --bg-gradient: linear-gradient(180deg, #fdf2f8 0%, #ffffff 40%, #fce7f3 80%, #ffffff 100%);
+}
+body.theme-emulsion .site-title { color: #9d174d; }
+body.theme-emulsion .header-badge { background: linear-gradient(90deg, #db2777, #f472b6); }
+
+/* 高保湿フェイスオイル＆美容オイル：ゴールデンアンバー・ボタニカルエメラルド */
+body.theme-oil {
+  --bg-gradient: linear-gradient(180deg, #f0fdf4 0%, #ffffff 40%, #ecfdf5 80%, #ffffff 100%);
+}
+body.theme-oil .site-title { color: #065f46; }
+body.theme-oil .header-badge { background: linear-gradient(90deg, #059669, #34d399); }
+
+/* 高保湿リペアバーム：ハニーカモミール・アンバーシールド */
+body.theme-balm {
+  --bg-gradient: linear-gradient(180deg, #fffbeb 0%, #ffffff 40%, #fef3c7 80%, #ffffff 100%);
+}
+body.theme-balm .site-title { color: #92400e; }
+body.theme-balm .header-badge { background: linear-gradient(90deg, #d97706, #fbbf24); }
