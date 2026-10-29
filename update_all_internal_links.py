@@ -3,6 +3,27 @@ import re
 
 ALL_ARTICLES = [
     {
+        "url": "/winter-hair-milk",
+        "file": "winter-hair-milk.html",
+        "title": "💆‍♀️ 保湿力の強さで髪のパサつき・静電気とさようなら！冬の乾燥・マフラー摩擦を芯から防ぐ高保湿ヘアミルク＆アウトバストリートメントランク10",
+        "desc": "オイルだけでは届かない毛髪内部へ水分＆CMCを集中補給！オルビス、ミルボンエルジューダ、N.シアミルク、ケラスターゼなど神ヘアミルク10選。",
+        "footer_name": "高保湿ヘアミルク"
+    },
+    {
+        "url": "/winter-cushion-foundation",
+        "file": "winter-cushion-foundation.html",
+        "title": "✨ 保湿力の強さで肌乾燥とさようなら！冬の暖房直撃でも夕方までひび割れない高保湿クッションファンデーション＆美容液ファンデランク10",
+        "desc": "暖房の効いた部屋でも夕方まで乾燥割れ・粉吹き知らず！TIRTIRクリスタル、CLIOハイグロウ、ジョンセンムル、YSLなど美容液クッション10選。",
+        "footer_name": "クッションファンデ"
+    },
+    {
+        "url": "/winter-body-scrub",
+        "file": "winter-body-scrub.html",
+        "title": "🛁 保湿力の強さで全身のゴワつき・粉吹きとさようなら！入浴時に潤いオイルを仕込む高保湿ボディスクラブ＆角質ケアランク10",
+        "desc": "頑固なひじ・ひざ・かかとの角質をオフし濃厚オイル膜で全身シールド！SABON、ハウスオブローゼ、LUSH、クナイプなど神スクラブ10選。",
+        "footer_name": "ボディスクラブ"
+    },
+    {
         "url": "/winter-hydrating-serum",
         "file": "winter-hydrating-serum.html",
         "title": "💧 保湿力の強さで肌乾燥・砂漠化とさようなら！冬のバリア崩壊を集中救済する高保湿美容液＆高濃度アンプルランク10",
