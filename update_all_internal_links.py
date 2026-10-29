@@ -3,6 +3,27 @@ import re
 
 ALL_ARTICLES = [
     {
+        "url": "/winter-powder",
+        "file": "winter-powder.html",
+        "title": "✨ 保湿力の強さで肌乾燥とさようなら！冬の粉吹き・乾燥小じわを防ぎ一日中うるおいツヤ肌が続く高保湿フェイスパウダーランク10",
+        "desc": "暖房直撃でも夕方まで粉吹き・地割れシワ知らず！コスメデコルテ、NARSリフ粉、エクセル、ミラコレなど美容液パウダー10選。",
+        "footer_name": "冬用パウダー"
+    },
+    {
+        "url": "/winter-lip-plumper",
+        "file": "winter-lip-plumper.html",
+        "title": "💄 保湿力の強さで唇乾燥とさようなら！冬のガサガサ・縦ジワ・皮剥けを濃密オイルと温感ボリュームで満たす高保湿リッププランパーランク10",
+        "desc": "真冬の過酷な唇トラブルを即効解消！ディオールマキシマイザー、クラランス、ヴィセなど温感刺激＆濃密オイルプランパー10選。",
+        "footer_name": "リッププランパー"
+    },
+    {
+        "url": "/winter-hair-mask",
+        "file": "winter-hair-mask.html",
+        "title": "💆‍♀️ 保湿力の強さで髪の乾燥・静電気とさようなら！真冬の毛先パサつき・広がりを芯から集中補修する濃密高保湿ヘアマスクランク10",
+        "desc": "マフラー摩擦や暖房の静電気・毛先パサつきを芯からリペア！フィーノ、オージュア、ケラスターゼ、TSUBAKIなどサロン級マスク10選。",
+        "footer_name": "高保湿ヘアマスク"
+    },
+    {
         "url": "/winter-stick-serum",
         "file": "winter-stick-serum.html",
         "title": "💄 保湿力の強さで肌乾燥とさようなら！日中いつでもメイクの上から乾燥小じわ・粉吹きをレスキューする高保湿スティック美容液ランク10",
@@ -196,18 +217,18 @@ def update_links():
             if a["file"] == target_article["file"]:
                 continue
             related_cards.append(f"""        <a href="{a['url']}" class="related-link-card">
-              <div class="related-link-title">{a['title']}</div>
-              <div class="related-link-desc">{a['desc']}</div>
-            </a>""")
+          <div class="related-link-title">{a['title']}</div>
+          <div class="related-link-desc">{a['desc']}</div>
+        </a>""")
 
         new_related_section = f"""<section id="related" class="related-section">
-          <div class="related-section-title">
-            <span>📑</span> あわせて読みたい！冬の徹底保湿ケア特集一覧
-          </div>
-          <div class="related-list">
-    {chr(10).join(related_cards)}
-          </div>
-        </section>"""
+      <div class="related-section-title">
+        <span>📑</span> あわせて読みたい！冬の徹底保湿ケア特集一覧
+      </div>
+      <div class="related-list">
+{chr(10).join(related_cards)}
+      </div>
+    </section>"""
 
         # 既存の関連記事セクションの置換
         if '<section id="related"' in content:
@@ -216,6 +237,8 @@ def update_links():
         # フッターリンクの置換
         if '<div class="footer-links">' in content:
             content = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, content, flags=re.DOTALL)
+        elif '<div class="footer-nav">' in content:
+            content = re.sub(r'<div class="footer-nav">.*?</div>', footer_links_html, content, flags=re.DOTALL)
 
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(content)
