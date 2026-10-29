@@ -14,6 +14,9 @@ with open("indexnow_key.txt", "r", encoding="utf-8") as f:
 HOST = "lumi-cosme.vercel.app"
 URL_LIST = [
     "https://lumi-cosme.vercel.app/",
+    "https://lumi-cosme.vercel.app/winter-make-keep-mist",
+    "https://lumi-cosme.vercel.app/winter-lip-oil",
+    "https://lumi-cosme.vercel.app/winter-body-oil",
     "https://lumi-cosme.vercel.app/winter-liquid-foundation",
     "https://lumi-cosme.vercel.app/winter-cream-cheek",
     "https://lumi-cosme.vercel.app/winter-cream-eyeshadow",
@@ -56,61 +59,65 @@ URL_LIST = [
     "https://lumi-cosme.vercel.app/summer-cosme"
 ]
 
-payload = {
-    "host": HOST,
-    "key": KEY,
-    "keyLocation": f"https://{HOST}/{KEY}.txt",
-    "urlList": URL_LIST
-}
-
-data_bytes = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-
 ENDPOINTS = [
-    "api.indexnow.org",
-    "www.bing.com",
-    "yandex.com",
-    "search.seznam.cz"
+    "https://api.indexnow.org/indexnow",
+    "https://www.bing.com/indexnow",
+    "https://yandex.com/indexnow"
 ]
 
-print(f"=== Submitting {len(URL_LIST)} URLs to IndexNow (Host: {HOST}) ===")
-print(f"Key: {KEY}")
+def submit():
+    payload = {
+        "host": HOST,
+        "key": KEY,
+        "keyLocation": f"https://{HOST}/{KEY}.txt",
+        "urlList": URL_LIST
+    }
+    
+    data_bytes = json.dumps(payload).encode("utf-8")
+    
+    print(f"=== Submitting {len(URL_LIST)} URLs to IndexNow ===")
+    print(f"Key: {KEY}")
+    print(f"KeyLocation: https://{HOST}/{KEY}.txt")
+    print(f"First 3 URLs:")
+    for u in URL_LIST[:3]:
+        print(f"  - {u}")
+    print(f"...")
 
-for endpoint in ENDPOINTS:
-    url = f"https://{endpoint}/indexnow"
-    req = urllib.request.Request(
-        url,
-        data=data_bytes,
-        headers={
-            "Content-Type": "application/json; charset=utf-8",
-            "User-Agent": "Mozilla/5.0 (compatible; IndexNowSubmittingBot/1.0)"
-        },
-        method="POST"
-    )
-    try:
-        with urllib.request.urlopen(req, context=ctx, timeout=15) as res:
-            code = res.getcode()
-            body = res.read().decode("utf-8", errors="ignore")
-            print(f"✓ {endpoint}: HTTP {code} {body if body else '(OK)'}")
-    except urllib.error.HTTPError as e:
-        body = e.read().decode("utf-8", errors="ignore")
-        print(f"✓ {endpoint}: HTTP {e.code} (Response: {body})")
-    except Exception as e:
-        print(f"✗ {endpoint}: Error {e}")
-    time.sleep(0.5)
+    success = False
+    for ep in ENDPOINTS:
+        print(f"\nSubmitting to: {ep} ...")
+        try:
+            req = urllib.request.Request(
+                ep,
+                data=data_bytes,
+                headers={
+                    "Content-Type": "application/json; charset=utf-8",
+                    "User-Agent": "LumiCosmeIndexNowBot/2.0"
+                },
+                method="POST"
+            )
+            with urllib.request.urlopen(req, context=ctx, timeout=10) as res:
+                code = res.getcode()
+                body = res.read().decode("utf-8")
+                print(f"  Response: HTTP {code} ({res.reason})")
+                if code in (200, 202):
+                    print(f"  ✓ Success! URLs accepted by {ep}")
+                    success = True
+                else:
+                    print(f"  Response body: {body}")
+        except urllib.error.HTTPError as e:
+            print(f"  HTTP Error {e.code}: {e.reason}")
+            try:
+                err_body = e.read().decode("utf-8")
+                print(f"  Details: {err_body}")
+            except:
+                pass
+            if e.code in (200, 202):
+                success = True
+        except Exception as e:
+            print(f"  Error: {e}")
+            
+    return success
 
-print("\n=== Pinging Sitemaps to Search Engines ===")
-sitemap_url = f"https://{HOST}/sitemap.xml"
-ping_targets = [
-    f"https://www.bing.com/ping?sitemap={urllib.parse.quote(sitemap_url)}",
-    f"https://www.google.com/ping?sitemap={urllib.parse.quote(sitemap_url)}"
-]
-
-for p_url in ping_targets:
-    try:
-        req = urllib.request.Request(p_url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, context=ctx, timeout=10) as res:
-            print(f"✓ Ping {p_url.split('?')[0]}: HTTP {res.getcode()}")
-    except Exception as e:
-        print(f"✗ Ping {p_url.split('?')[0]}: {e}")
-
-print("\n=== IndexNow Submission Completed Successfully ===")
+if __name__ == "__main__":
+    submit()

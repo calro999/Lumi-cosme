@@ -3,9 +3,9 @@ import json
 import re
 
 files_to_check = [
-    "winter-liquid-foundation.html",
-    "winter-cream-cheek.html",
-    "winter-cream-eyeshadow.html"
+    "winter-make-keep-mist.html",
+    "winter-lip-oil.html",
+    "winter-body-oil.html"
 ]
 
 all_passed = True
@@ -77,6 +77,14 @@ for fname in files_to_check:
     if len(img_matches) != 10:
         print("❌ Not all 10 products have product-img class!")
         all_passed = False
+    
+    # サンプル画像の有無
+    sample_imgs = len(re.findall(r'sample/item\.jpg', html))
+    if sample_imgs > 0:
+        print(f"❌ Found {sample_imgs} sample fallback images!")
+        all_passed = False
+    else:
+        print("✓ All 10 images are genuine Rakuten product images!")
     
     aff_matches = re.findall(r'href="([^"]*)"[^>]*class="rakuten-btn"', html)
     print(f"Product cards with affiliate buttons: {len(aff_matches)}/10")
