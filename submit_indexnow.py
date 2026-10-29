@@ -1,5 +1,6 @@
 import json
 import urllib.request
+import urllib.parse
 import ssl
 import time
 
@@ -12,26 +13,29 @@ with open("indexnow_key.txt", "r", encoding="utf-8") as f:
 
 HOST = "lumi-cosme.vercel.app"
 URL_LIST = [
-    f"https://{HOST}/",
-    f"https://{HOST}/winter-emulsion",
-    f"https://{HOST}/winter-face-oil",
-    f"https://{HOST}/winter-repair-balm",
-    f"https://{HOST}/winter-bath-care",
-    f"https://{HOST}/winter-face-wash",
-    f"https://{HOST}/winter-face-mist",
-    f"https://{HOST}/winter-lotion",
-    f"https://{HOST}/winter-cleansing",
-    f"https://{HOST}/winter-day-cream",
-    f"https://{HOST}/winter-serum-booster",
-    f"https://{HOST}/winter-face-mask",
-    f"https://{HOST}/winter-moisture-cream",
-    f"https://{HOST}/winter-eye-cream",
-    f"https://{HOST}/winter-base-makeup",
-    f"https://{HOST}/winter-lip-care",
-    f"https://{HOST}/winter-body-care",
-    f"https://{HOST}/winter-hair-care",
-    f"https://{HOST}/winter-hand-care",
-    f"https://{HOST}/summer-cosme"
+    "https://lumi-cosme.vercel.app/",
+    "https://lumi-cosme.vercel.app/winter-sleeping-mask",
+    "https://lumi-cosme.vercel.app/winter-nail-oil",
+    "https://lumi-cosme.vercel.app/winter-foot-cream",
+    "https://lumi-cosme.vercel.app/winter-emulsion",
+    "https://lumi-cosme.vercel.app/winter-face-oil",
+    "https://lumi-cosme.vercel.app/winter-repair-balm",
+    "https://lumi-cosme.vercel.app/winter-bath-care",
+    "https://lumi-cosme.vercel.app/winter-face-wash",
+    "https://lumi-cosme.vercel.app/winter-face-mist",
+    "https://lumi-cosme.vercel.app/winter-lotion",
+    "https://lumi-cosme.vercel.app/winter-cleansing",
+    "https://lumi-cosme.vercel.app/winter-day-cream",
+    "https://lumi-cosme.vercel.app/winter-serum-booster",
+    "https://lumi-cosme.vercel.app/winter-face-mask",
+    "https://lumi-cosme.vercel.app/winter-moisture-cream",
+    "https://lumi-cosme.vercel.app/winter-eye-cream",
+    "https://lumi-cosme.vercel.app/winter-base-makeup",
+    "https://lumi-cosme.vercel.app/winter-lip-care",
+    "https://lumi-cosme.vercel.app/winter-body-care",
+    "https://lumi-cosme.vercel.app/winter-hair-care",
+    "https://lumi-cosme.vercel.app/winter-hand-care",
+    "https://lumi-cosme.vercel.app/summer-cosme"
 ]
 
 payload = {

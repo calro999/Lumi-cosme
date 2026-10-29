@@ -1,0 +1,380 @@
+{
+  "winter_sleeping_mask": {
+    "title": "高保湿スリーピングマスク＆ナイトパック",
+    "page_file": "winter-sleeping-mask.html",
+    "items": [
+      {
+        "rank": 1,
+        "brand": "LANEIGE (ラネージュ)",
+        "display_name": "ウォータースリーピングマスク EX (プロバイオティクス複合体・翌朝うるツヤ肌)",
+        "item_name": "★リニューアル[LANEIGE ラネージュ] ウォーター スリーピング マスク EX 70ml / Water Sleeping Mask Masque De Nuit Hydratant / 睡眠パック/ 水分集中 / ナイトパック / 新しく生まれ変わったラネージュ第6世代ウォータースリーピングマスク",
+        "price": 2780,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00tk9yn.j9rug6e5.g00tk9yn.j9ruhed5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Froseroseshop%2Flaneige_1909002%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Froseroseshop%2Fi%2F10000598%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/roseroseshop/cabinet/12126483/imgrc0128161109.jpg",
+        "review_count": 4,
+        "review_average": 3.25,
+        "shop_name": "RoseRoseShop"
+      },
+      {
+        "rank": 2,
+        "brand": "ELIXIR (エリクシール)",
+        "display_name": "スリーピングジェルパック W (つや玉ぷるん・高弾力コラーゲンジェル)",
+        "item_name": "エリクシール シュペリエル スリーピングジェルパック W 105g （マスク・パック）",
+        "price": 2500,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00q3lln.j9rug158.g00q3lln.j9ruh19f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcosmetch%2F4901872056675%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcosmetch%2Fi%2F10061153%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/cosmetch/cabinet/30/0000022013000.jpg",
+        "review_count": 0,
+        "review_average": 0.0,
+        "shop_name": "コスメっち"
+      },
+      {
+        "rank": 3,
+        "brand": "FEMMUE (ファミュ)",
+        "display_name": "ローズウォーター スリーピングマスク (ダマスクローズ×シカうるおいシールド)",
+        "item_name": "【FEMMUE】ローズウォーター スリーピングマスク | ファミュ クリーム パック マスク ハリ 透明感 ローズPDRN 植物性PDRNレチナール ビタミン 透明感 乾燥 保湿 ナイアシンアミド レチノール 季節の変わり目 ゆらぎ肌 紫外線 ハリ ツヤ",
+        "price": 4290,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00uja8n.j9rugbc1.g00uja8n.j9ruhf60/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcosmekitchen%2F8809694362935%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcosmekitchen%2Fi%2F10001647%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/cosmekitchen/cabinet/09354782a/imgrc0103819490.jpg",
+        "review_count": 4,
+        "review_average": 4.5,
+        "shop_name": "コスメキッチン"
+      },
+      {
+        "rank": 4,
+        "brand": "DECORTÉ (コスメデコルテ)",
+        "display_name": "リポソーム アドバンスト リペアクリーム (1兆個のナイトカプセル・極上修復膜)",
+        "item_name": "【国内正規品】コスメデコルテ リポソーム アドバンスト リペアクリーム 50ml COSME DECORTE ナイトクリーム 保湿 エイジングケア 送料無料",
+        "price": 7140,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00t269n.j9ruga5b.g00t269n.j9ruhd35/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Farianakosume%2F4971710377767-1%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Farianakosume%2Fi%2F10004675%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/arianakosume/cabinet/main-6/4971710377002-ra-rk.jpg",
+        "review_count": 370,
+        "review_average": 4.88,
+        "shop_name": "アリアナ ショップ"
+      },
+      {
+        "rank": 5,
+        "brand": "innisfree (イニスフリー)",
+        "display_name": "グリーンティー スリーピングマスク (緑茶乳酸菌×濃密ジェル水分チャージ)",
+        "item_name": "★リニューアル ★2個セット [INNISFREE イニスフリー] グリーンティー シード ヒアルロン酸 セラム / Green Tea Seed Hyaluronic Acid Serum - 80ml x 2pcs / 正規品 / グリーンティーシード / スキンケア / うるおい / 保湿 / 美容液",
+        "price": 4420,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00tk9yn.j9rug6e5.g00tk9yn.j9ruhed5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Froseroseshop%2Finnisfree_2103003_2p%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Froseroseshop%2Fi%2F10001572%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/roseroseshop/cabinet/compass1681715771.jpg",
+        "review_count": 12,
+        "review_average": 4.58,
+        "shop_name": "RoseRoseShop"
+      },
+      {
+        "rank": 6,
+        "brand": "VT COSMETICS (ブイティ)",
+        "display_name": "CICA ナイトスリーピングマスク (シカヒアルロン×1包使い切り集中水分パック)",
+        "item_name": "VT cosmetics VTコスメティック シカスリーピングパック 30個入 ナイトパッククリーム 保湿クリーム 単品 韓国コスメ 正規品",
+        "price": 3180,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00tkm5n.j9rug8d5.g00tkm5n.j9ruh337/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fflytoyou%2F793631005%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fflytoyou%2Fi%2F10000368%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/flytoyou/cabinet/vt_cosmetic/793631005-8001fly.jpg",
+        "review_count": 16,
+        "review_average": 4.63,
+        "shop_name": "韓国コスメFly ToYou"
+      },
+      {
+        "rank": 7,
+        "brand": "LANEIGE (ラネージュ)",
+        "display_name": "シカ スリーピングマスク (フォレスト酵母CICA・肌荒れレスキューバリア)",
+        "item_name": "【国内発送】ラネージュ LANEIGE シカスリーピングマスク N 60ml[ マスク ]※消費期限　2028.09.02",
+        "price": 3050,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00rybkn.j9rug76b.g00rybkn.j9ruh786/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnet-cosmeleaf%2F8809608287750%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fnet-cosmeleaf%2Fi%2F10012792%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/net-cosmeleaf/cabinet/laneige/8809925196346-img.jpg",
+        "review_count": 8,
+        "review_average": 4.25,
+        "shop_name": "コスメリーフ"
+      },
+      {
+        "rank": 8,
+        "brand": "Avene (アベンヌ)",
+        "display_name": "イドランス スリーピングマスク (アベンヌ温泉水高配合・みずみずしい保湿膜)",
+        "item_name": "★ヤマト宅配便送料無料★資生堂 アベンヌ イドランス　スリーピングマスク50ml「資生堂、コーセー正規取扱店」",
+        "price": 3350,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00rxxan.j9rug8dd.g00rxxan.j9ruh87f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Foriennto%2F4964259992003%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Foriennto%2Fi%2F10004224%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/oriennto/cabinet/other/08906357/imgrc0103893397.jpg",
+        "review_count": 1,
+        "review_average": 5.0,
+        "shop_name": "オリエントストア"
+      },
+      {
+        "rank": 9,
+        "brand": "KANEBO (カネボウ)",
+        "display_name": "ナイト リピッド ウェア (夜間角層ラッピング・贅沢うるおいナイトケア)",
+        "item_name": "【カネボウ認定ショップ】カネボウ　ナイト　リピッド　ウェア　40ml　KANEBO【KN】",
+        "price": 9680,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00rxdnn.j9rug10e.g00rxdnn.j9ruh90b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsian%2F158944kn%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fsian%2Fi%2F10010675%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/sian/cabinet/06771221/09290671/158944.jpg",
+        "review_count": 18,
+        "review_average": 4.5,
+        "shop_name": "シャン コスメディア楽天市場店"
+      },
+      {
+        "rank": 10,
+        "brand": "ELIXIR (エリクシール)",
+        "display_name": "スリーピングクリアパック C 【医薬部外品】 (美白有効成分m-トラネキサム酸配合)",
+        "item_name": "＼10/29は最大10％OFF+全品Pアップ／【資生堂認定ショップ】エリクシールホワイト スリーピングクリアパック C",
+        "price": 3300,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00t3lin.j9rugb21.g00t3lin.j9ruh7c2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyayoi-cosme%2F05053%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fyayoi-cosme%2Fi%2F10001966%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/yayoi-cosme/cabinet/10309740/imgrc0094499008.jpg",
+        "review_count": 27,
+        "review_average": 4.7,
+        "shop_name": "コスメティック やよい"
+      }
+    ]
+  },
+  "winter_nail_oil": {
+    "title": "高保湿ネイルオイル＆爪用美容液",
+    "page_file": "winter-nail-oil.html",
+    "items": [
+      {
+        "rank": 1,
+        "brand": "uka (ウカ)",
+        "display_name": "ネイルオイル 24:45 (ラベンダー＆バニラ・植物性濃密リペアロールオン)",
+        "item_name": "uka ウカ ネイルオイル 24:45 basic 7:15 13:00 18:30 5mL / いい香り 大人 香り ローズ ネイルケア ネイルケアオイル ギフト 天然由来 オーガニック エコサート認証 指先 保湿 ロールオン キューティクルオイル プレゼント",
+        "price": 3480,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00umxin.j9rugc73.g00umxin.j9ruh15f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftaroshop01%2Fuka-nailoil-1%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ftaroshop01%2Fi%2F10000424%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/taroshop01/cabinet/13156836/compass1779327279.jpg",
+        "review_count": 5,
+        "review_average": 4.6,
+        "shop_name": "TARO SHOP 楽天市場店"
+      },
+      {
+        "rank": 2,
+        "brand": "O.P.I (オーピーアイ)",
+        "display_name": "プロスパ ネイル＆キューティクルオイル (クプアスバター×ホワイトティ高浸透オイル)",
+        "item_name": "【最大3％OFF】【遠方以外宅配便も無料】 ネイルオイル OPI ネイル キューティクルオイル プロスパ Pro Spa OIL 14.8ml ネイルケア 新品 送料無料 箱付き ハンドネイル&キューティクルオイル セルフネイル アボプレックスオイル プロスパオイル 【ギフトサーチ】",
+        "price": 3980,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00rjsgn.j9rug47e.g00rjsgn.j9ruh0d9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Felelerueru%2Fopipro004%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Felelerueru%2Fi%2F10008152%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/elelerueru/cabinet/oota/04594834/05148051/imgrc0067885035.jpg",
+        "review_count": 449,
+        "review_average": 4.36,
+        "shop_name": "Lエル"
+      },
+      {
+        "rank": 3,
+        "brand": "L'OCCITANE (ロクシタン)",
+        "display_name": "シア ネイルオイル (シアバター30%高配合・筆ペンタイプ集中トリートメント)",
+        "item_name": "●ポイント10倍＆割引クーポン●LOCCITANE ロクシタン カリテコンフォート ネイルオイル 7.5ml / シア ネイルオイル 7.5ml 各種【送料無料】ギフト 誕生日 プレゼント",
+        "price": 2230,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00snpon.j9rug471.g00snpon.j9ruh545/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcosmediva%2F3253581753019%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcosmediva%2Fi%2F10009392%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/cosmediva/cabinet/skuimage/topimage/locshnail.jpg",
+        "review_count": 8,
+        "review_average": 5.0,
+        "shop_name": "COSME DIVA"
+      },
+      {
+        "rank": 4,
+        "brand": "アンドネイル (&nail)",
+        "display_name": "オーガニックブレンドオイル (100%オーガニック・ハイポキニウム集中うるおい滴下)",
+        "item_name": "【セット】アンドネイル　オーガニックブレンドオイル　10ml　×3個セット /メーカー公認店/正規品/",
+        "price": 5280,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00qb28n.j9ruge63.g00qb28n.j9ruh728/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Finter-c%2Fandnailn-obo3%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Finter-c%2Fi%2F10006175%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/inter-c/cabinet/03173281/anailn_obo32.jpg",
+        "review_count": 7,
+        "review_average": 5.0,
+        "shop_name": "インタークリスティーヌ"
+      },
+      {
+        "rank": 5,
+        "brand": "JILL STUART (ジルスチュアート)",
+        "display_name": "アロマティックフラワー ネイルオイル (2層式フラワーエッセンス・ツヤ＆甘皮保湿)",
+        "item_name": "JILL STUART(ジルスチュアート) アロマティックフラワー ネイルオイル",
+        "price": 3540,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00s6ksn.j9rug8e1.g00s6ksn.j9ruh207/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpartytime-tokyo%2F22js104nal%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fpartytime-tokyo%2Fi%2F10035849%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/partytime-tokyo/cabinet/nal/22js104nal_001.jpg",
+        "review_count": 0,
+        "review_average": 0.0,
+        "shop_name": "PartyTime-Tokyo"
+      },
+      {
+        "rank": 6,
+        "brand": "無印良品 (MUJI)",
+        "display_name": "ネイルケアオイル (ペン型アプリケーター・ホホバ＆オリーブ天然うるおい補給)",
+        "item_name": "ネイルケアオイル・3．2g【無印良品 公式】",
+        "price": 890,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00tpdhn.j9rug9c2.g00tpdhn.j9ruh581/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmujirushi-ryohin%2F4550583916923%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmujirushi-ryohin%2Fi%2F10007456%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/mujirushi-ryohin/cabinet/item31/4550583916923.jpg",
+        "review_count": 12,
+        "review_average": 4.5,
+        "shop_name": "無印良品"
+      },
+      {
+        "rank": 7,
+        "brand": "SpaLuce (スパルーチェ)",
+        "display_name": "爪美容液 プラス (微弱電荷ナノ水×浸透型ケラチン・割れ爪＆二枚爪集中補修)",
+        "item_name": "【最大3％OFF】 ネイルケア ネイルオイル 爪美容液 スパルーチェ 爪美容液ダブルプラス 10ml 2本セット(計20ml) spaluce 弱酸性 ネイルトリートメント キューティクルオイル べたつかない ローション 二枚爪 ささくれ サラッと 爪美容液プラスがリニューアル 日本製 送料無料",
+        "price": 5200,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00rjsgn.j9rug47e.g00rjsgn.j9ruh0d9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Felelerueru%2Fspaluce002%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Felelerueru%2Fi%2F10009978%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/elelerueru/cabinet/oota/04594834/07885484/spaluce002_0.jpg",
+        "review_count": 21,
+        "review_average": 4.9,
+        "shop_name": "Lエル"
+      },
+      {
+        "rank": 8,
+        "brand": "ettusais (エテュセ)",
+        "display_name": "クイックケアコート (ホホバ油配合・リムーバー不要のツヤ保護美容液)",
+        "item_name": "エテュセ クイックケアコート(9ml)【tq0】【エテュセ】",
+        "price": 1155,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00r136n.j9rug084.g00r136n.j9ruh4be/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2Fe460435h%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24%2Fi%2F10557282%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/rakuten24/cabinet/267/4932554045267.jpg",
+        "review_count": 60,
+        "review_average": 4.33,
+        "shop_name": "楽天24"
+      },
+      {
+        "rank": 9,
+        "brand": "COUNTRY & STREAM",
+        "display_name": "ネイルトリートメントオイル (ハチミツ×オーガニックオイル・ジェル状オイル)",
+        "item_name": "カントリー＆ストリーム ネイルトリートメントオイル(7g)【Country＆Stream(カントリー＆ストリーム)】",
+        "price": 1100,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00r136n.j9rug084.g00r136n.j9ruh4be/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2Fs002190226942%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24%2Fi%2F10137285%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/rakuten24/cabinet/536/4901008613536.jpg",
+        "review_count": 7,
+        "review_average": 4.43,
+        "shop_name": "楽天24"
+      },
+      {
+        "rank": 10,
+        "brand": "CANMAKE (キャンメイク)",
+        "display_name": "メイクミーハッピー ネイルオイル (植物オイル高配合・ロールオンプチプラ神オイル)",
+        "item_name": "キャンメイク メイクミーハッピー ネイルオイル momo oolong 9.2〜9.5mL ネイルオイル アットコスメ",
+        "price": 770,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00qawwn.j9rugbf4.g00qawwn.j9ruh0cf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcosmecomonline%2F1000183802%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fcosmecomonline%2Fi%2F10159669%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/cosmecomonline/cabinet/item-img208/item_1000183802_1.jpg",
+        "review_count": 2,
+        "review_average": 3.0,
+        "shop_name": "アットコスメショッピング"
+      }
+    ]
+  },
+  "winter_foot_cream": {
+    "title": "高保湿かかと＆フットクリーム",
+    "page_file": "winter-foot-cream.html",
+    "items": [
+      {
+        "rank": 1,
+        "brand": "Neutrogena (ニュートロジーナ)",
+        "display_name": "ノルウェーフォーミュラ インテンスリペア フットクリーム (純度99%高濃度グリセリン)",
+        "item_name": "ニュートロジーナ ノルウェーフォーミュラ インテンスリペア CICA ボディエマルジョン 450ml 【Neutrogena(ニュートロジーナ)】 ボディローション・ジェル",
+        "price": 2091,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00ugynn.j9rugbc9.g00ugynn.j9ruhf63/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutensokuhaimart%2F4901730210133%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakutensokuhaimart%2Fi%2F10014620%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/rakutensokuhaimart/cabinet/rakuten24/133/4901730210133.jpg",
+        "review_count": 4,
+        "review_average": 5.0,
+        "shop_name": "楽天24エクスプレス"
+      },
+      {
+        "rank": 2,
+        "brand": "Locobase Repair (第一三共)",
+        "display_name": "ロコベースリペア かかとケアバーム (セラミド3×シアバター配合・防腐剤無添加シールド)",
+        "item_name": "ネコポス送料200円商品/□ロコベースリペアかかとケアバーム　　10g",
+        "price": 1100,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00ruqan.j9rug8a1.g00ruqan.j9ruh12b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fe-godai%2F4987107619594-y%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fe-godai%2Fi%2F10166673%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/e-godai/cabinet/items/49871/076/4987107619594.jpg",
+        "review_count": 16,
+        "review_average": 4.56,
+        "shop_name": "ゴダイ 楽天市場店"
+      },
+      {
+        "rank": 3,
+        "brand": "Dr.Scholl (ドクター・ショール)",
+        "display_name": "ディープ・モイスト かかと用保湿クリーム (尿素誘電・高保湿オイル密封処方)",
+        "item_name": "Dr.Scholl ドクター・ショール ドクターショール 足かかと用保湿クリーム 1本 70g | かかと クリーム かかとケア 角質 角質除去 角質ケア かかとケアクリーム かかとクリーム フットクリーム 角質 クリーム 足 クリーム 足 保湿 足裏 クリーム",
+        "price": 1000,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00twnun.j9rug353.g00twnun.j9ruha89/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flifestyle-007%2F71027%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Flifestyle-007%2Fi%2F10001377%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/lifestyle-007/cabinet/new_thumbnail/71027_new.jpg",
+        "review_count": 164,
+        "review_average": 4.59,
+        "shop_name": "ライフスタイル 生活のお手伝い"
+      },
+      {
+        "rank": 4,
+        "brand": "yuskin (ユースキン)",
+        "display_name": "ユースキン 120g 【指定医薬部外品】 (4つの有効成分・ひび割れあかぎれ修復)",
+        "item_name": "ユースキン ボトル 120g 【ユースキン】 クリーム",
+        "price": 1364,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00ugynn.j9rugbc9.g00ugynn.j9ruhf63/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutensokuhaimart%2F4987353190311%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakutensokuhaimart%2Fi%2F10013496%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/rakutensokuhaimart/cabinet/rakuten24/311/4987353190311.jpg",
+        "review_count": 4,
+        "review_average": 5.0,
+        "shop_name": "楽天24エクスプレス"
+      },
+      {
+        "rank": 5,
+        "brand": "資生堂 (SHISEIDO)",
+        "display_name": "尿素10%クリーム ジャータイプ 【指定医薬部外品】 (角質柔軟成分×ヒアルロン酸)",
+        "item_name": "資生堂 尿素10％ クリーム ジャー 100g×6個セット",
+        "price": 5635,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00ty2sn.j9rugb3c.g00ty2sn.j9ruh9c4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkm-select%2F20241022000725_9%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fkm-select%2Fi%2F10047315%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/km-select/cabinet/r_2021120132/20241022000725_9_1.jpg",
+        "review_count": 0,
+        "review_average": 0.0,
+        "shop_name": "KM SELECT"
+      },
+      {
+        "rank": 6,
+        "brand": "池田模範堂 (ヒビケア)",
+        "display_name": "ヒビケアFT軟膏 【第3類医薬品】 (ビタミンA油×アラントイン・パックリ割れ修復)",
+        "item_name": "【第3類医薬品】ヒビケアFT軟膏 20g",
+        "price": 1171,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00qvyfn.j9rug02a.g00qvyfn.j9ruhcdc/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsundrug%2F4987426002244%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fsundrug%2Fi%2F10041073%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/sundrug/cabinet/202510_2/4987426002244.jpg",
+        "review_count": 0,
+        "review_average": 0.0,
+        "shop_name": "サンドラッグe-shop"
+      },
+      {
+        "rank": 7,
+        "brand": "L'OCCITANE (ロクシタン)",
+        "display_name": "シア フットクリーム (シアバター15%配合・ラベンダー＆アルニカ抽出液)",
+        "item_name": "ロクシタン L'Occitane シア フットクリーム (新旧パッケージはランダム) 150ml/5.2oz【海外通販】",
+        "price": 4600,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00t2xcn.j9rug9bf.g00t2xcn.j9ruhde0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fstrawberrynet-beauty%2F42062%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fstrawberrynet-beauty%2Fi%2F10055995%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/strawberrynet-beauty/cabinet/12557956/12565304/04206030703.jpg",
+        "review_count": 0,
+        "review_average": 0.0,
+        "shop_name": "Strawberrynet - fresh beauty"
+      },
+      {
+        "rank": 8,
+        "brand": "ALOINS (アロインス)",
+        "display_name": "オーデクリームS 【医薬部外品】 (純度アロエエキス×高純度ワセリン・全身多目的クリーム)",
+        "item_name": "アロインス オーデクリームS 180g",
+        "price": 1150,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00uakkn.j9rug263.g00uakkn.j9ruhbb9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmtshop2018%2F4956962108017%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmtshop2018%2Fi%2F10000321%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/mtshop2018/cabinet/09871772/4956962108017.jpg",
+        "review_count": 9,
+        "review_average": 4.89,
+        "shop_name": "MTSHOP2018"
+      },
+      {
+        "rank": 9,
+        "brand": "Curel (キュレル)",
+        "display_name": "モイスチャーバーム 【医薬部外品】 (セラミド機能成分配合・濃厚密着クリーム)",
+        "item_name": "花王 キュレル モイスチャーバーム ジャー 顔・からだ用 (70g) curel　【医薬部外品】",
+        "price": 1388,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00rbnvn.j9rug755.g00rbnvn.j9ruh09f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftsuruha%2F10123691%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ftsuruha%2Fi%2F10062252%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/tsuruha/cabinet/shouhin68/10123691.jpg",
+        "review_count": 8,
+        "review_average": 4.63,
+        "shop_name": "ツルハドラッグ"
+      },
+      {
+        "rank": 10,
+        "brand": "桐灰化学 (小林製薬)",
+        "display_name": "かかとちゃん 角質密封ケア靴下 (チタン断熱密閉加工・履くだけでガサガサ解消)",
+        "item_name": "小林製薬 かかとちゃん S-Mサイズ 22〜25cm 1足分 2枚入 ブラック かかとケア 保湿 ガサガサ 角質ケア 寝ながら 集中ケア",
+        "price": 1520,
+        "affiliate_url": "https://hb.afl.rakuten.co.jp/hgc/g00u2etn.j9rug8d2.g00u2etn.j9ruhd3c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdaiya-shop%2Fzai-0501818fjo44118335%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fdaiya-shop%2Fi%2F10002919%2F&rafcid=wsc_i_is_1a3cdfd9-2aec-4b42-8290-1c53603b0012",
+        "image_url": "https://shop.r10s.jp/daiya-shop/cabinet/08434432/kakato-1.jpg",
+        "review_count": 67,
+        "review_average": 4.67,
+        "shop_name": "DAiYA DEPART"
+      }
+    ]
+  }
+}

@@ -3,6 +3,27 @@ import re
 
 ALL_ARTICLES = [
     {
+        "url": "/winter-sleeping-mask",
+        "file": "winter-sleeping-mask.html",
+        "title": "🌙 保湿力の強さで肌乾燥とさようなら！寝ている間に集中密着ケアする高保湿スリーピングマスク＆ナイトパックランク10",
+        "desc": "睡眠中の暖房乾燥脱水を完全遮断！ラネージュ、エリクシール、ファミュ、コスメデコルテなど翌朝ぷるんと吸い付く神パック10選。",
+        "footer_name": "スリーピングマスク"
+    },
+    {
+        "url": "/winter-nail-oil",
+        "file": "winter-nail-oil.html",
+        "title": "💅 保湿力の強さで肌乾燥とさようなら！指先のささくれ・パサつきを防ぎ美爪を育てる高保湿ネイルオイルランク10",
+        "desc": "爪割れ・二枚爪・痛いささくれを徹底リペア！uka、OPI、ロクシタン、アンドネイル、無印良品などケラチン浸透植物オイル10選。",
+        "footer_name": "ネイルオイル"
+    },
+    {
+        "url": "/winter-foot-cream",
+        "file": "winter-foot-cream.html",
+        "title": "👣 保湿力の強さで肌乾燥とさようなら！頑固なガサガサ・ひび割れをふっくら柔らかくする高保湿かかと＆フットクリームランク10",
+        "desc": "タイツの電線やパックリ割れと決別！ニュートロジーナ、ロコベース、ドクターショール、ユースキン、ヒビケアFTなど最強フットケア10選。",
+        "footer_name": "かかとフットケア"
+    },
+    {
         "url": "/winter-emulsion",
         "file": "winter-emulsion.html",
         "title": "🌸 保湿力の強さで肌乾燥とさようなら！うるおい密封と柔らかツヤ肌を叶える高保湿乳液＆エマルジョンランク10",
@@ -150,7 +171,7 @@ for target_article in ALL_ARTICLES:
     # 関連記事リスト構築（自分自身を除く）
     related_cards = []
     for a in ALL_ARTICLES:
-        if a["file"] == file_path:
+        if a["file"] == target_article["file"]:
             continue
         related_cards.append(f"""        <a href="{a['url']}" class="related-link-card">
           <div class="related-link-title">{a['title']}</div>
