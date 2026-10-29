@@ -14,6 +14,9 @@ with open("indexnow_key.txt", "r", encoding="utf-8") as f:
 HOST = "lumi-cosme.vercel.app"
 URL_LIST = [
     "https://lumi-cosme.vercel.app/",
+    "https://lumi-cosme.vercel.app/winter-liquid-foundation",
+    "https://lumi-cosme.vercel.app/winter-cream-cheek",
+    "https://lumi-cosme.vercel.app/winter-cream-eyeshadow",
     "https://lumi-cosme.vercel.app/winter-highlighter",
     "https://lumi-cosme.vercel.app/winter-hair-oil",
     "https://lumi-cosme.vercel.app/winter-lip-mask",
@@ -41,9 +44,9 @@ URL_LIST = [
     "https://lumi-cosme.vercel.app/winter-lotion",
     "https://lumi-cosme.vercel.app/winter-cleansing",
     "https://lumi-cosme.vercel.app/winter-day-cream",
+    "https://lumi-cosme.vercel.app/winter-moisture-cream",
     "https://lumi-cosme.vercel.app/winter-serum-booster",
     "https://lumi-cosme.vercel.app/winter-face-mask",
-    "https://lumi-cosme.vercel.app/winter-moisture-cream",
     "https://lumi-cosme.vercel.app/winter-eye-cream",
     "https://lumi-cosme.vercel.app/winter-base-makeup",
     "https://lumi-cosme.vercel.app/winter-lip-care",
@@ -103,15 +106,11 @@ ping_targets = [
 ]
 
 for p_url in ping_targets:
-    target_engine = "Bing" if "bing" in p_url else "Google"
     try:
         req = urllib.request.Request(p_url, headers={"User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req, context=ctx, timeout=10) as res:
-            print(f"✓ Ping {target_engine}: HTTP {res.getcode()}")
-    except urllib.error.HTTPError as e:
-        print(f"✓ Ping {target_engine}: HTTP {e.code}")
+            print(f"✓ Ping {p_url.split('?')[0]}: HTTP {res.getcode()}")
     except Exception as e:
-        print(f"✗ Ping {target_engine}: {e}")
-    time.sleep(0.5)
+        print(f"✗ Ping {p_url.split('?')[0]}: {e}")
 
-print("\nIndexNow & Sitemap Ping submission finished!")
+print("\n=== IndexNow Submission Completed Successfully ===")

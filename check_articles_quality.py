@@ -3,12 +3,9 @@ import json
 import re
 
 files_to_check = [
-    "winter-highlighter.html",
-    "winter-hair-oil.html",
-    "winter-lip-mask.html",
-    "winter-hair-milk.html",
-    "winter-cushion-foundation.html",
-    "winter-body-scrub.html"
+    "winter-liquid-foundation.html",
+    "winter-cream-cheek.html",
+    "winter-cream-eyeshadow.html"
 ]
 
 all_passed = True
@@ -26,7 +23,7 @@ for fname in files_to_check:
     with open(fname, "r", encoding="utf-8") as f:
         html = f.read()
     
-    # 1. ファイルサイズ & 本文文字数
+    # 1. ファイルサイズ & 本文文字数（HTMLタグ・CSS・JSを除外した純粋な日本語文字数）
     clean_text = re.sub(r'<script.*?</script>', '', html, flags=re.DOTALL)
     clean_text = re.sub(r'<style.*?</style>', '', clean_text, flags=re.DOTALL)
     clean_text = re.sub(r'<[^>]+>', '', clean_text)
@@ -39,21 +36,42 @@ for fname in files_to_check:
     else:
         print(f"✓ Text length requirement passed ({char_count:,} > 3,000 chars)")
         
-    # 2. JSON-LD 構造化データの検証
+    # 2. AI臭いテンプレ構文チェック
+    ai_cliches = [
+        "いかがでしたでしょうか",
+        "いかがでしたか？",
+        "いかがでしたでしょうか？",
+        "参考になれば幸いです",
+        "ぜひ試してみてくださいね！",
+        "AIとして",
+        "本記事では〜をご紹介しました。"
+    ]
+    found_cliches = []
+    for c in ai_cliches:
+        if c in html:
+            found_cliches.append(c)
+    if found_cliches:
+        print(f"❌ Found AI cliché phrases: {found_cliches}")
+        all_passed = False
+    else:
+        print("✓ No AI cliché / template phrases found!")
+        
+    # 3. JSON-LD 構造化データの検証
     json_ld_matches = re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, flags=re.DOTALL)
     if not json_ld_matches:
         print(f"❌ No JSON-LD structured data found!")
         all_passed = False
     else:
+        print(f"✓ Found {len(json_ld_matches)} JSON-LD blocks:")
         for idx, j_str in enumerate(json_ld_matches):
             try:
                 j_obj = json.loads(j_str.strip())
-                print(f"✓ JSON-LD #{idx+1} valid: type={j_obj.get('@type')}, headline={j_obj.get('headline', '')[:30]}...")
+                print(f"  - Block #{idx+1} valid: type={j_obj.get('@type')}, headline/name={j_obj.get('headline', j_obj.get('name', ''))[:35]}...")
             except Exception as e:
-                print(f"❌ JSON-LD #{idx+1} syntax error: {e}")
+                print(f"  ❌ Block #{idx+1} syntax error: {e}")
                 all_passed = False
                 
-    # 3. 楽天画像・アフィリエイトリンク・価格の検証
+    # 4. 楽天画像・アフィリエイトリンク・価格の検証
     img_matches = re.findall(r'<img[^>]*class="product-img"[^>]*>', html)
     print(f"Product cards with images: {len(img_matches)}/10")
     if len(img_matches) != 10:
@@ -78,7 +96,7 @@ for fname in files_to_check:
     else:
         print("✓ All product prices are valid (> ¥0)")
         
-    # 4. OGPタグの検証
+    # 5. OGPタグ & SEOメタの検証
     og_title = bool(re.search(r'<meta property="og:title"', html))
     og_desc = bool(re.search(r'<meta property="og:description"', html))
     og_img = bool(re.search(r'<meta property="og:image"', html))
@@ -88,7 +106,16 @@ for fname in files_to_check:
         print("❌ Missing critical SEO / OGP meta tags!")
         all_passed = False
 
+    # 6. 内部リンク網（関連記事カード数）の検証
+    related_matches = re.findall(r'class="related-link-card"', html)
+    print(f"Internal links count: {len(related_matches)}")
+    if len(related_matches) < 30:
+        print(f"❌ Insufficient internal links: {len(related_matches)}")
+        all_passed = False
+    else:
+        print(f"✓ Strong internal links mesh verified ({len(related_matches)} cross-links)")
+
 if all_passed:
-    print("\n🎉 ALL CHECKED ARTICLES PASSED ALL RIGOROUS CHECKS!")
+    print("\n🎉 ALL CHECKED ARTICLES PASSED ALL RIGOROUS QUALITY CHECKS!")
 else:
     print("\n⚠️ SOME CHECKS FAILED! Please inspect.")
