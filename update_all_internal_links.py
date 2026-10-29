@@ -3,6 +3,27 @@ import re
 
 ALL_ARTICLES = [
     {
+        "url": "/winter-stick-serum",
+        "file": "winter-stick-serum.html",
+        "title": "💄 保湿力の強さで肌乾燥とさようなら！日中いつでもメイクの上から乾燥小じわ・粉吹きをレスキューする高保湿スティック美容液ランク10",
+        "desc": "オフィス暖房のファンデ割れ・ちりめんジワをひと塗りで解決！イプサ、KAHI、ダルバ、アスタリフトなど高保湿バームスティック10選。",
+        "footer_name": "スティック美容液"
+    },
+    {
+        "url": "/winter-scalp-serum",
+        "file": "winter-scalp-serum.html",
+        "title": "💆 保湿力の強さで頭皮乾燥とさようなら！冬のフケ・かゆみ・つっぱりを防ぎうるおい頭皮を育てる高保湿スカルプローションランク10",
+        "desc": "冬のパラパラ乾性フケ・強い地肌かゆみに終止符！キュレル、ミルボン、ヴェレダ、無印良品など頭皮のセラミド保水ローション10選。",
+        "footer_name": "スカルプローション"
+    },
+    {
+        "url": "/winter-toneup-base",
+        "file": "winter-toneup-base.html",
+        "title": "🌸 保湿力の強さで肌乾燥とさようなら！冬の血色レス・乾燥くすみを払拭し夕方まで透き通る高保湿コントロールカラー＆トーンアップ下地ランク10",
+        "desc": "寒さによる青白さ・黄ぐすみ・ファンデの粉浮きを一掃！ポール＆ジョー、コスメデコルテ、ジルスチュアートなど美容液トーンアップ下地10選。",
+        "footer_name": "トーンアップ下地"
+    },
+    {
         "url": "/winter-sleeping-mask",
         "file": "winter-sleeping-mask.html",
         "title": "🌙 保湿力の強さで肌乾燥とさようなら！寝ている間に集中密着ケアする高保湿スリーピングマスク＆ナイトパックランク10",
@@ -160,44 +181,48 @@ ALL_ARTICLES = [
 
 footer_links_html = '<div class="footer-links">\n      <a href="/">トップページ</a>\n' + "\n".join([f'      <a href="{a["url"]}">{a["footer_name"]}</a>' for a in ALL_ARTICLES]) + '\n    </div>'
 
-for target_article in ALL_ARTICLES:
-    file_path = target_article["file"]
-    if not os.path.exists(file_path):
-        continue
-    
-    with open(file_path, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    # 関連記事リスト構築（自分自身を除く）
-    related_cards = []
-    for a in ALL_ARTICLES:
-        if a["file"] == target_article["file"]:
+def update_links():
+    for target_article in ALL_ARTICLES:
+        file_path = target_article["file"]
+        if not os.path.exists(file_path):
             continue
-        related_cards.append(f"""        <a href="{a['url']}" class="related-link-card">
-          <div class="related-link-title">{a['title']}</div>
-          <div class="related-link-desc">{a['desc']}</div>
-        </a>""")
+        
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = f.read()
 
-    new_related_section = f"""<section id="related" class="related-section">
-      <div class="related-section-title">
-        <span>📑</span> あわせて読みたい！冬の徹底保湿ケア特集一覧
-      </div>
-      <div class="related-list">
-{chr(10).join(related_cards)}
-      </div>
-    </section>"""
+        # 関連記事リスト構築（自分自身を除く）
+        related_cards = []
+        for a in ALL_ARTICLES:
+            if a["file"] == target_article["file"]:
+                continue
+            related_cards.append(f"""        <a href="{a['url']}" class="related-link-card">
+              <div class="related-link-title">{a['title']}</div>
+              <div class="related-link-desc">{a['desc']}</div>
+            </a>""")
 
-    # 既存の関連記事セクションの置換
-    if '<section id="related"' in content:
-        content = re.sub(r'<section id="related".*?</section>', new_related_section, content, flags=re.DOTALL)
-    
-    # フッターリンクの置換
-    if '<div class="footer-links">' in content:
-        content = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, content, flags=re.DOTALL)
+        new_related_section = f"""<section id="related" class="related-section">
+          <div class="related-section-title">
+            <span>📑</span> あわせて読みたい！冬の徹底保湿ケア特集一覧
+          </div>
+          <div class="related-list">
+    {chr(10).join(related_cards)}
+          </div>
+        </section>"""
 
-    with open(file_path, "w", encoding="utf-8") as f:
-        f.write(content)
+        # 既存の関連記事セクションの置換
+        if '<section id="related"' in content:
+            content = re.sub(r'<section id="related".*?</section>', new_related_section, content, flags=re.DOTALL)
+        
+        # フッターリンクの置換
+        if '<div class="footer-links">' in content:
+            content = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, content, flags=re.DOTALL)
 
-    print(f"Updated internal links and footer in: {file_path}")
+        with open(file_path, "w", encoding="utf-8") as f:
+            f.write(content)
 
-print("\nAll articles internal links updated successfully!")
+        print(f"Updated internal links and footer in: {file_path}")
+
+    print("\nAll articles internal links updated successfully!")
+
+if __name__ == "__main__":
+    update_links()
