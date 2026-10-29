@@ -6,41 +6,41 @@ with open("index.html", "r", encoding="utf-8") as f:
 
 # メタ情報の更新
 html = html.replace(
-    "全24大特集",
-    "全27大特集"
+    "全27大特集",
+    "全30大特集"
 )
 html = html.replace(
-    '<meta name="description" content="真冬（11月・12月）の深刻な乾燥・暖房ダメージを乗り切る高保湿スティック美容液・スカルプローション・トーンアップ下地・スリーピングマスク・ネイルオイル・フットクリーム・乳液・フェイスオイル・リペアバーム・入浴剤・洗顔料・ミスト化粧水・化粧水・クレンジング・デイクリーム・高保湿クリーム・導入美容液・シートマスク・アイクリーム・ファンデーション・リップ・ボディケア・ヘアケア・ハンドクリームを徹底解説するビューティー厳選メディア。">',
-    '<meta name="description" content="真冬（11月・12月）の深刻な乾燥・暖房ダメージを乗り切る高保湿フェイスパウダー・リッププランパー・集中ヘアマスク・スティック美容液・スカルプローション・トーンアップ下地・スリーピングマスク・ネイルオイル・フットクリーム・乳液・フェイスオイル・リペアバーム・入浴剤・洗顔料・ミスト化粧水・化粧水・クレンジング・デイクリーム・高保湿クリーム・導入美容液・シートマスク・アイクリーム・ファンデーション・リップ・ボディケア・ヘアケア・ハンドクリームを徹底解説するビューティー厳選メディア。">'
+    '<meta name="description" content="真冬（11月・12月）の深刻な乾燥・暖房ダメージを乗り切る高保湿フェイスパウダー・リッププランパー・集中ヘアマスク・スティック美容液・スカルプローション・トーンアップ下地・スリーピングマスク・ネイルオイル・フットクリーム・乳液・フェイスオイル・リペアバーム・入浴剤・洗顔料・ミスト化粧水・化粧水・クレンジング・デイクリーム・高保湿クリーム・導入美容液・シートマスク・アイクリーム・ファンデーション・リップ・ボディケア・ヘアケア・ハンドクリームを徹底解説するビューティー厳選メディア。">',
+    '<meta name="description" content="真冬（11月・12月）の深刻な乾燥・暖房ダメージを乗り切る高保湿美容液・高保湿コンシーラー・高保湿リップティント・フェイスパウダー・リッププランパー・集中ヘアマスク・スティック美容液・スカルプローション・トーンアップ下地・スリーピングマスク・ネイルオイル・フットクリーム・乳液・フェイスオイル・リペアバーム・入浴剤・洗顔料・ミスト化粧水・化粧水・クレンジング・デイクリーム・高保湿クリーム・導入美容液・シートマスク・アイクリーム・ファンデーション・リップ・ボディケア・ヘアケア・ハンドクリームを徹底解説するビューティー厳選メディア。">'
 )
 html = html.replace(
-    '<meta property="og:description" content="11月・12月の本格乾燥シーズン到来！スティック美容液、スカルプローション、トーンアップ下地など全24大特集公開中。">',
-    '<meta property="og:description" content="11月・12月の本格乾燥シーズン到来！高保湿フェイスパウダー、リッププランパー、集中補修ヘアマスクなど全27大特集公開中。">'
+    '<meta property="og:description" content="11月・12月の本格乾燥シーズン到来！高保湿乳液、フェイスオイル、リペアバームなど全27大特集公開中。">',
+    '<meta property="og:description" content="11月・12月の本格乾燥シーズン到来！高保湿美容液、高保湿コンシーラー、高保湿リップティントなど全30大特集公開中。">'
 )
 html = html.replace(
-    '<meta name="twitter:description" content="11月・12月の本格乾燥シーズン到来！スティック美容液、スカルプローション、トーンアップ下地など全24大特集公開中。">',
-    '<meta name="twitter:description" content="11月・12月の本格乾燥シーズン到来！高保湿フェイスパウダー、リッププランパー、集中補修ヘアマスクなど全27大特集公開中。">'
+    '<meta name="twitter:description" content="11月・12月の本格乾燥シーズン到来！高保湿乳液、フェイスオイル、リペアバームなど全27大特集公開中。">',
+    '<meta name="twitter:description" content="11月・12月の本格乾燥シーズン到来！高保湿美容液、高保湿コンシーラー、高保湿リップティントなど全30大特集公開中。">'
 )
 
-new_cards = """      <!-- 高保湿フェイスパウダー -->
-      <a href="/winter-powder" class="hub-card">
-        <span class="hub-card-tag" style="background: #eff6ff; color: #2563eb;">✨ 冬の粉吹き・乾燥小じわ防止 NEW</span>
-        <h2 class="hub-card-title">✨ 保湿力の強さで肌乾燥とさようなら！冬の粉吹き・乾燥小じわを防ぎ一日中うるおいツヤ肌が続く高保湿フェイスパウダーランク10</h2>
-        <p class="hub-card-desc">暖房直撃でも夕方まで粉吹き・地割れシワ知らず！コスメデコルテ、NARSリフ粉、エクセル、ミラコレなど美容液パウダー10選。</p>
+new_cards = """      <!-- 高保湿美容液＆高濃度アンプル -->
+      <a href="/winter-hydrating-serum" class="hub-card">
+        <span class="hub-card-tag" style="background: #eff6ff; color: #2563eb;">💧 冬の砂漠肌・バリア救済 NEW</span>
+        <h2 class="hub-card-title">💧 保湿力の強さで肌乾燥・砂漠化とさようなら！冬のバリア崩壊を集中救済する高保湿美容液＆高濃度アンプルランク10</h2>
+        <p class="hub-card-desc">暖房直撃でカラカラの角層を集中救済！コスメデコルテリポソーム、トリデン、キュレル、エトヴォスなどセラミド＆ヒアルロン酸セラム10選。</p>
       </a>
 
-      <!-- 高保湿リッププランパー＆濃密リップオイル -->
-      <a href="/winter-lip-plumper" class="hub-card">
-        <span class="hub-card-tag" style="background: #fff1f2; color: #e11d48;">💄 冬の縦ジワ・皮剥け即効リペア NEW</span>
-        <h2 class="hub-card-title">💄 保湿力の強さで唇乾燥とさようなら！冬のガサガサ・縦ジワ・皮剥けを濃密オイルと温感ボリュームで満たす高保湿リッププランパーランク10</h2>
-        <p class="hub-card-desc">真冬の過酷な唇トラブルを即効解消！ディオールマキシマイザー、クラランス、ヴィセなど温感刺激＆濃密オイルプランパー10選。</p>
+      <!-- 高保湿コンシーラー＆美容液リキッドコンシーラー -->
+      <a href="/winter-concealer" class="hub-card">
+        <span class="hub-card-tag" style="background: #fdf2f8; color: #db2777;">👁️ 目元の乾燥小じわ・ひび割れ防止 NEW</span>
+        <h2 class="hub-card-title">👁️ 保湿力の強さで目元・口元の乾燥ひび割れとさようなら！冬の青クマ・くすみを潤いヴェールで消し去る高保湿コンシーラーランク10</h2>
+        <p class="hub-card-desc">夕方の目元のちりめんジワ・地割れ割れに終止符！ディオールスキン、コスメデコルテ、NARS、アンドビーなど美容液コンシーラー10選。</p>
       </a>
 
-      <!-- 濃密高保湿ヘアマスク＆インバストリートメント -->
-      <a href="/winter-hair-mask" class="hub-card">
-        <span class="hub-card-tag" style="background: #f0fdf4; color: #16a34a;">💆‍♀️ 静電気・毛先パサつき集中補修 NEW</span>
-        <h2 class="hub-card-title">💆‍♀️ 保湿力の強さで髪の乾燥・静電気とさようなら！真冬の毛先パサつき・広がりを芯から集中補修する濃密高保湿ヘアマスクランク10</h2>
-        <p class="hub-card-desc">マフラー摩擦や暖房の静電気・毛先パサつきを芯からリペア！フィーノ、オージュア、ケラスターゼ、TSUBAKIなどサロン級マスク10選。</p>
+      <!-- 高保湿リップティント＆とろける美容液ルージュ -->
+      <a href="/winter-lip-tint" class="hub-card">
+        <span class="hub-card-tag" style="background: #fff1f2; color: #e11d48;">💄 冬の皮剥け防止＆落ちない血色 NEW</span>
+        <h2 class="hub-card-title">💄 保湿力の強さで唇の乾燥・皮剥け・血色レスとさようなら！真冬のイベントも一日中うるおい発色が続く高保湿リップティント＆美容液ルージュランク10</h2>
+        <p class="hub-card-desc">皮剥け知らずで一日中落ちない！KATEリップモンスター、ロムアンドメルティングバーム、オペラ、ディオールなど高保湿ルージュ10選。</p>
       </a>
 """
 
@@ -54,4 +54,4 @@ if '<div class="footer-links">' in html:
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html)
 
-print("Updated index.html successfully!")
+print("Updated index.html successfully with 3 new articles!")
