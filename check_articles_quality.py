@@ -3,6 +3,9 @@ import json
 import re
 
 files_to_check = [
+    "winter-highlighter.html",
+    "winter-hair-oil.html",
+    "winter-lip-mask.html",
     "winter-hair-milk.html",
     "winter-cushion-foundation.html",
     "winter-body-scrub.html"
@@ -24,7 +27,6 @@ for fname in files_to_check:
         html = f.read()
     
     # 1. ファイルサイズ & 本文文字数
-    # HTMLタグを除去して純粋な日本語テキスト文字数を算出
     clean_text = re.sub(r'<script.*?</script>', '', html, flags=re.DOTALL)
     clean_text = re.sub(r'<style.*?</style>', '', clean_text, flags=re.DOTALL)
     clean_text = re.sub(r'<[^>]+>', '', clean_text)
@@ -46,17 +48,17 @@ for fname in files_to_check:
         for idx, j_str in enumerate(json_ld_matches):
             try:
                 j_obj = json.loads(j_str.strip())
-                print(f"✓ JSON-LD #{idx+1} valid: type={j_obj.get('@type')}, headline={j_obj.get('headline')[:30]}...")
+                print(f"✓ JSON-LD #{idx+1} valid: type={j_obj.get('@type')}, headline={j_obj.get('headline', '')[:30]}...")
             except Exception as e:
                 print(f"❌ JSON-LD #{idx+1} syntax error: {e}")
                 all_passed = False
                 
     # 3. 楽天画像・アフィリエイトリンク・価格の検証
-    img_matches = re.findall(r'class="product-img"[^>]*src="([^"]*)"', html)
-    if len(img_matches) != 10:
-        # 属性順序違いを考慮
-        img_matches = re.findall(r'<img[^>]*class="product-img"[^>]*>', html)
+    img_matches = re.findall(r'<img[^>]*class="product-img"[^>]*>', html)
     print(f"Product cards with images: {len(img_matches)}/10")
+    if len(img_matches) != 10:
+        print("❌ Not all 10 products have product-img class!")
+        all_passed = False
     
     aff_matches = re.findall(r'href="([^"]*)"[^>]*class="rakuten-btn"', html)
     print(f"Product cards with affiliate buttons: {len(aff_matches)}/10")
@@ -87,6 +89,6 @@ for fname in files_to_check:
         all_passed = False
 
 if all_passed:
-    print("\n🎉 ALL 3 ARTICLES PASSED ALL RIGOROUS CHECKS!")
+    print("\n🎉 ALL CHECKED ARTICLES PASSED ALL RIGOROUS CHECKS!")
 else:
     print("\n⚠️ SOME CHECKS FAILED! Please inspect.")

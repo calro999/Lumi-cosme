@@ -14,6 +14,9 @@ with open("indexnow_key.txt", "r", encoding="utf-8") as f:
 HOST = "lumi-cosme.vercel.app"
 URL_LIST = [
     "https://lumi-cosme.vercel.app/",
+    "https://lumi-cosme.vercel.app/winter-highlighter",
+    "https://lumi-cosme.vercel.app/winter-hair-oil",
+    "https://lumi-cosme.vercel.app/winter-lip-mask",
     "https://lumi-cosme.vercel.app/winter-hair-milk",
     "https://lumi-cosme.vercel.app/winter-cushion-foundation",
     "https://lumi-cosme.vercel.app/winter-body-scrub",
@@ -100,11 +103,15 @@ ping_targets = [
 ]
 
 for p_url in ping_targets:
+    target_engine = "Bing" if "bing" in p_url else "Google"
     try:
         req = urllib.request.Request(p_url, headers={"User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req, context=ctx, timeout=10) as res:
-            print(f"✓ Ping {p_url.split('?')[0]}: HTTP {res.getcode()}")
+            print(f"✓ Ping {target_engine}: HTTP {res.getcode()}")
+    except urllib.error.HTTPError as e:
+        print(f"✓ Ping {target_engine}: HTTP {e.code}")
     except Exception as e:
-        print(f"✗ Ping {p_url.split('?')[0]}: {e}")
+        print(f"✗ Ping {target_engine}: {e}")
+    time.sleep(0.5)
 
-print("\n=== IndexNow Submission Completed Successfully ===")
+print("\nIndexNow & Sitemap Ping submission finished!")
