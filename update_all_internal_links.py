@@ -3,6 +3,27 @@ import re
 
 ALL_ARTICLES = [
     {
+        "url": "/winter-holiday-coffret",
+        "file": "winter-holiday-coffret.html",
+        "title": "🎁 贅沢なうるおいと輝きで真冬の乾燥肌・メイクを特別格上げ！11月12月限定ホリデーコレクション＆高保湿クリスマスコフレランク10",
+        "desc": "11月・12月限定の争奪戦コフレを厳選！コスメデコルテ、ディオール、ルナソル、SABON、キールズ、SK-IIなど、冬の乾燥肌を高保湿ケアしながら特別な輝きを添える名品10選。",
+        "footer_name": "クリスマスコフレ"
+    },
+    {
+        "url": "/winter-enzyme-wash",
+        "file": "winter-enzyme-wash.html",
+        "title": "🫧 保湿力の強さで冬の角質ゴワつき・くすみ毛穴とさようなら！つっぱらず透明感を呼び覚ます高保湿酵素洗顔パウダーランク10",
+        "desc": "冬の寒さと乾燥で硬くなった角質ゴワつき・くすみ毛穴を救う！オバジC、suisaiゴールド、ファンケル、カネボウ、estなど、つっぱらず透明感を呼び覚ます高保湿酵素洗顔10選。",
+        "footer_name": "酵素洗顔パウダー"
+    },
+    {
+        "url": "/winter-tinted-lip-balm",
+        "file": "winter-tinted-lip-balm.html",
+        "title": "💄 保湿力の強さで冬のカサカサ唇＆血色レスとさようなら！ひと塗りでぷるんと潤う高保湿カラーリップバームランク10",
+        "desc": "冬の寒風・エアコン乾燥による唇の皮剥け・縦ジワ・血色不良を救う！ディオール、シャネル、KANEBO、NARS、ボビイ ブラウンなど、高保湿と透け感美発色を両立した神カラーリップバーム10選。",
+        "footer_name": "カラーリップバーム"
+    },
+    {
         "url": "/winter-eyelash-serum",
         "file": "winter-eyelash-serum.html",
         "title": "👁️ 保湿力の強さで冬のまつ毛抜け・パサつき乾燥とさようなら！ハリ・コシ・密度感を呼び覚ます高保湿まつ毛美容液・アイラッシュセラムランク10",

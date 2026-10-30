@@ -3,9 +3,9 @@ import json
 import re
 
 files_to_check = [
-    "winter-eyelash-serum.html",
-    "winter-point-makeup-remover.html",
-    "winter-massage-cream.html"
+    "winter-holiday-coffret.html",
+    "winter-enzyme-wash.html",
+    "winter-tinted-lip-balm.html"
 ]
 
 all_passed = True
