@@ -9,29 +9,29 @@ if '<div class="footer-links">' in html:
     html = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, html, flags=re.DOTALL)
 
 # 新3記事のカード定義
-new_cards = """      <!-- 高保湿メイクキープミスト -->
-      <a href="/winter-make-keep-mist" class="hub-card">
-        <span class="hub-card-tag" style="background: #e0f2fe; color: #0369a1;">✨ 暖房崩れ・粉吹き・マフラー摩擦防止 NEW</span>
-        <h2 class="hub-card-title">✨ 保湿力の強さで肌乾燥・粉吹きとさようなら！暖房直撃でもうるツヤ肌を一日中ロックする高保湿メイクキープミストランク10</h2>
-        <p class="hub-card-desc">冬の暖房乾燥による粉吹き・ひび割れ・マフラー摩擦を完全防御！コーセー、コスメデコルテ、ディオール、クラランス、ダルバなど高保湿ミスト10選。</p>
+new_cards = """      <!-- 高保湿日焼け止め・UV美容液 -->
+      <a href="/winter-uv-cream" class="hub-card">
+        <span class="hub-card-tag" style="background: #fef08a; color: #854d0e;">☀️ 冬の紫外線防御・夕方までツッパリ知らず NEW</span>
+        <h2 class="hub-card-title">☀️ 保湿力の強さで冬の紫外線＆乾燥ツッパリとさようなら！まるで美容クリームな極上高保湿日焼け止め・UV美容液ランク10</h2>
+        <p class="hub-card-desc">冬の乾燥と冷風に負けない！カネボウ ヴェイル オブ デイ、コスメデコルテ サンシェルター、オルビス、クレ・ド・ポー ボーテ、POLAなど高保湿UV10選。</p>
       </a>
 
-      <!-- 高保湿リップオイル -->
-      <a href="/winter-lip-oil" class="hub-card">
-        <span class="hub-card-tag" style="background: #fce7f3; color: #be185d;">💄 唇の皮剥け・縦ジワ消滅・ガラス玉ツヤ NEW</span>
-        <h2 class="hub-card-title">💄 保湿力の強さで唇のガサガサ皮剥けとさようなら！濃密植物オイルでガラス玉のようなぷるツヤ唇を叶える高保湿リップオイルランク10</h2>
-        <p class="hub-card-desc">冬の皮剥け・縦ジワを濃密植物オイルで集中トリートメント！クラランス、ディオール、ジバンシイ、シャネル、エクセルなど極上リップオイル10選。</p>
+      <!-- 高保湿シワ改善リンクルクリーム -->
+      <a href="/winter-wrinkle-cream" class="hub-card">
+        <span class="hub-card-tag" style="background: #ede9fe; color: #5b21b6;">👁️ 乾燥小ジワ・ほうれい線撃退・真皮ハリ NEW</span>
+        <h2 class="hub-card-title">👁️ 保湿力の強さで冬の乾燥小ジワ・ほうれい線とさようなら！角層深く密着する高保湿シワ改善リンクルクリームランク10</h2>
+        <p class="hub-card-desc">冬の乾燥小ジワ・ほうれい線・ちりめんジワを撃退！エリクシール レチノパワー、POLA リンクルショット、コスデコ iP.Shot、KANEBOなど薬用リンクル10選。</p>
       </a>
 
-      <!-- 高保湿ボディオイル -->
-      <a href="/winter-body-oil" class="hub-card">
-        <span class="hub-card-tag" style="background: #fef3c7; color: #b45309;">🛁 すねの粉吹き・乾燥かゆみ・冷えむくみ解消 NEW</span>
-        <h2 class="hub-card-title">🛁 保湿力の強さで全身の乾燥かゆみ・粉吹きとさようなら！お風呂上がりの肌をとろけるシルクへ導く高保湿ボディオイルランク10</h2>
-        <p class="hub-card-desc">すねの粉吹き・乾燥かゆみ・冷えむくみを完全解消！ヴェレダ、クラランス、ニュクス、バイオイル、メルヴィータなど高保湿ボディオイル10選。</p>
+      <!-- 高保湿ボディウォッシュ -->
+      <a href="/winter-body-wash" class="hub-card">
+        <span class="hub-card-tag" style="background: #e0f2fe; color: #0369a1;">🛁 お風呂上がりのかゆみ・すねの粉吹き防止 NEW</span>
+        <h2 class="hub-card-title">🛁 保湿力の強さで冬のお風呂上がり乾燥・かゆみとさようなら！うるおいを守ってしっとり洗い上げる高保湿ボディウォッシュランク10</h2>
+        <p class="hub-card-desc">脱衣所でのかゆみ・すねの粉吹きを元から防ぐ！ケアセラ、ミノン、キュレル、SABON、ロクシタンなどセラミド保持泡ソープ＆シャワーオイル10選。</p>
       </a>\n"""
 
 # まだ追加されていなければ hub-grid の直後に挿入
-if '/winter-make-keep-mist' not in html:
+if '/winter-uv-cream' not in html:
     html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + new_cards)
 
 with open("index.html", "w", encoding="utf-8") as f:

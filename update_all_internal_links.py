@@ -3,6 +3,27 @@ import re
 
 ALL_ARTICLES = [
     {
+        "url": "/winter-uv-cream",
+        "file": "winter-uv-cream.html",
+        "title": "☀️ 保湿力の強さで冬の紫外線＆乾燥ツッパリとさようなら！まるで美容クリームな極上高保湿日焼け止め・UV美容液ランク10",
+        "desc": "冬の乾燥と冷風に負けない！カネボウ ヴェイル オブ デイ、コスメデコルテ サンシェルター、オルビス、クレ・ド・ポー ボーテ、POLAなど高保湿UV10選。",
+        "footer_name": "高保湿日焼け止め"
+    },
+    {
+        "url": "/winter-wrinkle-cream",
+        "file": "winter-wrinkle-cream.html",
+        "title": "👁️ 保湿力の強さで冬の乾燥小ジワ・ほうれい線とさようなら！角層深く密着する高保湿シワ改善リンクルクリームランク10",
+        "desc": "冬の乾燥小ジワ・ほうれい線・ちりめんジワを撃退！エリクシール レチノパワー、POLA リンクルショット、コスデコ iP.Shot、KANEBOなど薬用リンクル10選。",
+        "footer_name": "シワ改善クリーム"
+    },
+    {
+        "url": "/winter-body-wash",
+        "file": "winter-body-wash.html",
+        "title": "🛁 保湿力の強さで冬のお風呂上がり乾燥・かゆみとさようなら！うるおいを守ってしっとり洗い上げる高保湿ボディウォッシュランク10",
+        "desc": "脱衣所でのかゆみ・すねの粉吹きを元から防ぐ！ケアセラ、ミノン、キュレル、SABON、ロクシタンなどセラミド保持泡ソープ＆シャワーオイル10選。",
+        "footer_name": "高保湿ボディウォッシュ"
+    },
+    {
         "url": "/winter-make-keep-mist",
         "file": "winter-make-keep-mist.html",
         "title": "✨ 保湿力の強さで肌乾燥・粉吹きとさようなら！暖房直撃でもうるツヤ肌を一日中ロックする高保湿メイクキープミストランク10",
