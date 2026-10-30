@@ -9,29 +9,29 @@ if '<div class="footer-links">' in html:
     html = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, html, flags=re.DOTALL)
 
 # 新3記事のカード定義
-new_cards = """      <!-- 高保湿ハンド美容液・ハンドセラム -->
-      <a href="/winter-hand-serum" class="hub-card">
-        <span class="hub-card-tag" style="background: #ecfdf5; color: #047857;">🤲 スマホ操作サラリ・老け手＆乾燥シワ撃退・高浸透 NEW</span>
-        <h2 class="hub-card-title">🤲 保湿力の強さで手荒れ・老け手・乾燥シワとさようなら！スマホ操作もサラリと快適＆手肌のキメをふっくら満たす高保湿ハンド美容液・ハンドセラムランク10</h2>
-        <p class="hub-card-desc">冬の寒風・手洗い・消毒による手荒れや乾燥小ジワを救う！SHIRO、アルビオンエクシア、アユーラ、オサジ、コスメデコルテなど、ベタつかずスマホも快適操作できる神高保湿ハンド美容液厳選10選。</p>
+new_cards = """      <!-- 高保湿まつ毛美容液・アイラッシュセラム -->
+      <a href="/winter-eyelash-serum" class="hub-card">
+        <span class="hub-card-tag" style="background: #fdf2f8; color: #be185d;">👁️ まつ毛抜け＆乾燥切断ストップ・ナノペプチド高保湿 NEW</span>
+        <h2 class="hub-card-title">👁️ 保湿力の強さで冬のまつ毛抜け・パサつき乾燥とさようなら！ハリ・コシ・密度感を呼び覚ます高保湿まつ毛美容液・アイラッシュセラムランク10</h2>
+        <p class="hub-card-desc">冬の暖房乾燥・冷風・マスカラ摩擦で細く傷んだまつ毛を救う！ラッシュアディクト、エマーキット、ディオール、ランコム、コスメデコルテなど、キューティクルを高保湿補修して圧倒的なハリ・コシ・密度感を呼び覚ます神まつ毛美容液厳選10選。</p>
       </a>
 
-      <!-- 極上高保湿バスオイル -->
-      <a href="/winter-bath-oil" class="hub-card">
-        <span class="hub-card-tag" style="background: #e0f2fe; color: #0369a1;">🛁 湯上がり乾燥ゼロ・お風呂で全身シルク膜・極上温活 NEW</span>
-        <h2 class="hub-card-title">🛁 保湿力の強さで冬の湯上がり乾燥・粉吹きとさようなら！お風呂に浸かるだけで全身シルク肌へ導く極上高保湿バスオイルランク10</h2>
-        <p class="hub-card-desc">真冬の脱衣所での急激な乾燥・粉吹き・かゆみを救う！ジョーマローン、アユーラ、アロマセラピーアソシエイツ、ポールシェリー、ヴェレダなど、お風呂上がりボディクリーム不要の極上高保湿バスオイル厳選10選。</p>
+      <!-- 高保湿ポイントメイクリムーバー -->
+      <a href="/winter-point-makeup-remover" class="hub-card">
+        <span class="hub-card-tag" style="background: #eff6ff; color: #1d4ed8;">✨ こすらずスルン・目元口元の摩擦乾燥小ジワ防止 NEW</span>
+        <h2 class="hub-card-title">✨ 保湿力の強さで目元・口元の摩擦ダメージ＆乾燥小ジワとさようなら！デリケートな皮膚をうるおいで守り抜く高保湿ポイントメイクリムーバーランク10</h2>
+        <p class="hub-card-desc">冬の乾燥小ジワ・色素沈着・唇の皮剥けの主因となるクレンジング摩擦を撃退！RMK、シャネル、クレ・ド・ポー ボーテ、ビフェスタ、ランコムなど、濃密アイメイクやティントをこすらずスルンと落として高保湿キープする神ポイントメイクリムーバー厳選10選。</p>
       </a>
 
-      <!-- 超濃密高保湿ボディバター -->
-      <a href="/winter-body-butter" class="hub-card">
-        <span class="hub-card-tag" style="background: #fef3c7; color: #b45309;">🧴 粉吹きすね救済・シアバター濃厚密着・96時間保湿 NEW</span>
-        <h2 class="hub-card-title">🧴 保湿力の強さで冬の粉吹き肌・乾燥かゆみとさようなら！こっくり濃厚ヴェールで全身を包み込む神高保湿ボディバターランク10</h2>
-        <p class="hub-card-desc">真冬のすねの粉吹き・乾燥かゆみ・ひじひざのガサガサを救う！ザボディショップ、ローラメルシエ、キールズ、ロクシタン、サボンなど、こっくり濃厚エモリエント膜で一晩中うるおいを守り抜く神高保湿ボディバター厳選10選。</p>
+      <!-- 高保湿フェイスマッサージクリーム -->
+      <a href="/winter-massage-cream" class="hub-card">
+        <span class="hub-card-tag" style="background: #faf5ff; color: #7e22ce;">💆‍♀️ 冬の冷えむくみ＆コリ解消・血行促進上向きハリ肌 NEW</span>
+        <h2 class="hub-card-title">💆‍♀️ 保湿力の強さで冬の冷えむくみ・乾燥くすみ・フェイスラインたるみとさようなら！巡りを高めてふっくら上向き肌へ導く高保湿フェイスマッサージクリームランク10</h2>
+        <p class="hub-card-desc">冬の寒波による血行不良・冷え固まった筋肉のコリ・重たいむくみ・乾燥くすみを撃退！POLA B.A、SUQQU、資生堂エリクシール、コスメデコルテAQ、アルビオンエクシアなど、摩擦ゼロで巡りを高め上向き立体ハリ肌へ導く神マッサージクリーム厳選10選。</p>
       </a>\n"""
 
 # まだ追加されていなければ hub-grid の直後に挿入
-if '/winter-hand-serum' not in html:
+if '/winter-eyelash-serum' not in html:
     html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + new_cards)
 
 with open("index.html", "w", encoding="utf-8") as f:
