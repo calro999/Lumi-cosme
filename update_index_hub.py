@@ -9,32 +9,32 @@ if '<div class="footer-links">' in html:
     html = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, html, flags=re.DOTALL)
 
 # 新3記事のカード定義
-new_cards = """      <!-- 高保湿日焼け止め・UV美容液 -->
-      <a href="/winter-uv-cream" class="hub-card">
-        <span class="hub-card-tag" style="background: #fef08a; color: #854d0e;">☀️ 冬の紫外線防御・夕方までツッパリ知らず NEW</span>
-        <h2 class="hub-card-title">☀️ 保湿力の強さで冬の紫外線＆乾燥ツッパリとさようなら！まるで美容クリームな極上高保湿日焼け止め・UV美容液ランク10</h2>
-        <p class="hub-card-desc">冬の乾燥と冷風に負けない！カネボウ ヴェイル オブ デイ、コスメデコルテ サンシェルター、オルビス、クレ・ド・ポー ボーテ、POLAなど高保湿UV10選。</p>
+new_cards = """      <!-- 高保湿リップスクラブ -->
+      <a href="/winter-lip-scrub" class="hub-card">
+        <span class="hub-card-tag" style="background: #fce7f3; color: #9d174d;">💄 唇の皮剥け・縦ジワ撃退・ぷるツヤ唇 NEW</span>
+        <h2 class="hub-card-title">💄 保湿力の強さで唇のガサガサ皮剥け・縦ジワとさようなら！古い角質を優しくオフしてぷるんと潤う高保湿リップスクラブランク10</h2>
+        <p class="hub-card-desc">冬の北風と暖房乾燥でガサガサに皮剥けした唇を救う！レブロン、キャンメイク、ディオール、LUSH、ハウスオブローゼなど高保湿リップスクラブ厳選10選。</p>
       </a>
 
-      <!-- 高保湿シワ改善リンクルクリーム -->
-      <a href="/winter-wrinkle-cream" class="hub-card">
-        <span class="hub-card-tag" style="background: #ede9fe; color: #5b21b6;">👁️ 乾燥小ジワ・ほうれい線撃退・真皮ハリ NEW</span>
-        <h2 class="hub-card-title">👁️ 保湿力の強さで冬の乾燥小ジワ・ほうれい線とさようなら！角層深く密着する高保湿シワ改善リンクルクリームランク10</h2>
-        <p class="hub-card-desc">冬の乾燥小ジワ・ほうれい線・ちりめんジワを撃退！エリクシール レチノパワー、POLA リンクルショット、コスデコ iP.Shot、KANEBOなど薬用リンクル10選。</p>
+      <!-- 高保湿BB・CCクリーム -->
+      <a href="/winter-bb-cream" class="hub-card">
+        <span class="hub-card-tag" style="background: #fef3c7; color: #92400e;">✨ 朝の粉ふき・乾燥崩れ防止・うるツヤ美肌 NEW</span>
+        <h2 class="hub-card-title">✨ 保湿力の強さで冬の粉ふき・乾燥崩れとさようなら！1本で一日中うるツヤ肌が続く高保湿BB・CCクリームランク10</h2>
+        <p class="hub-card-desc">冬の朝の冷え込みと乾燥によるファンデの粉吹き・ひび割れを撃退！コスメデコルテ、dプログラム、マキアージュ、ラロッシュポゼなど高保湿BB・CCクリーム厳選10選。</p>
       </a>
 
-      <!-- 高保湿ボディウォッシュ -->
-      <a href="/winter-body-wash" class="hub-card">
-        <span class="hub-card-tag" style="background: #e0f2fe; color: #0369a1;">🛁 お風呂上がりのかゆみ・すねの粉吹き防止 NEW</span>
-        <h2 class="hub-card-title">🛁 保湿力の強さで冬のお風呂上がり乾燥・かゆみとさようなら！うるおいを守ってしっとり洗い上げる高保湿ボディウォッシュランク10</h2>
-        <p class="hub-card-desc">脱衣所でのかゆみ・すねの粉吹きを元から防ぐ！ケアセラ、ミノン、キュレル、SABON、ロクシタンなどセラミド保持泡ソープ＆シャワーオイル10選。</p>
+      <!-- 高保湿炭酸パック -->
+      <a href="/winter-carbonic-pack" class="hub-card">
+        <span class="hub-card-tag" style="background: #ccfbf1; color: #115e59;">🫧 冬の冷えくすみ・血行不良撃退・サロン級発光 NEW</span>
+        <h2 class="hub-card-title">🫧 保湿＆血行促進で冬の冷えくすみ・ゴワつきとさようなら！サロン級の透明感と弾力を呼び覚ます高保湿炭酸パック・炭酸マスクランク10</h2>
+        <p class="hub-card-desc">冬の寒波による血行不良・くすみ・ゴワつく角質を撃退！エニシーグローパック、EKATO、ドクターメディオンなど高保湿炭酸パック厳選10選。</p>
       </a>\n"""
 
 # まだ追加されていなければ hub-grid の直後に挿入
-if '/winter-uv-cream' not in html:
+if '/winter-lip-scrub' not in html:
     html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + new_cards)
 
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html)
 
-print("Successfully updated index.html with new article cards and footer links!")
+print("Successfully updated index.html with 3 new cards and latest footer links!")
