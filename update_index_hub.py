@@ -9,29 +9,29 @@ if '<div class="footer-links">' in html:
     html = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, html, flags=re.DOTALL)
 
 # 最新3記事のカード定義
-latest_cards = """      <!-- 高保湿クレンジングバーム -->
-      <a href="/winter-cleansing-balm" class="hub-card">
-        <span class="hub-card-tag" style="background: #f0fdf4; color: #15803d;">🫧 体温でとろける高保湿クレンジングバーム NEW</span>
-        <h2 class="hub-card-title">🫧 保湿力の強さで冬の突っ張り・乾燥小じわとさようなら！体温でとろけて毛穴汚れもつるんと落とす高保湿クレンジングバームランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬乾燥を救う！DUO、パーフェクトワンフォーカス、ルルルン、クリニーク、KANEBOなど、体温でとろけて毛穴の角栓・濃密メイクを摩擦レスに落とす神バーム10選。</p>
+latest_cards = """      <!-- 高保湿ナイトクリーム -->
+      <a href="/winter-night-cream" class="hub-card">
+        <span class="hub-card-tag" style="background: #fdf2f8; color: #9d174d;">🌙 睡眠中集中リペア・翌朝もっちり肌 NEW</span>
+        <h2 class="hub-card-title">🌙 保湿力の強さで睡眠中の砂漠肌・乾燥小ジワとさようなら！翌朝もっちり吸い付く高保湿ナイトクリームランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬乾燥を睡眠中に集中リペア！コスメデコルテ、KANEBO、エリクシール、キュレル、オルビス、SK-IIなど、翌朝ふっくらハリ肌へ導く高保湿ナイトクリーム10選。</p>
       </a>
 
-      <!-- 高保湿スカルプシャンプー -->
-      <a href="/winter-scalp-shampoo" class="hub-card">
-        <span class="hub-card-tag" style="background: #eff6ff; color: #1d4ed8;">🌿 頭皮砂漠化・フケかゆみ予防アミノ酸スカルプ NEW</span>
-        <h2 class="hub-card-title">🌿 保湿力の強さで頭皮乾燥・フケかゆみとさようなら！うるおい守る高保湿スカルプシャンプーランク10</h2>
-        <p class="hub-card-desc">11月・12月の厳しい寒さとエアコン暖房による頭皮の砂漠化、乾性フケ、かゆみをブロック！haru、オージュア、キュレル、エトヴォス、カダソンなどアミノ酸高保湿シャンプー10選。</p>
+      <!-- 高保湿クレンジングミルク -->
+      <a href="/winter-cleansing-milk" class="hub-card">
+        <span class="hub-card-tag" style="background: #f0fdf4; color: #166534;">🥛 洗い上がりツッパリ摩擦ゼロ・美容液洗顔 NEW</span>
+        <h2 class="hub-card-title">🥛 保湿力の強さで冬の洗い上がりツッパリ・摩擦乾燥とさようなら！うるおい残して優しく落とす高保湿クレンジングミルクランク10</h2>
+        <p class="hub-card-desc">11月・12月の洗顔後ツッパリ・摩擦ダメージ・乾燥小ジワを徹底解決！カバーマーク、カウブランド、チャントアチャーム、シスレー、ヴェレダなどうるおい守る高保湿ミルク10選。</p>
       </a>
 
-      <!-- 高保湿シカクリーム -->
-      <a href="/winter-cica-cream" class="hub-card">
-        <span class="hub-card-tag" style="background: #fdf2f8; color: #be185d;">🌱 寒風赤み・肌荒れ急速リペア高保湿CICA NEW</span>
-        <h2 class="hub-card-title">🌱 保湿力の強さで冬の肌荒れ・寒風赤みとさようなら！肌バリアを集中強化する高保湿シカクリームランク10</h2>
-        <p class="hub-card-desc">11月・12月の冷たい北風と暖房乾燥による赤ら顔、ヒリつき、粉吹き肌荒れを急速リペア！ラロッシュポゼ、VT、Dr.Jart+、アベンヌ、Dr.Gなど肌バリア集中強化シカクリーム10選。</p>
+      <!-- 高保湿ヘアミスト -->
+      <a href="/winter-hair-mist" class="hub-card">
+        <span class="hub-card-tag" style="background: #eff6ff; color: #1e40af;">✨ 冬の静電気・毛先パサつき防止ヘアミスト NEW</span>
+        <h2 class="hub-card-title">✨ 保湿力の強さで冬の静電気・毛先パサつきとさようなら！髪にうるおいヴェールをまとう高保湿ヘアミストランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬の静電気・マフラー摩擦・暖房乾燥による髪のパサパサ・ボサボサを瞬時に解消！ジルスチュアート、スティーブンノル、オルビス、ナプラ、ReFaなど高保湿ミスト10選。</p>
       </a>\n"""
 
 # まだ追加されていなければ hub-grid の直後に挿入
-if '/winter-cleansing-balm' not in html:
+if '/winter-night-cream' not in html:
     html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + latest_cards)
 
 with open("index.html", "w", encoding="utf-8") as f:
