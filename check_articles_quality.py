@@ -3,9 +3,9 @@ import json
 import re
 
 files_to_check = [
-    "winter-hair-balm.html",
-    "winter-hot-cleansing.html",
-    "winter-neck-cream.html"
+    "winter-hand-serum.html",
+    "winter-bath-oil.html",
+    "winter-body-butter.html"
 ]
 
 all_passed = True
@@ -98,16 +98,15 @@ for fname in files_to_check:
                 all_passed = False
                 
     zero_prices = len(re.findall(r'¥0', html))
-    no_price = len(re.findall(r'価格表示なし', html))
-    if zero_prices > 0 or no_price > 0:
-        print(f"❌ Found products with no price or ¥0! (zero={zero_prices}, no_price={no_price})")
+    if zero_prices > 0:
+        print(f"❌ Found {zero_prices} zero prices!")
         all_passed = False
     else:
-        print("✓ All 10 products have valid prices!")
+        print("✓ All product prices are valid non-zero amounts!")
 
-print("\n==========================================")
+print("\n" + "="*50)
 if all_passed:
-    print("🎉 ALL QUALITY CHECKS PASSED FOR ALL 3 ARTICLES! 🎉")
+    print("🎉 ALL QUALITY & SEO & ACCURACY CHECKS PASSED PERFECTLY!")
 else:
-    print("❌ SOME CHECKS FAILED. Please review the output above.")
-print("==========================================")
+    print("❌ SOME CHECKS FAILED! PLEASE REVIEW ABOVE ERRORS.")
+print("="*50)

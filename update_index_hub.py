@@ -9,29 +9,29 @@ if '<div class="footer-links">' in html:
     html = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, html, flags=re.DOTALL)
 
 # 新3記事のカード定義
-new_cards = """      <!-- 高保湿ヘアバーム -->
-      <a href="/winter-hair-balm" class="hub-card">
-        <span class="hub-card-tag" style="background: #fdf2f8; color: #9d174d;">💆‍♀️ 毛先パサつき・静電気ブロック・濡れツヤ全身保湿 NEW</span>
-        <h2 class="hub-card-title">💆‍♀️ 保湿力の強さで毛先のパサつき・静電気・広がりとさようなら！冬の冷風から一日中うるおいキープ＆全身保湿できるマルチ高保湿ヘアバームランク10</h2>
-        <p class="hub-card-desc">冬の寒風・乾燥・マフラー静電気でパサつく髪を救う！ザ・プロダクト、N.（エヌドット）、track（トラック）、ミルボンなど、毛先のうるおい束感キープから手肌・リップの保湿まで叶える神ヘアバーム厳選10選。</p>
+new_cards = """      <!-- 高保湿ハンド美容液・ハンドセラム -->
+      <a href="/winter-hand-serum" class="hub-card">
+        <span class="hub-card-tag" style="background: #ecfdf5; color: #047857;">🤲 スマホ操作サラリ・老け手＆乾燥シワ撃退・高浸透 NEW</span>
+        <h2 class="hub-card-title">🤲 保湿力の強さで手荒れ・老け手・乾燥シワとさようなら！スマホ操作もサラリと快適＆手肌のキメをふっくら満たす高保湿ハンド美容液・ハンドセラムランク10</h2>
+        <p class="hub-card-desc">冬の寒風・手洗い・消毒による手荒れや乾燥小ジワを救う！SHIRO、アルビオンエクシア、アユーラ、オサジ、コスメデコルテなど、ベタつかずスマホも快適操作できる神高保湿ハンド美容液厳選10選。</p>
       </a>
 
-      <!-- 高保湿温感クレンジング -->
-      <a href="/winter-hot-cleansing" class="hub-card">
-        <span class="hub-card-tag" style="background: #ffedd5; color: #9a3412;">🫧 冷え固まった毛穴溶解・スチーム温活・美容液90% NEW</span>
-        <h2 class="hub-card-title">🫧 保湿＆温感スチーム効果で冬の冷え固まった毛穴・乾燥ゴワつきとさようなら！じんわり温めてうるおいを守り抜く高保湿温感クレンジングランク10</h2>
-        <p class="hub-card-desc">冬の寒さで冷え固まった毛穴の角栓・乾燥ゴワつきを撃退！マナラ、DUO（デュオ）、スキンビル、ベネフィーク、ラフラなど、じんわり温感スチーム＆美容液成分90%超で洗い上げる高保湿温感クレンジング厳選10選。</p>
+      <!-- 極上高保湿バスオイル -->
+      <a href="/winter-bath-oil" class="hub-card">
+        <span class="hub-card-tag" style="background: #e0f2fe; color: #0369a1;">🛁 湯上がり乾燥ゼロ・お風呂で全身シルク膜・極上温活 NEW</span>
+        <h2 class="hub-card-title">🛁 保湿力の強さで冬の湯上がり乾燥・粉吹きとさようなら！お風呂に浸かるだけで全身シルク肌へ導く極上高保湿バスオイルランク10</h2>
+        <p class="hub-card-desc">真冬の脱衣所での急激な乾燥・粉吹き・かゆみを救う！ジョーマローン、アユーラ、アロマセラピーアソシエイツ、ポールシェリー、ヴェレダなど、お風呂上がりボディクリーム不要の極上高保湿バスオイル厳選10選。</p>
       </a>
 
-      <!-- 高保湿ネック＆デコルテクリーム -->
-      <a href="/winter-neck-cream" class="hub-card">
-        <span class="hub-card-tag" style="background: #ede9fe; color: #5b21b6;">✨ 首の横ジワ・マフラーチクチク摩擦防止・首元リフト NEW</span>
-        <h2 class="hub-card-title">✨ 保湿力の強さで首元の乾燥小ジワ・マフラー摩擦とさようなら！冬のタートルネック映えするハリツヤ肌へ導く高保湿ネック＆デコルテクリームランク10</h2>
-        <p class="hub-card-desc">冬のタートルネックやマフラーのチクチク摩擦、乾燥で深まる首の横ジワを救う！クラランス、資生堂リバイタル、ポーラ、シスレー、肌美精など、首元専用の高保湿ネック＆デコルテクリーム厳選10選。</p>
+      <!-- 超濃密高保湿ボディバター -->
+      <a href="/winter-body-butter" class="hub-card">
+        <span class="hub-card-tag" style="background: #fef3c7; color: #b45309;">🧴 粉吹きすね救済・シアバター濃厚密着・96時間保湿 NEW</span>
+        <h2 class="hub-card-title">🧴 保湿力の強さで冬の粉吹き肌・乾燥かゆみとさようなら！こっくり濃厚ヴェールで全身を包み込む神高保湿ボディバターランク10</h2>
+        <p class="hub-card-desc">真冬のすねの粉吹き・乾燥かゆみ・ひじひざのガサガサを救う！ザボディショップ、ローラメルシエ、キールズ、ロクシタン、サボンなど、こっくり濃厚エモリエント膜で一晩中うるおいを守り抜く神高保湿ボディバター厳選10選。</p>
       </a>\n"""
 
 # まだ追加されていなければ hub-grid の直後に挿入
-if '/winter-hair-balm' not in html:
+if '/winter-hand-serum' not in html:
     html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + new_cards)
 
 with open("index.html", "w", encoding="utf-8") as f:

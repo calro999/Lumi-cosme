@@ -3,6 +3,27 @@ import re
 
 ALL_ARTICLES = [
     {
+        "url": "/winter-hand-serum",
+        "file": "winter-hand-serum.html",
+        "title": "🤲 保湿力の強さで手荒れ・老け手・乾燥シワとさようなら！スマホ操作もサラリと快適＆手肌のキメをふっくら満たす高保湿ハンド美容液・ハンドセラムランク10",
+        "desc": "冬の寒風・手洗い・消毒による手荒れや乾燥小ジワを救う！SHIRO、アルビオンエクシア、アユーラ、オサジ、コスメデコルテなど、ベタつかずスマホも快適操作できる神高保湿ハンド美容液厳選10選。",
+        "footer_name": "ハンド美容液"
+    },
+    {
+        "url": "/winter-bath-oil",
+        "file": "winter-bath-oil.html",
+        "title": "🛁 保湿力の強さで冬の湯上がり乾燥・粉吹きとさようなら！お風呂に浸かるだけで全身シルク肌へ導く極上高保湿バスオイルランク10",
+        "desc": "真冬の脱衣所での急激な乾燥・粉吹き・かゆみを救う！ジョーマローン、アユーラ、アロマセラピーアソシエイツ、ポールシェリー、ヴェレダなど、お風呂上がりボディクリーム不要の極上高保湿バスオイル厳選10選。",
+        "footer_name": "高保湿バスオイル"
+    },
+    {
+        "url": "/winter-body-butter",
+        "file": "winter-body-butter.html",
+        "title": "🧴 保湿力の強さで冬の粉吹き肌・乾燥かゆみとさようなら！こっくり濃厚ヴェールで全身を包み込む神高保湿ボディバターランク10",
+        "desc": "真冬のすねの粉吹き・乾燥かゆみ・ひじひざのガサガサを救う！ザボディショップ、ローラメルシエ、キールズ、ロクシタン、サボンなど、こっくり濃厚エモリエント膜で一晩中うるおいを守り抜く神高保湿ボディバター厳選10選。",
+        "footer_name": "高保湿ボディバター"
+    },
+    {
         "url": "/winter-hair-balm",
         "file": "winter-hair-balm.html",
         "title": "💆‍♀️ 保湿力の強さで毛先のパサつき・静電気・広がりとさようなら！冬の冷風から一日中うるおいキープ＆全身保湿できるマルチ高保湿ヘアバームランク10",
@@ -405,6 +426,8 @@ def update_links():
             content = re.sub(r'<section id="related-hub".*?</section>', new_related_section, content, flags=re.DOTALL)
         elif '<section id="internal-links"' in content:
             content = re.sub(r'(<section id="internal-links".*?</section>)', r'\1\n\n    ' + new_related_section, content, flags=re.DOTALL)
+        elif '</main>' in content:
+            content = content.replace('</main>', '    ' + new_related_section + '\n  </main>')
         
         # フッターリンクの置換
         if '<div class="footer-links">' in content:
