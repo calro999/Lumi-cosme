@@ -6,94 +6,109 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lumi-cosme.vercel.app/winter-cleansing-cream</loc>
+    <loc>https://lumi-cosme.vercel.app/winter-vitamin-c-serum</loc>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://lumi-cosme.vercel.app/winter-makeup-primer</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://lumi-cosme.vercel.app/winter-cream-foundation</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://lumi-cosme.vercel.app/winter-cleansing-cream</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-niacinamide-serum</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-lipstick</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-hand-cream</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-retinol-cream</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-ceramide-serum</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-cleansing-gel</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-peel-serum</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-lip-serum</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-cleansing-oil</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-body-milk</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-toner-pad</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-night-cream</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-cleansing-milk</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-hair-mist</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-cleansing-balm</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-scalp-shampoo</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-cica-cream</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-holiday-coffret</loc>

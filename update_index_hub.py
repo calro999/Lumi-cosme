@@ -9,29 +9,29 @@ if '<div class="footer-links">' in html:
     html = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, html, flags=re.DOTALL)
 
 # 最新3記事のカード定義
-latest_cards = """      <!-- 高保湿クレンジングクリーム -->
-      <a href="/winter-cleansing-cream" class="hub-card">
-        <span class="hub-card-tag" style="background: #eff6ff; color: #1d4ed8;">🫧 まるで美容パック・摩擦ゼロオフ NEW</span>
-        <h2 class="hub-card-title">🫧 保湿力の強さで冬の突っ張り・乾燥砂漠肌とさようなら！まるで美容パックな高保湿クレンジングクリームランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬の冷え固まった毛穴・洗い上がりのつっぱり乾燥を徹底解決！コスメデコルテAQ、オルビス、カネボウ、アルビオン、POLA、アルージェ、ポンズ、ちふれなど、摩擦レスにメイクを浮かせ角層のうるおいを守り抜く高保湿クレンジングクリーム10選。</p>
+latest_cards = """      <!-- 高保湿ビタミンC美容液 -->
+      <a href="/winter-vitamin-c-serum" class="hub-card">
+        <span class="hub-card-tag" style="background: #fffbeb; color: #b45309;">🍊 毛穴引き締め・乾燥くすみ解消 NEW</span>
+        <h2 class="hub-card-title">🍊 保湿力の強さで冬の毛穴開き・乾燥くすみとさようなら！うるおい満ちる濃密高保湿ビタミンC美容液ランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬の乾燥でしぼんだ毛穴・血行不良によるどんよりくすみを徹底解決！オバジC25、メラノCCプレミアム、キールズ、タカミ、Yunth生ビタミンCなど、冬でも乾燥・ピリつき知らずの高保湿ビタミンC美容液10選。</p>
       </a>
 
-      <!-- 高保湿ナイアシンアミド美容液 -->
-      <a href="/winter-niacinamide-serum" class="hub-card">
-        <span class="hub-card-tag" style="background: #f0fdf4; color: #15803d;">✨ シワ改善・美白・バリア強化 NEW</span>
-        <h2 class="hub-card-title">✨ 保湿力の強さで冬の乾燥小ジワ・くすみたるみとさようなら！ハリ艶と透明感を呼び覚ます高保湿ナイアシンアミド美容液ランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬の乾燥小ジワ・暖房くすみ・肌バリア崩壊を徹底解決！ワンバイコーセー、ラロッシュポゼ、魔女工場、オルビス、ジオーディナリー、肌ラボ、ディセンシア、ドクターケイ、大正製薬など、シワ改善・美白・セラミド合成を同時に促す高保湿ナイアシンアミド美容液10選。</p>
+      <!-- 高保湿化粧下地プライマー -->
+      <a href="/winter-makeup-primer" class="hub-card">
+        <span class="hub-card-tag" style="background: #eff6ff; color: #1d4ed8;">💧 美容液成分90%・粉吹き防止 NEW</span>
+        <h2 class="hub-card-title">💧 保湿力の強さで冬のカサつき粉吹き・乾燥崩れとさようなら！うるおい満ちる高保湿化粧下地プライマーランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬の暖房によるファンデ粉吹き・小ジワ割れ・乾燥崩れを徹底解決！ポール＆ジョー、クレ・ド・ポー ボーテ、コスメデコルテ、カネボウ、ボビイブラウンなど、一日中うるおいを閉じ込め極上ツヤ肌をキープする高保湿化粧下地10選。</p>
       </a>
 
-      <!-- 高保湿リップスティック口紅 -->
-      <a href="/winter-lipstick" class="hub-card">
-        <span class="hub-card-tag" style="background: #fdf2f8; color: #be185d;">💄 24時間乾かない・皮剥け知らず NEW</span>
-        <h2 class="hub-card-title">💄 保湿力の強さで冬の唇乾燥・ガサガサ皮剥けとさようなら！うる艶と美発色が一日中続く高保湿リップスティック口紅ランク10</h2>
-        <p class="hub-card-desc">11月・12月の忘年会やホリデーイベントで唇が乾かない！皮剥け・縦ジワ知らずの高保湿ルージュ10選。KATEリップモンスター、ディオール、シャネル、KANEBO、SUQQU、デコルテ、オペラ、YSL、ロムアンド、クレドポーなど、濃密オイル＆保湿成分で一日中ツヤと発色が続く名品を徹底比較！</p>
+      <!-- 高保湿クリームファンデーション -->
+      <a href="/winter-cream-foundation" class="hub-card">
+        <span class="hub-card-tag" style="background: #fdf2f8; color: #be185d;">✨ 最高峰の艶肌・擬似皮脂シールド NEW</span>
+        <h2 class="hub-card-title">✨ 保湿力の強さで冬のカサつき・粉吹きファンデ割れとさようなら！極上ツヤ肌が続く高保湿クリームファンデーションランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬の乾燥による粉吹き・小ジワ割れ・ファンデ浮きを徹底解決！SUQQU、KANEBO、クレ・ド・ポー ボーテ、コスメデコルテ、RMKなど、美容オイルとスキンケアエキスで肌を一日中密封ガードする高保湿クリームファンデーション10選。</p>
       </a>\n"""
 
 # まだ追加されていなければ hub-grid の直後に挿入
-if '/winter-cleansing-cream' not in html:
+if '/winter-vitamin-c-serum' not in html:
     html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + latest_cards)
 
 with open("index.html", "w", encoding="utf-8") as f:
