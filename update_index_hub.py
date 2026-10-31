@@ -9,30 +9,30 @@ if '<div class="footer-links">' in html:
     html = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, html, flags=re.DOTALL)
 
 # 最新3記事のカード定義
-latest_cards = """      <!-- 高保湿ビタミンC美容液 -->
-      <a href="/winter-vitamin-c-serum" class="hub-card">
-        <span class="hub-card-tag" style="background: #fffbeb; color: #b45309;">🍊 毛穴引き締め・乾燥くすみ解消 NEW</span>
-        <h2 class="hub-card-title">🍊 保湿力の強さで冬の毛穴開き・乾燥くすみとさようなら！うるおい満ちる濃密高保湿ビタミンC美容液ランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬の乾燥でしぼんだ毛穴・血行不良によるどんよりくすみを徹底解決！オバジC25、メラノCCプレミアム、キールズ、タカミ、Yunth生ビタミンCなど、冬でも乾燥・ピリつき知らずの高保湿ビタミンC美容液10選。</p>
+newest_cards = """      <!-- 高保湿ボディクリーム -->
+      <a href="/winter-body-cream" class="hub-card">
+        <span class="hub-card-tag" style="background: #f0fdf4; color: #15803d;">🧴 全身粉吹き防止・高濃度セラミド NEW</span>
+        <h2 class="hub-card-title">🧴 保湿力の強さで冬の粉吹き・全身カサつき乾燥とさようなら！しっとり潤い肌が続く高保湿ボディクリームランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬の乾燥で粉を吹くすね・腕・お腹まわりのカサつきを徹底解決！キュレル、セタフィル、ニュートロジーナ、ロクシタン、ローラメルシエなど、高純度シアバターやセラミド配合の最強高保湿ボディクリーム10選。</p>
       </a>
 
-      <!-- 高保湿化粧下地プライマー -->
-      <a href="/winter-makeup-primer" class="hub-card">
-        <span class="hub-card-tag" style="background: #eff6ff; color: #1d4ed8;">💧 美容液成分90%・粉吹き防止 NEW</span>
-        <h2 class="hub-card-title">💧 保湿力の強さで冬のカサつき粉吹き・乾燥崩れとさようなら！うるおい満ちる高保湿化粧下地プライマーランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬の暖房によるファンデ粉吹き・小ジワ割れ・乾燥崩れを徹底解決！ポール＆ジョー、クレ・ド・ポー ボーテ、コスメデコルテ、カネボウ、ボビイブラウンなど、一日中うるおいを閉じ込め極上ツヤ肌をキープする高保湿化粧下地10選。</p>
+      <!-- 高保湿ブースターオイル -->
+      <a href="/winter-booster-oil" class="hub-card">
+        <span class="hub-card-tag" style="background: #fefce8; color: #a16207;">✨ 角層柔軟・吸水力爆上げプレオイル NEW</span>
+        <h2 class="hub-card-title">✨ 保湿力の強さで冬のゴワつき・カサカサ砂漠肌とさようなら！化粧水をぐんぐん引き込む高保湿ブースターオイルランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬の寒さで硬くこわばった肌・化粧水が入らないインナードライを徹底解決！RMK、メルヴィータ、トリロジー、HABA、FEMMUE、アルビオンなど、洗顔後すぐの肌をふっくらほぐし吸水力を劇的アップする最強高保湿ブースターオイル10選。</p>
       </a>
 
-      <!-- 高保湿クリームファンデーション -->
-      <a href="/winter-cream-foundation" class="hub-card">
-        <span class="hub-card-tag" style="background: #fdf2f8; color: #be185d;">✨ 最高峰の艶肌・擬似皮脂シールド NEW</span>
-        <h2 class="hub-card-title">✨ 保湿力の強さで冬のカサつき・粉吹きファンデ割れとさようなら！極上ツヤ肌が続く高保湿クリームファンデーションランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬の乾燥による粉吹き・小ジワ割れ・ファンデ浮きを徹底解決！SUQQU、KANEBO、クレ・ド・ポー ボーテ、コスメデコルテ、RMKなど、美容オイルとスキンケアエキスで肌を一日中密封ガードする高保湿クリームファンデーション10選。</p>
+      <!-- 高保湿シャンプー -->
+      <a href="/winter-moisture-shampoo" class="hub-card">
+        <span class="hub-card-tag" style="background: #eff6ff; color: #1d4ed8;">🫧 静電気防止・濃密アミノ酸補修 NEW</span>
+        <h2 class="hub-card-title">🫧 保湿力の強さで冬のパサつき・静電気・頭皮乾燥とさようなら！うるおい満ちる濃密高保湿シャンプーランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬の暖房風や乾燥による毛先のパサパサ・静電気広がり・頭皮のカサつきを徹底解決！オージュア、ケラスターゼ、ボタニストプレミアム、ミルボン、エッセンシャルプレミアムなど、アミノ酸系洗浄＆濃密保湿で髪と頭皮をうるおす最強高保湿シャンプー10選。</p>
       </a>\n"""
 
 # まだ追加されていなければ hub-grid の直後に挿入
-if '/winter-vitamin-c-serum' not in html:
-    html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + latest_cards)
+if '/winter-body-cream' not in html:
+    html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + newest_cards)
 
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html)
