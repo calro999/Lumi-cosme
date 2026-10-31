@@ -9,29 +9,29 @@ if '<div class="footer-links">' in html:
     html = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, html, flags=re.DOTALL)
 
 # 最新3記事のカード定義
-latest_cards = """      <!-- 高保湿クレンジングオイル -->
-      <a href="/winter-cleansing-oil" class="hub-card">
-        <span class="hub-card-tag" style="background: #fff7ed; color: #c2410c;">🫧 毛穴詰まり・摩擦レス高保湿オイル NEW</span>
-        <h2 class="hub-card-title">🫧 保湿力の強さで冬の頑固な毛穴詰まり・洗い上がりの砂漠化とさようなら！摩擦レスでうるおい守る高保湿クレンジングオイルランク10</h2>
-        <p class="hub-card-desc">11月・12月の寒さで固まった毛穴の角栓・皮脂詰まりや濃密メイクを摩擦レスに浮かせながら、リッチな植物美容オイルで洗い上がりのつっぱり・乾燥を防ぐ神高保湿クレンジングオイル10選。</p>
+latest_cards = """      <!-- 高保湿クレンジングジェル -->
+      <a href="/winter-cleansing-gel" class="hub-card">
+        <span class="hub-card-tag" style="background: #fff7ed; color: #c2410c;">🫧 摩擦ゼロ・毛穴ほぐし高保湿ジェル NEW</span>
+        <h2 class="hub-card-title">🫧 保湿力の強さで冬の摩擦ダメージ・洗い上がり突っ張りとさようなら！毛穴汚れも優しく包み落とす高保湿クレンジングジェルランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬の乾燥・毛穴冷え・摩擦ダメージを徹底解決！マナラ、キュレル、サンタマルシェ、オルビス、エストなど、厚みのあるクッションジェルで洗い上がりのつっぱりを防ぎ、毛穴汚れも摩擦レスに落とす神高保湿クレンジングジェル10選。</p>
       </a>
 
-      <!-- 高保湿ボディミルク -->
-      <a href="/winter-body-milk" class="hub-card">
-        <span class="hub-card-tag" style="background: #f0fdfa; color: #0f766e;">🧴 全身の粉吹き・衣類摩擦防止エマルジョン NEW</span>
-        <h2 class="hub-card-title">🧴 保湿力の強さで全身のカサカサ粉吹き・インナー摩擦乾燥とさようなら！スーッと浸透して服もすぐ着られる高保湿ボディミルクランク10</h2>
-        <p class="hub-card-desc">11月・12月のタイツやヒートテックによる摩擦乾燥・すねの粉吹き・かゆみを撃退！水分と油分を黄金バランスで補給し、ベタつかず就寝前も快適に使える神高保湿ボディミルク10選。</p>
+      <!-- 高保湿角質柔軟美容液・ピールセラム -->
+      <a href="/winter-peel-serum" class="hub-card">
+        <span class="hub-card-tag" style="background: #f0fdfa; color: #0f766e;">💧 角質ゴワつき解消・化粧水浸透ブースター NEW</span>
+        <h2 class="hub-card-title">💧 保湿力の強さで冬の角質ゴワつき・化粧水はじき砂漠肌とさようなら！うるおい浸透を呼び覚ます高保湿角質柔軟美容液・ピールセラムランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬の角質肥厚・化粧水が浸透しないインナードライを根本解決！タカミスキンピール、ラロッシュポゼ、CNP、ソフィーナiPなど、剥がさず肌代謝を整えて化粧水の吸い込みを爆上げする神高保湿ピールセラム10選。</p>
       </a>
 
-      <!-- 高保湿トナーパッド -->
-      <a href="/winter-toner-pad" class="hub-card">
-        <span class="hub-card-tag" style="background: #eff6ff; color: #1d4ed8;">💧 朝の3分水分爆弾チャージ・部分パック NEW</span>
-        <h2 class="hub-card-title">💧 保湿力の強さで朝の乾燥ゴワつき・メイクの粉浮きとさようなら！貼るだけで水分爆弾チャージする高保湿トナーパッドランク10</h2>
-        <p class="hub-card-desc">11月・12月の朝の暖房乾燥やインナードライによるメイクの粉浮き・毛穴目立ちを解決！美容液を贅沢に含んだパッドで部分パック＆角質ケアができる神高保湿トナーパッド10選。</p>
+      <!-- 高保湿リップセラム・唇用美容液 -->
+      <a href="/winter-lip-serum" class="hub-card">
+        <span class="hub-card-tag" style="background: #fdf2f8; color: #be185d;">💄 唇の皮剥け・縦ジワ集中リペア美容液 NEW</span>
+        <h2 class="hub-card-title">💄 保湿力の強さで冬の唇皮剥け・砂漠縦ジワとさようなら！24時間ぷるんと満たす高保湿リップセラム・唇用美容液ランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬の深刻な唇の皮剥け・出血・縦ジワ・しぼみを徹底リペア！コスメデコルテ、オバジ、タカミ、トリデン、ディオールなど、固形バームでは届かない深層まで潤いを届けふっくら満たす神高保湿リップセラム10選。</p>
       </a>\n"""
 
 # まだ追加されていなければ hub-grid の直後に挿入
-if '/winter-cleansing-oil' not in html:
+if '/winter-cleansing-gel' not in html:
     html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + latest_cards)
 
 with open("index.html", "w", encoding="utf-8") as f:
