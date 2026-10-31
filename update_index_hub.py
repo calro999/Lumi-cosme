@@ -9,29 +9,29 @@ if '<div class="footer-links">' in html:
     html = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, html, flags=re.DOTALL)
 
 # 最新3記事のカード定義
-latest_cards = """      <!-- 高保湿クレンジングジェル -->
-      <a href="/winter-cleansing-gel" class="hub-card">
-        <span class="hub-card-tag" style="background: #fff7ed; color: #c2410c;">🫧 摩擦ゼロ・毛穴ほぐし高保湿ジェル NEW</span>
-        <h2 class="hub-card-title">🫧 保湿力の強さで冬の摩擦ダメージ・洗い上がり突っ張りとさようなら！毛穴汚れも優しく包み落とす高保湿クレンジングジェルランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬の乾燥・毛穴冷え・摩擦ダメージを徹底解決！マナラ、キュレル、サンタマルシェ、オルビス、エストなど、厚みのあるクッションジェルで洗い上がりのつっぱりを防ぎ、毛穴汚れも摩擦レスに落とす神高保湿クレンジングジェル10選。</p>
+latest_cards = """      <!-- 高保湿ハンドクリーム -->
+      <a href="/winter-hand-cream" class="hub-card">
+        <span class="hub-card-tag" style="background: #ecfdf5; color: #047857;">🧤 水仕事でも落ちない・手荒れ救済 NEW</span>
+        <h2 class="hub-card-title">🧤 保湿力の強さで冬の手荒れ・あかぎれひび割れ砂漠手肌とさようなら！水仕事でも落ちない高保湿ハンドクリームランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬の手荒れ・あかぎれ・水仕事乾燥・スマホのベタつきを徹底解決！ロクシタン、アトリックス、イソップ、ユースキン、ニュートロジーナ、ヘパソフト、シャネル、オサジなど、高純度シアバターやヘパリン類似物質配合の神高保湿ハンドクリーム10選。</p>
       </a>
 
-      <!-- 高保湿角質柔軟美容液・ピールセラム -->
-      <a href="/winter-peel-serum" class="hub-card">
-        <span class="hub-card-tag" style="background: #f0fdfa; color: #0f766e;">💧 角質ゴワつき解消・化粧水浸透ブースター NEW</span>
-        <h2 class="hub-card-title">💧 保湿力の強さで冬の角質ゴワつき・化粧水はじき砂漠肌とさようなら！うるおい浸透を呼び覚ます高保湿角質柔軟美容液・ピールセラムランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬の角質肥厚・化粧水が浸透しないインナードライを根本解決！タカミスキンピール、ラロッシュポゼ、CNP、ソフィーナiPなど、剥がさず肌代謝を整えて化粧水の吸い込みを爆上げする神高保湿ピールセラム10選。</p>
+      <!-- 高保湿レチノールクリーム -->
+      <a href="/winter-retinol-cream" class="hub-card">
+        <span class="hub-card-tag" style="background: #fefce8; color: #a16207;">✨ 冬こそ始める・ふっくらハリ弾力覚醒 NEW</span>
+        <h2 class="hub-card-title">✨ 保湿力の強さで冬の小ジワ・乾燥毛穴たるみとさようなら！ふっくらハリ弾力を呼び覚ます高保湿レチノールクリームランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬の小ジワ・たるみ毛穴・A反応乾燥を徹底解決！エリクシール、キールズ、イニスフリー、COSRX、トゥヴェール、なめらか本舗、ドクターシーラボなど、高保湿バリア成分とピュアレチノール配合の神高保湿レチノールクリーム10選。</p>
       </a>
 
-      <!-- 高保湿リップセラム・唇用美容液 -->
-      <a href="/winter-lip-serum" class="hub-card">
-        <span class="hub-card-tag" style="background: #fdf2f8; color: #be185d;">💄 唇の皮剥け・縦ジワ集中リペア美容液 NEW</span>
-        <h2 class="hub-card-title">💄 保湿力の強さで冬の唇皮剥け・砂漠縦ジワとさようなら！24時間ぷるんと満たす高保湿リップセラム・唇用美容液ランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬の深刻な唇の皮剥け・出血・縦ジワ・しぼみを徹底リペア！コスメデコルテ、オバジ、タカミ、トリデン、ディオールなど、固形バームでは届かない深層まで潤いを届けふっくら満たす神高保湿リップセラム10選。</p>
+      <!-- 高保湿セラミド美容液 -->
+      <a href="/winter-ceramide-serum" class="hub-card">
+        <span class="hub-card-tag" style="background: #eff6ff; color: #1d4ed8;">💧 インナードライ撃退・角層バリア再構築 NEW</span>
+        <h2 class="hub-card-title">💧 保湿力の強さで冬のインナードライ・バリア破壊赤み肌とさようなら！角層細胞を満たす高濃度ヒト型セラミド美容液ランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬のインナードライ・乾燥粉吹き・暖房赤み肌を徹底解決！コスメデコルテ、エトヴォス、キュレル、松山油脂、トゥヴェール、カネボウ、アスタリフトなど、高純度ヒト型セラミド配合の神高保湿セラミド美容液10選。</p>
       </a>\n"""
 
 # まだ追加されていなければ hub-grid の直後に挿入
-if '/winter-cleansing-gel' not in html:
+if '/winter-hand-cream' not in html:
     html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + latest_cards)
 
 with open("index.html", "w", encoding="utf-8") as f:
