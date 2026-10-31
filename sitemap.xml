@@ -6,6 +6,21 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://lumi-cosme.vercel.app/winter-cleansing-oil</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://lumi-cosme.vercel.app/winter-body-milk</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://lumi-cosme.vercel.app/winter-toner-pad</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://lumi-cosme.vercel.app/winter-night-cream</loc>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>

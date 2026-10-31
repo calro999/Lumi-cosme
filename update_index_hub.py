@@ -9,29 +9,29 @@ if '<div class="footer-links">' in html:
     html = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, html, flags=re.DOTALL)
 
 # 最新3記事のカード定義
-latest_cards = """      <!-- 高保湿ナイトクリーム -->
-      <a href="/winter-night-cream" class="hub-card">
-        <span class="hub-card-tag" style="background: #fdf2f8; color: #9d174d;">🌙 睡眠中集中リペア・翌朝もっちり肌 NEW</span>
-        <h2 class="hub-card-title">🌙 保湿力の強さで睡眠中の砂漠肌・乾燥小ジワとさようなら！翌朝もっちり吸い付く高保湿ナイトクリームランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬乾燥を睡眠中に集中リペア！コスメデコルテ、KANEBO、エリクシール、キュレル、オルビス、SK-IIなど、翌朝ふっくらハリ肌へ導く高保湿ナイトクリーム10選。</p>
+latest_cards = """      <!-- 高保湿クレンジングオイル -->
+      <a href="/winter-cleansing-oil" class="hub-card">
+        <span class="hub-card-tag" style="background: #fff7ed; color: #c2410c;">🫧 毛穴詰まり・摩擦レス高保湿オイル NEW</span>
+        <h2 class="hub-card-title">🫧 保湿力の強さで冬の頑固な毛穴詰まり・洗い上がりの砂漠化とさようなら！摩擦レスでうるおい守る高保湿クレンジングオイルランク10</h2>
+        <p class="hub-card-desc">11月・12月の寒さで固まった毛穴の角栓・皮脂詰まりや濃密メイクを摩擦レスに浮かせながら、リッチな植物美容オイルで洗い上がりのつっぱり・乾燥を防ぐ神高保湿クレンジングオイル10選。</p>
       </a>
 
-      <!-- 高保湿クレンジングミルク -->
-      <a href="/winter-cleansing-milk" class="hub-card">
-        <span class="hub-card-tag" style="background: #f0fdf4; color: #166534;">🥛 洗い上がりツッパリ摩擦ゼロ・美容液洗顔 NEW</span>
-        <h2 class="hub-card-title">🥛 保湿力の強さで冬の洗い上がりツッパリ・摩擦乾燥とさようなら！うるおい残して優しく落とす高保湿クレンジングミルクランク10</h2>
-        <p class="hub-card-desc">11月・12月の洗顔後ツッパリ・摩擦ダメージ・乾燥小ジワを徹底解決！カバーマーク、カウブランド、チャントアチャーム、シスレー、ヴェレダなどうるおい守る高保湿ミルク10選。</p>
+      <!-- 高保湿ボディミルク -->
+      <a href="/winter-body-milk" class="hub-card">
+        <span class="hub-card-tag" style="background: #f0fdfa; color: #0f766e;">🧴 全身の粉吹き・衣類摩擦防止エマルジョン NEW</span>
+        <h2 class="hub-card-title">🧴 保湿力の強さで全身のカサカサ粉吹き・インナー摩擦乾燥とさようなら！スーッと浸透して服もすぐ着られる高保湿ボディミルクランク10</h2>
+        <p class="hub-card-desc">11月・12月のタイツやヒートテックによる摩擦乾燥・すねの粉吹き・かゆみを撃退！水分と油分を黄金バランスで補給し、ベタつかず就寝前も快適に使える神高保湿ボディミルク10選。</p>
       </a>
 
-      <!-- 高保湿ヘアミスト -->
-      <a href="/winter-hair-mist" class="hub-card">
-        <span class="hub-card-tag" style="background: #eff6ff; color: #1e40af;">✨ 冬の静電気・毛先パサつき防止ヘアミスト NEW</span>
-        <h2 class="hub-card-title">✨ 保湿力の強さで冬の静電気・毛先パサつきとさようなら！髪にうるおいヴェールをまとう高保湿ヘアミストランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬の静電気・マフラー摩擦・暖房乾燥による髪のパサパサ・ボサボサを瞬時に解消！ジルスチュアート、スティーブンノル、オルビス、ナプラ、ReFaなど高保湿ミスト10選。</p>
+      <!-- 高保湿トナーパッド -->
+      <a href="/winter-toner-pad" class="hub-card">
+        <span class="hub-card-tag" style="background: #eff6ff; color: #1d4ed8;">💧 朝の3分水分爆弾チャージ・部分パック NEW</span>
+        <h2 class="hub-card-title">💧 保湿力の強さで朝の乾燥ゴワつき・メイクの粉浮きとさようなら！貼るだけで水分爆弾チャージする高保湿トナーパッドランク10</h2>
+        <p class="hub-card-desc">11月・12月の朝の暖房乾燥やインナードライによるメイクの粉浮き・毛穴目立ちを解決！美容液を贅沢に含んだパッドで部分パック＆角質ケアができる神高保湿トナーパッド10選。</p>
       </a>\n"""
 
 # まだ追加されていなければ hub-grid の直後に挿入
-if '/winter-night-cream' not in html:
+if '/winter-cleansing-oil' not in html:
     html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + latest_cards)
 
 with open("index.html", "w", encoding="utf-8") as f:
