@@ -8,30 +8,30 @@ with open("index.html", "r", encoding="utf-8") as f:
 if '<div class="footer-links">' in html:
     html = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, html, flags=re.DOTALL)
 
-# 最新3記事のカード定義
-newest_cards = """      <!-- 高保湿スカルプスクラブ -->
-      <a href="/winter-scalp-scrub" class="hub-card">
-        <span class="hub-card-tag" style="background: #f0fdf4; color: #15803d;">💆 頭皮クレンジング・乾燥フケ防止 NEW</span>
-        <h2 class="hub-card-title">💆 保湿力の強さで冬の頭皮乾燥フケ・毛穴詰まり・かゆみとさようなら！うるおい頭皮へ導く高保湿スカルプスクラブランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬の湿気低下による頭皮の乾燥フケ・ニット帽や暖房による蒸れ毛穴詰まり・血行不良を徹底解決！SABON、ロクシタン、uka、ラ・カスタ、ヴェレダ、アヴェダ、OSAJI、モロッカンオイル、ミルボンなど、天然塩・シュガースクラブとボタニカルオイル配合の高保湿スカルプスクラブ10選。</p>
+# 新規3記事のカード定義
+newest_cards = """      <!-- 高保湿マイクロニードルパッチ -->
+      <a href="/winter-needle-patch" class="hub-card">
+        <span class="hub-card-tag" style="background: #fdf4ff; color: #a21caf;">🔬 目元・ほうれい線角層注入 NEW</span>
+        <h2 class="hub-card-title">🔬 保湿力の強さで冬の目元・ほうれい線乾燥小ジワとさようなら！寝ている間にヒアルロン酸針が角層深部へ直接届く高保湿マイクロニードルパッチランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬の凍える冷気とエアコン暖房で深く刻まれる目元・口元の乾燥小ジワ・ほうれい線を徹底解決！北の快適工房、資生堂ナビジョン、クオニス、VT CICA、コーセークリアターン、ドクターフィルなど、寝ている間にヒアルロン酸針が角層深部へダイレクト注入する最強高保湿マイクロニードルパッチ10選。</p>
       </a>
 
-      <!-- 薬用高保湿重炭酸入浴剤 -->
-      <a href="/winter-medicinal-bath" class="hub-card">
-        <span class="hub-card-tag" style="background: #eff6ff; color: #1d4ed8;">🛁 冷え性疲労回復・湯上がり過乾燥防止 NEW</span>
-        <h2 class="hub-card-title">🛁 保湿力の強さで冬の冷え性・湯冷めカサつき砂漠肌とさようなら！芯までポカポカ潤う薬用高保湿重炭酸入浴剤ランク10</h2>
-        <p class="hub-card-desc">11月・12月の厳しい寒さによる末端冷え・肩こり・お風呂上がりの急激な肌乾燥（過乾燥）を徹底解決！BARTH、薬用ホットタブ重炭酸湯、きき湯ファインヒート、アユーラメディテーションバス、クナイプ、ツムラ日本の名湯、ヴェレダなど、中性重炭酸イオンと生薬・高保湿オイル配合の薬用高保湿重炭酸入浴剤10選。</p>
+      <!-- 高保湿バスソルト -->
+      <a href="/winter-bath-salt" class="hub-card">
+        <span class="hub-card-tag" style="background: #f0f9ff; color: #0369a1;">🛁 冷え性改善・湯上がり全身過乾燥防止 NEW</span>
+        <h2 class="hub-card-title">🛁 保湿力の強さで冬の冷え性・全身カサつき乾燥とさようなら！マグネシウム＆ミネラル温浴で湯上がりしっとり極上肌へ導く高保湿バスソルトランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬の寒冷による末端冷え性・入浴後の全身粉吹き乾燥・かゆみを徹底解決！シークリスタルス、クナイプ、NEHAN TOKYO、MARKS&WEB、SABON、BARAKA、SHIRO、アユーラなど、高純度エプソムソルトや死海ミネラルで芯まで温め肌をうるおす最強高保湿バスソルト10選。</p>
       </a>
 
-      <!-- 朝用ふき取り高保湿化粧水 -->
-      <a href="/winter-wipe-lotion" class="hub-card">
-        <span class="hub-card-tag" style="background: #fdf4ff; color: #a21caf;">💧 朝の時短角質オフ・冷水洗顔防止 NEW</span>
-        <h2 class="hub-card-title">💧 保湿力の強さで冬の朝の冷水洗顔・乾燥つっぱりとさようなら！拭くだけで角質オフ＆濃密保水する朝用ふき取り高保湿化粧水ランク10</h2>
-        <p class="hub-card-desc">11月・12月の朝の寒さで冷水洗顔がつらい・洗顔後の急激なつっぱり・メイク崩れ・ゴワつき角質を徹底解決！カネボウ ラディアントスキンリファイナー、ビオデルマ サンシビオ、ネイチャーコンク、イプサ、クリニーク、チャコットなど、拭くだけで角質オフ＆濃密保水する朝用ふき取り高保湿化粧水10選。</p>
+      <!-- 高保湿プランプリップグロス -->
+      <a href="/winter-lip-gloss" class="hub-card">
+        <span class="hub-card-tag" style="background: #fff1f2; color: #be123c;">💄 唇の縦ジワしぼみ・ホリデー水光ツヤ NEW</span>
+        <h2 class="hub-card-title">💄 保湿力の強さで冬の唇乾燥・縦ジワしぼみとさようなら！ホリデーの煌めきとぷるんとした濃密ツヤが続く高保湿プランプリップグロスランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬の唇乾燥・縦ジワ・皮剥け・血色レスを徹底解決！ディオール、クラランス、ジルスチュアート、シャネル、ロムアンド、キャンメイク、RMK、SUQQUなど、カプサイシンや濃密植物オイルで唇をふっくら満たしホリデーの濡れツヤをキープする最強高保湿プランプリップグロス10選。</p>
       </a>\n"""
 
 # まだ追加されていなければ hub-grid の直後に挿入
-if '/winter-scalp-scrub' not in html:
+if '/winter-needle-patch' not in html:
     html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + newest_cards)
 
 with open("index.html", "w", encoding="utf-8") as f:

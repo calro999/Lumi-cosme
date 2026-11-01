@@ -4,7 +4,7 @@ sitemap_header = """<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lumi-cosme.vercel.app/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,7 +15,7 @@ for idx, a in enumerate(ALL_ARTICLES):
     priority = "0.95" if idx < 3 else ("0.9" if idx < 15 else "0.8")
     url_blocks.append(f"""  <url>
     <loc>https://lumi-cosme.vercel.app{a['url']}</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>{priority}</priority>
   </url>""")
