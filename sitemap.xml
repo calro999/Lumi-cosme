@@ -7,22 +7,40 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lumi-cosme.vercel.app/winter-needle-patch</loc>
+    <loc>https://lumi-cosme.vercel.app/winter-inbath-body</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://lumi-cosme.vercel.app/winter-hot-eyemask</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://lumi-cosme.vercel.app/winter-hand-mask</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://lumi-cosme.vercel.app/winter-needle-patch</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-bath-salt</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-lip-gloss</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-morning-mask</loc>
@@ -82,19 +100,19 @@
     <loc>https://lumi-cosme.vercel.app/winter-scalp-scrub</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-medicinal-bath</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-wipe-lotion</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-hair-treatment</loc>
