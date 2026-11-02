@@ -9,29 +9,29 @@ if '<div class="footer-links">' in html:
     html = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, html, flags=re.DOTALL)
 
 # 新規3記事のカード定義
-newest_cards = """      <!-- 高保湿シアバター -->
-      <a href="/winter-shea-butter" class="hub-card">
-        <span class="hub-card-tag" style="background: #fef3c7; color: #92400e;">🧈 天然濃厚ベール・全身密封保護 NEW</span>
-        <h2 class="hub-card-title">🧈 保湿力の強さで肌乾燥とさようなら！天然の濃厚ベールで極上保護する高保湿シアバターランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬本番に深刻化する皮脂枯れ・粉吹き乾燥・冷風刺激を徹底解決！西アフリカの大自然が育んだ天然植物油脂・シアバター100%バームから高濃度ブレンドクリームまで、高保湿シアバター10選を徹底比較！ロクシタン、ママバター、生活の木、spa hinokiなど厳選。</p>
+newest_cards = """      <!-- 高保湿アルガンオイル -->
+      <a href="/winter-argan-oil" class="hub-card">
+        <span class="hub-card-tag" style="background: #fef3c7; color: #92400e;">🥑 モロッコの黄金・角質柔軟ブースター NEW</span>
+        <h2 class="hub-card-title">🥑 保湿力の強さで肌乾燥とさようなら！モロッコの黄金オイルでふっくら極上やわらか肌へ導く高保湿アルガンオイルランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬本番に深刻化するゴワつき・砂漠乾燥・角質硬化を徹底解決！モロッコ南西部のみに自生するアルガンの樹から抽出された高純度オーガニックアルガンオイル10選を徹底比較！メルヴィータ、コディナ、spa hinoki、生活の木、ナイアード、マカダミ屋など厳選。</p>
       </a>
 
-      <!-- 高保湿ホホバオイル -->
-      <a href="/winter-jojoba-oil" class="hub-card">
-        <span class="hub-card-tag" style="background: #fef9c3; color: #854d0e;">🌿 皮脂膜成分補給・ブースター導入 NEW</span>
-        <h2 class="hub-card-title">🌿 保湿力の強さで肌乾燥とさようなら！皮脂膜を補い真冬の肌を柔らかく包む高保湿ホホバオイルランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬本番に急減する皮脂膜を補修！人間の皮脂と同じ『ワックスエステル』を豊富に含む高保湿ホホバオイル10選を徹底比較！無印良品、インカオイル、spa hinoki、生活の木、KISOなど、未精製ゴールデンから高純度精製クリアまで厳選。</p>
+      <!-- 高保湿馬油クリーム -->
+      <a href="/winter-horse-oil" class="hub-card">
+        <span class="hub-card-tag" style="background: #fed7aa; color: #9a3412;">🐴 人肌皮脂類似・粉吹きひび割れ救済 NEW</span>
+        <h2 class="hub-card-title">🐴 保湿力の強さで頑固な肌乾燥・粉吹きとさようなら！人の皮脂に極めて近い天然脂質で包み込む高保湿馬油クリームランク10</h2>
+        <p class="hub-card-desc">11月・12月の真冬の冷風と暖房直撃による深刻な粉吹き乾燥・ひび・あかぎれ・肌荒れを徹底解決！人の皮脂バランスに極めて酷似した天然不飽和脂肪酸が角層深部へ驚異のスピードで浸透する高保湿馬油10選を徹底比較！ソンバーユ、北海道純馬油本舗、リマーユ、ロッシモイストエイドなど厳選。</p>
       </a>
 
-      <!-- 高保湿尿素クリーム -->
-      <a href="/winter-urea-cream" class="hub-card">
-        <span class="hub-card-tag" style="background: #dcfce7; color: #166534;">🦶 ガサガサかかと・角質柔軟治療 NEW</span>
-        <h2 class="hub-card-title">🦶 保湿力の強さでガサガサ角質とさようなら！硬くなったかかと・ひじをしっとり柔らかく整える高保湿尿素クリームランク10</h2>
-        <p class="hub-card-desc">11月・12月の寒冷乾燥でカチコチに硬化するガサガサかかと・ひび割れ・粉吹き肌を徹底解決！天然保湿因子NMFを補い角質を柔軟化する高保湿尿素クリーム10選を徹底比較！ケラチナミンコーワ、フェルゼア、資生堂尿素10%、メンソレータム、アトリックス、ユースキンなど厳選。</p>
+      <!-- 高保湿パンテノールクリーム -->
+      <a href="/winter-panthenol-cream" class="hub-card">
+        <span class="hub-card-tag" style="background: #dbeafe; color: #1e40af;">🧪 プロビタミンB5・肌バリア鉄壁補修 NEW</span>
+        <h2 class="hub-card-title">🧪 保湿力の強さで冬のヒリつき・敏感乾燥とさようなら！高濃度プロビタミンB5で角層バリアを鉄壁補修する高保湿パンテノールクリームランク10</h2>
+        <p class="hub-card-desc">11月・12月の寒冷刺激やエアコン乾燥によって引き起こされるバリア破壊・ヒリヒリ敏感肌・乾燥赤みを徹底修復！抗炎症＆組織再生を促進する高濃度プロビタミンB5（パンテノール）を配合した高保湿シカ＆バリアクリーム10選を徹底比較！ラロッシュポゼ シカプラストB5+、BIOHEAL BOH、アヌア、Dr.G、リアルバリアなど厳選。</p>
       </a>\n"""
 
 # まだ追加されていなければ hub-grid の直後に挿入
-if '/winter-shea-butter' not in html:
+if '/winter-argan-oil' not in html:
     html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + newest_cards)
 
 with open("index.html", "w", encoding="utf-8") as f:
