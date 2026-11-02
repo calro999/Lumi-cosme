@@ -1,0 +1,50 @@
+import glob
+import os
+import datetime
+
+HOST = "https://lumi-cosme.vercel.app"
+today = datetime.date.today().isoformat()
+
+# トップページ
+urls = [
+    {
+        "loc": f"{HOST}/",
+        "lastmod": today,
+        "priority": "1.0",
+        "changefreq": "daily"
+    }
+]
+
+# 全html記事
+html_files = sorted([f for f in glob.glob("*.html") if f != "index.html"])
+
+# 優先度の高い新記事
+newest_slugs = ["winter-oil-mist", "winter-carbonic-bath", "winter-hot-treatment", "winter-foot-mask", "winter-eye-patch", "winter-nail-serum"]
+
+for f in html_files:
+    slug = f.replace(".html", "")
+    prio = "0.9" if slug in newest_slugs else "0.8"
+    urls.append({
+        "loc": f"{HOST}/{slug}",
+        "lastmod": today,
+        "priority": prio,
+        "changefreq": "weekly"
+    })
+
+xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
+xml_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+
+for u in urls:
+    xml_content += f"""  <url>
+    <loc>{u['loc']}</loc>
+    <lastmod>{u['lastmod']}</lastmod>
+    <changefreq>{u['changefreq']}</changefreq>
+    <priority>{u['priority']}</priority>
+  </url>\n"""
+
+xml_content += '</urlset>\n'
+
+with open("sitemap.xml", "w", encoding="utf-8") as f:
+    f.write(xml_content)
+
+print(f"Updated sitemap.xml successfully with {len(urls)} URLs!")

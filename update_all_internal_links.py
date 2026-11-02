@@ -3,6 +3,27 @@ import re
 
 ALL_ARTICLES = [
     {
+        "url": "/winter-oil-mist",
+        "file": "winter-oil-mist.html",
+        "title": "✨ 保湿力の強さで暖房乾燥・午後カサカサ肌とさようなら！水分と美容オイルの黄金比で日中も瞬時に艶肌復活する高保湿オイルインミストランク10",
+        "desc": "11月・12月の暖房直撃による砂漠肌・粉吹き・メイク崩れ・夕方のちりめんジワを徹底解決！水分補給とオイルのラッピング効果を両立する高保湿オイルインミスト10選を徹底比較！ダルバ、エリクシール、dプログラム、アルビオン、RMK、カネボウなど、振ってスプレーするだけで一日中ツヤと潤いが続く名品を厳選。",
+        "footer_name": "高保湿オイルインミスト"
+    },
+    {
+        "url": "/winter-carbonic-bath",
+        "file": "winter-carbonic-bath.html",
+        "title": "🛁 保湿力の強さで冬の冷え性・カサカサ全身乾燥とさようなら！重炭酸イオン温浴で芯から温まり角層深部まで潤す薬用重炭酸入浴剤ランク10",
+        "desc": "11月・12月の寒波による冷え性・血行不良・全身のカサカサ粉吹き乾燥を徹底解消！BARTH、薬用ホットタブ、きき湯ファインヒート、バブメディキュア、クナイプ、AYURAなど、中性重炭酸イオンが温浴効果を高めて血流を促進し、お風呂上がりもしっとり潤い肌が持続する至高の重炭酸入浴剤10選を徹底比較！",
+        "footer_name": "薬用重炭酸入浴剤"
+    },
+    {
+        "url": "/winter-hot-treatment",
+        "file": "winter-hot-treatment.html",
+        "title": "💆‍♀️ 保湿力の強さで冬のパサつき剛毛・冷えたガチガチ頭皮とさようなら！塗った瞬間じんわり温感で美髪成分が急速浸透する温感ヘッドスパトリートメントランク10",
+        "desc": "11月・12月の寒さで凝り固まったガチガチ頭皮と、静電気・暖房乾燥でパサつく毛先をダブルで救済！moremo、ヘッドスパセブン、トリコレ、サロニア、アミノレスキューなど、水と反応してじんわり温かくなり液体から濃密クリームへ変化する最新温感ウォータートリートメント＆スカルプスパ10選を徹底比較！",
+        "footer_name": "温感ヘッドスパトリートメント"
+    },
+    {
         "url": "/winter-foot-mask",
         "file": "winter-foot-mask.html",
         "title": "🦶 保湿力の強さで冬のかかとひび割れ・タイツ電線ガサガサとさようなら！履くだけで角質深部まで濃密柔軟ケアする高保湿かかとパック＆保湿ソックスランク10",
@@ -798,7 +819,9 @@ def update_links():
     </section>"""
 
         # 既存の関連記事セクションの置換
-        if '<section id="related"' in content:
+        if '<section class="related-section" id="internal-links-hub"' in content:
+            content = re.sub(r'<section class="related-section" id="internal-links-hub".*?</section>', new_related_section, content, flags=re.DOTALL)
+        elif '<section id="related"' in content:
             content = re.sub(r'<section id="related".*?</section>', new_related_section, content, flags=re.DOTALL)
         elif '<section id="related-hub"' in content:
             content = re.sub(r'<section id="related-hub".*?</section>', new_related_section, content, flags=re.DOTALL)
@@ -811,7 +834,9 @@ def update_links():
         if '<div class="footer-links">' in content:
             content = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, content, flags=re.DOTALL)
         elif '<div class="footer-inner">' in content:
-            content = re.sub(r'(<footer class="site-footer">\s*<div class="footer-inner">)', r'\1\n    ' + footer_links_html, content, flags=re.DOTALL)
+            content = re.sub(r'(<div class="footer-inner">\s*<div class="footer-logo">)', r'\1\n    ' + footer_links_html + '\n', content, flags=re.DOTALL)
+            if '<div class="footer-links">' not in content:
+                content = content.replace('<div class="footer-inner">', '<div class="footer-inner">\n    ' + footer_links_html)
         elif '<footer class="site-footer">' in content:
             content = re.sub(r'(<footer class="site-footer">\s*<div class="container">)', r'\1\n    ' + footer_links_html, content, flags=re.DOTALL)
 
