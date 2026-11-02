@@ -19,7 +19,7 @@ urls = [
 html_files = sorted([f for f in glob.glob("*.html") if f != "index.html"])
 
 # 優先度の高い新記事
-newest_slugs = ["winter-oil-mist", "winter-carbonic-bath", "winter-hot-treatment", "winter-foot-mask", "winter-eye-patch", "winter-nail-serum"]
+newest_slugs = ["winter-pdrn-serum", "winter-collagen-mask", "winter-carbonic-shampoo", "winter-oil-mist", "winter-carbonic-bath", "winter-hot-treatment", "winter-foot-mask", "winter-eye-patch", "winter-nail-serum"]
 
 for f in html_files:
     slug = f.replace(".html", "")
