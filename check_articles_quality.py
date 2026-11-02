@@ -3,6 +3,9 @@ import json
 import re
 
 files_to_check = [
+    "winter-ceramide-cream.html",
+    "winter-peptide-serum.html",
+    "winter-hair-serum.html",
     "winter-exosome-serum.html",
     "winter-bath-milk.html",
     "winter-glutathione-serum.html",
