@@ -3,6 +3,27 @@ import re
 
 ALL_ARTICLES = [
     {
+        "url": "/winter-marula-oil",
+        "file": "winter-marula-oil.html",
+        "title": "🥑 保湿力の強さで肌乾燥とさようなら！アルガン超えの抗酸化力と極上浸透膜で砂漠肌を救う高保湿マルラオイルランク10",
+        "desc": "11月・12月の冬本番に！アルガンオイルを超える抗酸化力と人の皮脂に近いオメガ脂肪酸で砂漠肌を救う高保湿マルラオイル10選を徹底比較！ヴァーチェ、The Ordinary、マンデイムーン、マカダミ屋など厳選。",
+        "footer_name": "高保湿マルラオイル"
+    },
+    {
+        "url": "/winter-birch-juice",
+        "file": "winter-birch-juice.html",
+        "title": "🌲 保湿力の強さで肌乾燥とさようなら！天然ミネラルの潤い巡る白樺樹液で乾かない水光肌へ導く高保水バーチコスメランク10",
+        "desc": "11月・12月の冬本番に！天然ミネラルとアミノ酸に満ちた白樺樹液（バーチウォーター）でインナードライを解消する高保水コスメ10選を徹底比較！ROUND LAB、Anua、KOIVEなど厳選。",
+        "footer_name": "高保水白樺樹液コスメ"
+    },
+    {
+        "url": "/winter-azelaic-acid",
+        "file": "winter-azelaic-acid.html",
+        "title": "🧪 保湿力の強さで肌乾燥とさようなら！冬のインナードライ赤みと乾燥毛穴を鎮めて潤す高濃度アゼライン酸コスメランク10",
+        "desc": "11月・12月の冬本番に！寒暖差赤みや暖房テカリ、乾燥毛穴を鎮めて潤す高濃度アゼライン酸コスメ10選を徹底比較！KISO、dr365、Anua、トゥヴェール、DRXなど厳選。",
+        "footer_name": "高濃度アゼライン酸コスメ"
+    },
+    {
         "url": "/winter-ectoin",
         "file": "winter-ectoin.html",
         "title": "🧬 保湿力の強さで肌乾燥とさようなら！極限環境の生命力で乾かない水分シェルターを築く高保水エクトインコスメランク10",
@@ -1029,6 +1050,23 @@ def update_links():
     </section>"""
 
         # 新デザインの記事用の内部リンクボックス置換
+        if '<div class="related-grid" id="related-grid-box">' in content:
+            inner_cards = []
+            for a in ALL_ARTICLES:
+                if a["file"] == target_article["file"]:
+                    continue
+                inner_cards.append(f"""          <a href="{a['url']}" class="related-card">
+            <div class="related-card-title">{a['title']}</div>
+            <div class="related-card-desc">{a['desc']}</div>
+          </a>""")
+            content = re.sub(r'<div class="related-grid" id="related-grid-box">.*?</div>', '<div class="related-grid" id="related-grid-box">\n' + "\n".join(inner_cards) + '\n        </div>', content, flags=re.DOTALL)
+
+        if '<div class="footer-links-grid" id="footer-links-box">' in content:
+            f_links = []
+            for a in ALL_ARTICLES:
+                f_links.append(f"""            <a href="{a['url']}">{a['footer_name']}</a>""")
+            content = re.sub(r'<div class="footer-links-grid" id="footer-links-box">.*?</div>', '<div class="footer-links-grid" id="footer-links-box">\n' + "\n".join(f_links) + '\n          </div>', content, flags=re.DOTALL)
+
         if '<div class="internal-links-box">' in content:
             inner_cards = []
             for a in ALL_ARTICLES:

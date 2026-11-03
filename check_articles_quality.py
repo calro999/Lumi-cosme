@@ -3,6 +3,9 @@ import json
 import re
 
 files_to_check = [
+    "winter-marula-oil.html",
+    "winter-birch-juice.html",
+    "winter-azelaic-acid.html",
     "winter-ectoin.html",
     "winter-bakuchiol.html",
     "winter-bifida.html",
