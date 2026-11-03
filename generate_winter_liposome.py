@@ -1,0 +1,975 @@
+import json
+import re
+
+with open("fetched_final_30_liposome_coenzyme_astaxanthin.json", "r", encoding="utf-8") as f:
+    data = json.load(f)
+
+items = data["winter_liposome"]["items"]
+
+product_details = [
+    {
+        "rank": 1,
+        "tag": "🏆 1滴に1兆個のカプセル！真冬のインナードライを根本から解消する殿堂入り名品",
+        "catch": "0.1ミクロンの多重層バイオリポソームが角層深層へ直行。玉ねぎ状の層が外側からほぐれ24時間潤いを放出し続ける",
+        "brand_name": "DECORTÉ (コスメデコルテ)",
+        "capacity": "50ml / 75ml (リポソーム アドバンスト リペアセラム)",
+        "type": "多重層リポソーム先行美容液 (導入ブースター)",
+        "features": "多重層バイオリポソーム（生体類似生体リン脂質）、ビフィズス菌培養溶解質、HPA酵母培養液、テンニンカ果実エキス",
+        "value": "洗顔直後の無防備な角層に瞬時に浸透。肌と一体化するようにバリアを再建し、11月〜12月の暖房下でも乾燥を微塵も感じさせない持続保水力を実現",
+        "desc_p1": "11月から12月にかけて本格化するオフィスの暖房や乾いた寒風により、スキンケアを重ねても夕方にはパリパリに乾いてしまう『インナードライ』。その最大の原因は、水分を抱え込む角質層のラメラ構造がスカスカに崩れていることにあります。コスメデコルテが数十年のカプセル研究を結集して進化させた『リポソーム アドバンスト リペアセラム』は、美容業界で名実ともに最高峰と称えられる先行美容液です。",
+        "desc_p2": "特筆すべきは、1滴に1兆個も凝縮された0.1ミクロンの多重層バイオリポソーム。タマネギのように幾重にも重なったリン脂質のカプセルが角層の奥深くへ浸透し、外側の層から少しずつ美容成分と潤いを解き放ちます。オイルフリーのみずみずしいテクスチャーでありながら、肌になじませた瞬間にもっちり吸い付くような濃密な弾力ヴェールが完成。後から使う化粧水や乳液の引き込み力も飛躍的に高まります。",
+        "target": "暖房の効いた室内で肌の内側がつっぱる方、どんな保湿ケアをしても乾燥が収まらない方、冬の乾燥小ジワやキメの乱れを根本解決したい方",
+        "point": "朝晩の洗顔直後、化粧水をつける前のまっさらな肌に2〜3プッシュをなじませます。両手で顔全体を包み込み、手の温もりでカプセルを角層の奥へと届けるようにハンドプレスするのが効果的です。"
+    },
+    {
+        "rank": 2,
+        "tag": "🌙 睡眠中の3時間を黄金の濃密パックへ！一夜で肌バリアを再構築する睡眠リペアクリーム",
+        "catch": "ナイト多重層バイオリポソーム配合。1回の使用で＋3時間眠ったかのような極上のハリ・ツヤ・高密度なうるおい",
+        "brand_name": "DECORTÉ (コスメデコルテ)",
+        "capacity": "50g (リポソーム アドバンスト リペアクリーム)",
+        "type": "ナイト多重層リポソーム高保湿クリーム",
+        "features": "ナイト多重層バイオリポソーム、ヒプネアムスキフォルミスエキス、シラカンバ樹液、エモリエントオイル",
+        "value": "睡眠中の肌再生リズムに着目し、油分と水分を多重層カプセルで包み込んで一晩中放出。翌朝の肌密度が劇的に変化",
+        "desc_p1": "真冬の夜間は湿度が急低下し、就寝中に皮膚から水分が猛烈な勢いで蒸発します。朝起きたときに肌がカサつき、顔色がどんより沈んで見えるのは夜間乾燥の典型的な兆候です。コスメデコルテの『リポソーム アドバンスト リペアクリーム』は、夜の睡眠時間を集中修復トリートメントへと変える革命的ナイトクリーム。",
+        "desc_p2": "リッチでこっくりとしたコクがありながら、肌に乗せると体温でとろけるように広がり、肌表面に薄く軽やかなシールド膜を形成します。寝具にベタつかない絶妙な仕上がりでありながら、睡眠中にカプセルが角層の深部まで潤いをデリバリー。翌朝洗顔したときの指先の滑らかさ、毛穴がキュッと引き締まった高密度のハリ感には感動を覚えるはずです。",
+        "target": "朝起きると顔が乾燥で突っ張っている方、冬の寒さで肌の疲労感・くすみが抜けない方、リッチな保湿感とベタつかない使用感を両立したい方",
+        "point": "夜のお手入れの最後に、パール粒2個分を顔の5点（両頬・額・鼻・あご）に置き、顔の中心から外側へ引き上げるように伸ばします。乾燥が激しい目元や口元には米粒大を重ね塗りしてください。"
+    },
+    {
+        "rank": 3,
+        "tag": "✨ ナノ微細乳化リポソームが瞬時にキメを整える！カネボウの革新ツヤ美容液",
+        "catch": "高浸透ナノ微細乳化リポソーム処方。真冬のゴワついた角層をほどき、光を放つシルクのようななめらか肌へ",
+        "brand_name": "KANEBO (カネボウ)",
+        "capacity": "60ml (フュージョニング ソリューション)",
+        "type": "キメ・ツヤ整流リポソーム美容液",
+        "features": "ナノサイズ微細乳化リポソーム、複合セラミド保湿成分、植物エキスコンプレックス",
+        "value": "光の乱反射を引き起こす冬の乾燥キメ乱れを即効補正。角層細胞の配列を均一に整え、冬の冷たい光の下でも内側から発光するツヤ肌を実現",
+        "desc_p1": "冬の寒さと乾燥により角質肥厚を起こし、肌表面がザラついて光を綺麗に反射できなくなる『冬枯れくすみ』。カネボウが最新の皮膚生理学に基づいて開発した『フュージョニング ソリューション』は、肌の凹凸やキメの乱れをリポソーム技術でなめらかに整える新発想の美容液です。",
+        "desc_p2": "生体親和性の高い微細乳化カプセルが、ごわついた角層の隙間へスルスルと入り込み、細胞ひとつひとつを潤いで満たしてふっくら立ち上げます。塗布した瞬間に肌の手触りがつるんと滑らかになり、キメの整った素肌へと変貌。朝のメイク前に仕込むことで、ファンデーションのノリと夕方までのツヤ持ちが劇的にアップします。",
+        "target": "冬になるとファンデーションが毛穴落ちしたり粉を吹く方、肌のざらつきやくすみを払拭したい方、軽やかで即効性のある美容液を好む方",
+        "point": "朝晩、化粧水で肌を整えた後にディスペンサー2〜3プッシュを手に取り、顔全体になじませます。キメを滑らかにするイメージで、手のひら全体を滑らせるように優しくストロークしてください。"
+    },
+    {
+        "rank": 4,
+        "tag": "🎯 マイクロニードル×リポソームの相乗効果！角層深層へ美容成分をダイレクト注入",
+        "catch": "CICAニードルが微細な通り道を作り、リポソームカプセルが深部まで浸透。真冬の停滞肌を目覚めさせる導入美容液",
+        "brand_name": "VT COSMETICS (ブイティー)",
+        "capacity": "50ml (マイルド リードルショット 50 / 100)",
+        "type": "マイクロニードル×リポソーム導入美容液",
+        "features": "天然シリカマイクロニードル（CICA REEDLE™）、ツボクサエキス、低分子ヒアルロン酸リポソーム、アミノ酸コンプレックス",
+        "value": "天然の微細針が角層に刺激を与えて美容成分の浸透ルートを確保。リポソーム化された保湿成分が深層まで届き、真冬のごわつき肌を再生",
+        "desc_p1": "SNSや美容誌のベストコスメで空前のブームを巻き起こしているVTのリードルショット。冬の寒冷で新陳代謝が鈍り、どんな高価な美容液を塗っても肌表面で上滑りしてしまう『冬の角層硬化』を打ち破る切り札として絶大な支持を集めています。",
+        "desc_p2": "天然のシリカから精製された超微細針にCICA成分をコーティングし、さらにリポソーム化された保湿成分と融合。肌に伸ばすとチクチクとした独特の刺激を感じますが、これが角層深層への浸透ルートが開いた証拠です。その後に重ねる化粧水やクリームの浸透スピードと保湿持続力が数倍に跳ね上がり、翌朝にはキュッと引き締まった弾力素肌を実感できます。",
+        "target": "冬になると化粧水や美容液の浸透が悪く感じる方、自宅でエステ級のディープ浸透ケアを体験したい方、毛穴の開きや肌のハリ低下が気になる方",
+        "point": "夜の洗顔後すぐ、化粧水の前に適量を手に取り、顔全体に塗り広げてから手のひらで押し込むようにハンドプレスします。チクチク感があるため擦らず、スタンプを押すように優しく密着させてください。"
+    },
+    {
+        "rank": 5,
+        "tag": "🛡️ 5種のヒト型セラミドをリポソーム化！真冬の敏感肌を守り抜く高保水セラム",
+        "catch": "セラミドEOP/NP/AP/NG/AGを多重層リポソームカプセルに内包。乾燥性敏感肌の角層バリアを隙間なく修復",
+        "brand_name": "ETVOS (エトヴォス)",
+        "capacity": "50ml (モイスチャライジングセラム)",
+        "type": "高保湿ヒト型セラミドリポソーム美容乳液",
+        "features": "5種のヒト型セラミド（1, 2, 3, 5, 6II）、多重層リポソーム技術、ヒアルロン酸、PCA-Na（天然保湿因子）",
+        "value": "肌の細胞間脂質と完全に同等の構造を持つヒト型セラミドを高濃度配合。冬の冷風や暖房による水分蒸発を徹底ブロック",
+        "desc_p1": "肌の水分保持能力の80%以上を担っている『細胞間脂質セラミド』。真冬の過酷な環境下ではセラミドの合成量が減少し、角層が隙間だらけになって水分が逃げてしまいます。エトヴォスのモイスチャライジングセラムは、皮膚科学に基づき5種類ものヒト型セラミドをバランスよく配合した傑作美容液です。",
+        "desc_p2": "セラミドをリポソームカプセル化することで、角層のすみずみまでスムーズにデリバリー。乳液のような滑らかで心地よいミルクテクスチャーが肌を優しく包み込み、油分と水分の黄金比率を保ちます。低刺激処方でアルコールやシリコン、パラベンフリーのため、真冬の粉吹きやヒリつきを感じる超敏感肌でも安心してお使いいただけます。",
+        "target": "冬になると乾燥で頬がヒリつく・皮がめくれる敏感肌の方、乳液と美容液を1本で手軽に済ませたい方、肌に優しい低刺激スキンケアを求める方",
+        "point": "化粧水で水分を補給した後、手のひらに2プッシュを取り顔全体になじませます。特に乾燥しやすい目元や口元、乾燥小ジワが気になる部位には指先で重ねづけしてください。"
+    },
+    {
+        "rank": 6,
+        "tag": "🧪 微粒子リポソーム乳酸菌が肌環境を整える！冬のゆらぎ肌を救う韓国メガヒットアンプル",
+        "catch": "ビフィズス菌培養溶解質×リポソームデリバリー。真冬の過酷な環境に負けない強靭な肌基礎体力を構築",
+        "brand_name": "魔女工場 (Manyo Factory)",
+        "capacity": "50ml (ビフィダ バイオーム コンプレックス アンプル)",
+        "type": "肌バリア強化リポソーム発酵美容液",
+        "features": "ビフィダバイオーム™、10種のヒアルロン酸、ペプチド複合体、マイクロリポソーム化技術",
+        "value": "美肌菌（皮膚マイクロバイオーム）を育み、角層の防御壁を強化。真冬の急激な寒暖差やエアコン乾燥による肌トラブルを未然に防ぐ",
+        "desc_p1": "韓国オリーブヤングや日本の各美容アワードで殿堂入りを果たしている魔女工場の『ビフィダバイオームコンプレックスアンプル』。真冬の寒さやストレスによって乱れた肌の常在菌バランスを整え、肌本来の自活力を高める高機能発酵アンプルです。",
+        "desc_p2": "発酵成分と10重のヒアルロン酸を微粒子リポソーム技術でナノ化。濃厚でとろみのある茶褐色のテクスチャーですが、肌に乗せるとすーっと角層へ吸い込まれ、ベタつきを残さずに内側からパーンと張るような密度感をもたらします。使い続けるほどに肌のバリア機能が安定し、冬特有のカサつきや赤みが起きにくい健やかな肌へと導かれます。",
+        "target": "季節の変わり目や真冬に肌調子を崩しやすい方、肌のキメや弾力を根本から底上げしたい方、ベタつかず奥まで潤う発酵コスメを探している方",
+        "point": "化粧水の後、スポイト1回分を取り顔全体に優しく塗り広げます。乾燥が気になる日はさらに2〜3滴を手に取り、両手で顔を包み込むようにハンドプレスして重ねづけするのがおすすめです。"
+    },
+    {
+        "rank": 7,
+        "tag": "🍃 緑茶乳酸菌カプセルが水分バリアを死守！速攻保水を叶えるロングセラーセラム",
+        "catch": "緑茶乳酸菌プロバイオティクス×ナノカプセル化ヒアルロン酸。洗顔直後の3秒で砂漠肌をみずみずしく潤す",
+        "brand_name": "innisfree (イニスフリー)",
+        "capacity": "80ml (グリーンティーシード ヒアルロン セラム)",
+        "type": "瞬間水分補給ナノカプセル美容液",
+        "features": "ビューティーグリーンティー™抽出エキス、緑茶乳酸菌（プロバイオティクス）、ナノカプセルヒアルロン酸、パンテノール",
+        "value": "分子サイズの異なるヒアルロン酸をナノカプセル化。冬のお風呂上がりや洗顔後の急速な乾燥を食い止め、潤い満タンの肌状態をキープ",
+        "desc_p1": "全世界で累計販売数3,000万本を突破したイニスフリーの代表作。チェジュ島の自社農園で栽培された美容専用の緑茶エキスと、最新のナノカプセル技術を融合させた高保水ブースターセラムです。",
+        "desc_p2": "洗顔後、タオルドライした直後の肌は急速に水分が蒸発する『魔の時間』。このセラムをなじませることで、ナノカプセル化されたヒアルロン酸と緑茶乳酸菌が瞬時に角層へ浸透し、水分をがっちりホールドします。みずみずしく爽やかな使用感でありながら、内側からしっとりとした潤いが長時間持続。男女問わず愛される冬のデイリーケアの決定版です。",
+        "target": "洗顔後すぐに肌がつっぱる方、重い油分よりもみずみずしい水分感をたっぷり補給したい方、大容量で毎日惜しみなく使いたい方",
+        "point": "洗顔後、タオルドライしたら間髪入れずに2〜3プッシュを全顔になじませます。首元までしっかり伸ばすことで、冬のタートルネックやマフラーによる首の乾燥摩擦も予防できます。"
+    },
+    {
+        "rank": 8,
+        "tag": "💎 浸透型リポソームコラーゲン配合！真冬の乾燥たるみを引き上げる濃厚オールインワン",
+        "catch": "日本初の浸透型コラーゲンリポソーム。濃密なゲルが肌の上で引き締まりヴェールを形成し、上向きのハリ肌へ",
+        "brand_name": "DR.CI:LABO (ドクターシーラボ)",
+        "capacity": "120g (アクアコラーゲンゲル エンリッチリフトEX)",
+        "type": "高機能リポソームリフトオールインワンゲル",
+        "features": "浸透型リポソームコラーゲンEX、ナイアシンアミド、金・白金コロイド、植物性エラスチン",
+        "value": "分子の大きいコラーゲンをリポソームカプセル化して角層奥まで届けるドクターズコスメ。1品で冬の本格リフト＆保湿ケアを完結",
+        "desc_p1": "皮膚の専門家が開発したオールインワンゲルの金字塔。2025年秋にさらなる進化を遂げ、世界初となる浸透型リポソームコラーゲンを贅沢に配合しました。冬の冷えや乾燥によってたるみ・ほうれい線が目立ちやすくなった肌を、強力な弾力と潤いで支えます。",
+        "desc_p2": "ぷるんと弾力のある濃厚なゲルを肌になじませると、リポソームカプセルが角層深くまで浸透し、肌表面にはピンと張るようなリフト膜を形成。乾燥小ジワを目立たなくするだけでなく、あご下やフェイスラインをすっきりと引き締まった印象へと導きます。化粧水からパックまでこれ1つで完了するため、忙しい真冬の朝晩のスキンケアに最適です。",
+        "target": "真冬の乾燥とともにフェイスラインのゆるみ・たるみが気になる方、手軽に本格的なエイジングケアを完結させたい方",
+        "point": "洗顔後、スパチュラで適量（朝はパール2粒大、夜はさくらんぼ1粒大）を取り、顔全体になじませます。あご先からこめかみに向かって引き上げるようにハンドプレスするのがリフト感を高めるコツです。"
+    },
+    {
+        "rank": 9,
+        "tag": "🌿 植物性ナノリポソームヒアルロン酸！乾いた角層を速攻オアシス化する水分爆弾アンプル",
+        "catch": "500Da超低分子植物性リポソームヒアルロン酸×パンテノール。冬のインナードライを潤す高純度ウォーターアンプル",
+        "brand_name": "NATURE REPUBLIC (ネイチャーリパブリック)",
+        "capacity": "30ml (ヒアテノール ハイドラ アンプル)",
+        "type": "高純度水分チャージリポソームアンプル",
+        "features": "植物性ナノリポソームヒアルロン酸、パンテノール（プロビタミンB5）、オクラ果実エキス、タマリンド種子エキス",
+        "value": "植物由来のナノリポソーム加工により、驚異的な角層浸透スピードを実現。塗った瞬間に乾いた角層が水分を飲み干すように潤う",
+        "desc_p1": "韓国の大手自然派ブランド・ネイチャーリパブリックの『ヒアテノール』シリーズ。分子サイズを極限まで小さくした超低分子植物性ヒアルロン酸をリポソーム化し、パンテノールと黄金比で配合した水分特化型アンプルです。",
+        "desc_p2": "青いボトルからスポイトで取り出すと、とろみがありながらも肌に触れた瞬間にスッと水状に崩れて角層深部へ吸い込まれます。ベタつきや被膜感が一切なく、内側から水分が湧き出るようなみずみずしい保水感を実現。冬でもテカリやすい混合肌や、油分過多でニキビができやすい方のインナードライ対策に最高の相棒となります。",
+        "target": "油分でフタをすると白ニキビができる方、インナードライで肌の内側が突っ張る方、朝のメイク崩れを防ぎたい脂性肌・混合肌の方",
+        "point": "洗顔後、化粧水の直後に2〜3滴をなじませます。乾燥が気になる日は、手持ちのコットンにアンプルを含ませて乾燥部分に貼る『部分水分パック』も絶大な効果があります。"
+    },
+    {
+        "rank": 10,
+        "tag": "🍶 老舗酒蔵のコメ発酵液×アミノ酸ナノリポソーム！プチプラ界の超高保湿名品美容液",
+        "catch": "純米吟醸酒のコメ発酵液×アミノ酸リポソーム。150mlの大容量で顔からデコルテまで惜しみなく潤す",
+        "brand_name": "菊正宗酒造",
+        "capacity": "150ml (日本酒の美容液)",
+        "type": "高保湿アミノ酸ナノリポソーム美容液",
+        "features": "コメ発酵液、アミノ酸ナノリポソーム、3種のセラミド（NP, AP, EOP）、プラセンタエキス、アルブチン",
+        "value": "150mlの特大サイズでありながら、リポソーム化されたアミノ酸とセラミドを贅沢配合。真冬の乾燥肌にしっとり吸い付くうるおいを与えるコスパ最強セラム",
+        "desc_p1": "江戸時代から続く老舗酒蔵・菊正宗が本気で作った『日本酒の美容液』。日本酒に含まれる天然アミノ酸の保湿力に着目し、角層への浸透性を高めるためにアミノ酸をナノリポソーム化して配合した大ヒットプチプラ美容液です。",
+        "desc_p2": "とろりとした濃密な美容液が肌に密着し、もっちりとした潤いのヴェールを形成。コメ発酵液による天然の保湿効果と3種のセラミドが協調し、真冬の乾燥で硬くなった肌をふっくらと柔らかく整えます。150mlと美容液としては異例の大容量のため、顔だけでなく首元やデコルテ、乾燥で粉を吹きやすい手足まで全身に惜しみなく使えます。",
+        "target": "プチプラで惜しみなく全身に使える高保湿美容液を探している方、日本酒や発酵コスメの保湿力が好きな方、コスパ重視でしっかり潤したい方",
+        "point": "化粧水の後に2〜3プッシュを顔全体になじませた後、もう1プッシュを首筋からデコルテにかけて伸ばします。冬のボディミルクに1プッシュ混ぜて使うのもおすすめです。"
+    }
+]
+
+# JSON-LD 生成
+jsonld_items = []
+for i, p in enumerate(items):
+    d = product_details[i]
+    jsonld_items.append({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": f"第{i+1}位：{d['brand_name']} {p['name']}",
+        "description": d['catch'],
+        "image": p['img_url'],
+        "url": f"https://lumi-cosme.vercel.app/winter-liposome.html#item-{i+1}",
+        "offers": {
+            "@type": "Offer",
+            "price": str(p['price']),
+            "priceCurrency": "JPY",
+            "availability": "https://schema.org/InStock"
+        }
+    })
+
+faq_list = [
+    {
+        "question": "リポソームとはどのような技術ですか？他の保湿成分と何が違うのですか？",
+        "answer": "リポソームとは、生体の細胞膜と同じ『生体リン脂質』で構成された超微細な多重層カプセルのことです。タマネギのように層が幾重にも重なっており、その層と層の間に水分や油分、美容成分を内包しています。一般的な化粧品成分は角層表面にとどまりがちですが、リポソームは肌の構成成分と類似しているため、バリアを通り抜けて角層深層へ直行します。さらに、外側の層から少しずつ玉ねぎの皮がむけるように成分を放出し続ける『時間差放出（徐放性）』を持つため、一度塗ると長時間にわたって潤いが持続するのが最大の違いです。"
+    },
+    {
+        "question": "なぜ11月〜12月の真冬の乾燥肌にリポソームコスメが必須なのですか？",
+        "answer": "11月から12月は外気温の急降下とともに暖房の使用が本格化し、湿度が30%以下まで落ち込む過酷な季節です。この極度の乾燥環境では、肌表面にどれだけ油分を重ねても、内側の水分が蒸発して突っ張る『インナードライ』が発生します。リポソームは傷ついた角層ラメラ構造の隙間にぴったりと入り込み、細胞膜そのものを修復しながら水分を閉じ込めます。エアコンの乾いた風に一日中さらされても肌の内側の水分が逃げない鉄壁の保水環境を作れるため、真冬の乾燥対策に最も適しています。"
+    },
+    {
+        "question": "リポソーム美容液はスキンケアのどの順番で使うのが最も効果的ですか？",
+        "answer": "製品の設計によって異なりますが、コスメデコルテのリペアセラムやVTのリードルショットのような『先行型（導入・ブースター）リポソーム』の場合は、朝晩の洗顔直後、化粧水をつける前のまっさらな肌に使用するのが鉄則です。洗顔直後の無防備な角層に微細カプセルが速やかに浸透し、角層を柔らかくほぐすことで、その後に重ねる化粧水や乳液の浸透ルートを確保できます。一方、クリームや乳液にリポソームが配合されている場合は、お手入れの最後のフタとして使用することで、夜間の水分蒸散をブロックする長時間持続シールドとして機能します。"
+    },
+    {
+        "question": "リポソームコスメとセラミドやヒアルロン酸は併用できますか？",
+        "answer": "併用できますし、むしろ相乗効果が期待できます。リポソームカプセルの中にセラミドやヒアルロン酸を閉じ込めた製品（エトヴォスやネイチャーリパブリックなど）も多く存在します。また、先行リポソーム美容液で角層の受け入れ態勢を整えた後に、高保湿セラミド化粧水やヒアルロン酸セラムを重ねると、成分が角層の奥深くまで引き込まれ、驚くほどのモチモチ肌へと導かれます。"
+    },
+    {
+        "question": "敏感肌や肌荒れしやすい時期でもリポソームコスメは刺激になりませんか？",
+        "answer": "リポソームを形成するリン脂質は、人間の細胞膜と全く同じ親和性の高い生体成分であるため、極めて低刺激で肌になじみやすいのが特徴です。肌が敏感になっているときほど、壊れた角層バリアの穴をリン脂質が埋めてくれるため、保護効果を発揮します。ただし、マイクロニードル配合タイプ（リードルショットなど）は微細なチクチク感があるため、肌がひどく荒れている時期はマイルドな先行セラム（コスメデコルテなど）やセラミド配合セラム（エトヴォスなど）を選ぶのがおすすめです。"
+    }
+]
+
+jsonld_faq = []
+for faq in faq_list:
+    jsonld_faq.append({
+        "@type": "Question",
+        "name": faq["question"],
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq["answer"]
+        }
+    })
+
+jsonld_article = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lumi-cosme.vercel.app/winter-liposome.html"
+    },
+    "headline": "保湿力の強さで肌乾燥とさようなら！多重層カプセルが角層深くまで潤いを巡らせ続ける高保湿リポソームコスメランク10",
+    "description": "11月・12月の暖房乾燥と真冬のインナードライを根本解決する高保湿リポソームコスメを徹底厳選！コスメデコルテリポソーム、カネボウ、エトヴォス、VT、魔女工場からドクターシーラボまで楽天で今すぐ買えるおすすめ人気ランキング10選とプロの活用術を詳しく解説。",
+    "image": items[0]["img_url"],
+    "author": {
+        "@type": "Organization",
+        "name": "冬コスメ徹底比較ラボ 編集部"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "冬コスメ徹底比較ラボ",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://lumi-cosme.vercel.app/favicon.jpg"
+        }
+    },
+    "datePublished": "2026-11-04T00:00:00+09:00",
+    "dateModified": "2026-11-04T00:00:00+09:00"
+}
+
+jsonld_itemlist = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "真冬の高保湿リポソームコスメおすすめ人気ランキング10選",
+    "itemListElement": jsonld_items
+}
+
+jsonld_faqpage = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": jsonld_faq
+}
+
+cards_html = []
+for i, p in enumerate(items):
+    d = product_details[i]
+    cards_html.append(f"""
+    <article class="product-card" id="item-{i+1}">
+      <div class="product-badge-rank">第{i+1}位</div>
+      <div class="product-tag">{d['tag']}</div>
+      <h3 class="product-name">{d['brand_name']} {p['name']}</h3>
+      <p class="product-catch">{d['catch']}</p>
+      
+      <div class="product-layout">
+        <div class="product-visual">
+          <img src="{p['img_url']}" alt="{p['name']}" class="product-img" loading="lazy" width="300" height="300">
+          <div class="price-box">
+            <span class="price-label">楽天参考価格</span>
+            <span class="price-value">¥{p['price']:,}</span>
+            <span class="price-tax">（税込）</span>
+          </div>
+          <a href="{p['affiliate_url']}" target="_blank" rel="noopener sponsored" class="rakuten-btn">
+            楽天で最新価格・在庫を見る
+          </a>
+        </div>
+        
+        <div class="product-info-detail">
+          <div class="spec-table">
+            <div class="spec-row"><span class="spec-th">ブランド</span><span class="spec-td">{d['brand_name']}</span></div>
+            <div class="spec-row"><span class="spec-th">容量・規格</span><span class="spec-td">{d['capacity']}</span></div>
+            <div class="spec-row"><span class="spec-th">アイテム種別</span><span class="spec-td">{d['type']}</span></div>
+            <div class="spec-row"><span class="spec-th">注目成分</span><span class="spec-td">{d['features']}</span></div>
+            <div class="spec-row"><span class="spec-th">真冬の保湿価値</span><span class="spec-td">{d['value']}</span></div>
+          </div>
+          
+          <div class="review-box">
+            <h4>💡 美容皮膚専門ライターの詳細解説＆真冬のレビュー</h4>
+            <p>{d['desc_p1']}</p>
+            <p>{d['desc_p2']}</p>
+          </div>
+          
+          <div class="target-box">
+            <strong>🎯 こんな方に特におすすめ：</strong>
+            <p>{d['target']}</p>
+          </div>
+          
+          <div class="usage-box">
+            <strong>✨ 効果を最大化する真冬の使い方テクニック：</strong>
+            <p>{d['point']}</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    """)
+
+cards_joined = "\n".join(cards_html)
+
+table_rows = []
+for i, p in enumerate(items):
+    d = product_details[i]
+    table_rows.append(f"""
+    <tr>
+      <td class="tbl-rank">第{i+1}位</td>
+      <td class="tbl-name"><a href="#item-{i+1}">{d['brand_name']} {p['name'][:22]}...</a></td>
+      <td class="tbl-type">{d['type']}</td>
+      <td class="tbl-price">¥{p['price']:,}</td>
+      <td class="tbl-merit">{d['value'][:32]}...</td>
+    </tr>
+    """)
+table_rows_joined = "\n".join(table_rows)
+
+html_content = f"""<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>保湿力の強さで肌乾燥とさようなら！多重層カプセルが角層深くまで潤いを巡らせ続ける高保湿リポソームコスメランク10 | 冬コスメ徹底比較ラボ</title>
+  <meta name="description" content="11月・12月の暖房乾燥と真冬のインナードライを根本解決する高保湿リポソームコスメを徹底厳選！コスメデコルテリポソーム、カネボウ、エトヴォス、VT、魔女工場からドクターシーラボまで楽天で今すぐ買えるおすすめ人気ランキング10選とプロの活用術を詳しく解説。">
+  <meta name="keywords" content="リポソーム コスメ,冬 乾燥肌 保湿,コスメデコルテ リポソーム,高保湿 美容液,インナードライ 対策,リポソーム 美容液 ランキング">
+  <link rel="canonical" href="https://lumi-cosme.vercel.app/winter-liposome.html">
+  
+  <meta property="og:title" content="保湿力の強さで肌乾燥とさようなら！多重層カプセルが角層深くまで潤いを巡らせ続ける高保湿リポソームコスメランク10">
+  <meta property="og:description" content="11月・12月の暖房乾燥と真冬のインナードライを根本解決する高保湿リポソームコスメを徹底厳選！楽天で買える人気ランキング10選。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://lumi-cosme.vercel.app/winter-liposome.html">
+  <meta property="og:image" content="{items[0]['img_url']}">
+  <meta property="og:site_name" content="冬コスメ徹底比較ラボ">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <script type="application/ld+json">
+{json.dumps(jsonld_article, ensure_ascii=False, indent=2)}
+  </script>
+  <script type="application/ld+json">
+{json.dumps(jsonld_itemlist, ensure_ascii=False, indent=2)}
+  </script>
+  <script type="application/ld+json">
+{json.dumps(jsonld_faqpage, ensure_ascii=False, indent=2)}
+  </script>
+  
+  <style>
+    :root {{
+      --primary: #1e3a8a;
+      --primary-light: #eff6ff;
+      --primary-border: #bfdbfe;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --gold: #b45309;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --bg-light: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+    }}
+    
+    * {{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }}
+    
+    body {{
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      line-height: 1.8;
+      color: var(--text-main);
+      background-color: #f1f5f9;
+      padding-bottom: 60px;
+    }}
+    
+    header {{
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }}
+    
+    .site-logo {{
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      opacity: 0.95;
+    }}
+    
+    .site-logo a {{
+      color: #ffffff;
+      text-decoration: none;
+    }}
+    
+    header h1 {{
+      font-size: 1.8rem;
+      line-height: 1.4;
+      max-width: 900px;
+      margin: 0 auto 16px;
+      font-weight: 800;
+    }}
+    
+    .header-meta {{
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }}
+    
+    .container {{
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }}
+    
+    .lead-box {{
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 35px;
+      box-shadow: var(--shadow-sm);
+      border-left: 6px solid var(--accent);
+    }}
+    
+    .lead-box p {{
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+      color: #374151;
+    }}
+    
+    .lead-box p:last-child {{
+      margin-bottom: 0;
+    }}
+    
+    .toc-box {{
+      background-color: var(--primary-light);
+      border: 1px solid var(--primary-border);
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 40px;
+    }}
+    
+    .toc-title {{
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }}
+    
+    .toc-list {{
+      list-style-type: none;
+      padding-left: 5px;
+    }}
+    
+    .toc-list li {{
+      margin-bottom: 10px;
+    }}
+    
+    .toc-list a {{
+      color: #1e40af;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }}
+    
+    .toc-list a:hover {{
+      color: #2563eb;
+      text-decoration: underline;
+    }}
+    
+    .section-title {{
+      font-size: 1.5rem;
+      color: #0f172a;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 10px;
+      margin: 45px 0 25px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }}
+    
+    .content-box {{
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 35px;
+      box-shadow: var(--shadow-sm);
+    }}
+    
+    .content-box h3 {{
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin: 25px 0 12px;
+      font-weight: 700;
+    }}
+    
+    .content-box h3:first-child {{
+      margin-top: 0;
+    }}
+    
+    .content-box p {{
+      margin-bottom: 16px;
+      color: #374151;
+    }}
+    
+    .content-box ul, .content-box ol {{
+      margin: 15px 0 20px 25px;
+      color: #374151;
+    }}
+    
+    .content-box li {{
+      margin-bottom: 8px;
+    }}
+    
+    .product-card {{
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      position: relative;
+    }}
+    
+    .product-badge-rank {{
+      display: inline-block;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      padding: 6px 18px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }}
+    
+    .product-tag {{
+      font-size: 0.95rem;
+      color: #b45309;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }}
+    
+    .product-name {{
+      font-size: 1.4rem;
+      color: #0f172a;
+      line-height: 1.4;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }}
+    
+    .product-catch {{
+      font-size: 1rem;
+      color: #475569;
+      font-weight: 600;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }}
+    
+    .product-layout {{
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 30px;
+    }}
+    
+    @media (max-width: 820px) {{
+      .product-layout {{
+        grid-template-columns: 1fr;
+      }}
+    }}
+    
+    .product-visual {{
+      text-align: center;
+    }}
+    
+    .product-img {{
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      background-color: #ffffff;
+      margin-bottom: 15px;
+      object-fit: contain;
+    }}
+    
+    .price-box {{
+      background: #f8fafc;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #e2e8f0;
+    }}
+    
+    .price-label {{
+      font-size: 0.85rem;
+      color: #64748b;
+      display: block;
+      margin-bottom: 2px;
+    }}
+    
+    .price-value {{
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #e11d48;
+    }}
+    
+    .price-tax {{
+      font-size: 0.8rem;
+      color: #64748b;
+    }}
+    
+    .rakuten-btn {{
+      display: block;
+      background: linear-gradient(135deg, #bf0000 0%, #e60000 100%);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 14px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(191, 0, 0, 0.25);
+      transition: all 0.2s;
+    }}
+    
+    .rakuten-btn:hover {{
+      background: linear-gradient(135deg, #a60000 0%, #cc0000 100%);
+      box-shadow: 0 6px 10px rgba(191, 0, 0, 0.35);
+      transform: translateY(-1px);
+    }}
+    
+    .spec-table {{
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }}
+    
+    .spec-row {{
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 8px 0;
+    }}
+    
+    .spec-th {{
+      font-weight: 700;
+      color: #475569;
+    }}
+    
+    .spec-td {{
+      color: #1e293b;
+    }}
+    
+    .review-box {{
+      background: #f8fafc;
+      border-left: 4px solid #3b82f6;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 16px;
+    }}
+    
+    .review-box h4 {{
+      font-size: 1.05rem;
+      color: #1e40af;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }}
+    
+    .review-box p {{
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      color: #334155;
+      line-height: 1.7;
+    }}
+    
+    .review-box p:last-child {{
+      margin-bottom: 0;
+    }}
+    
+    .target-box, .usage-box {{
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }}
+    
+    .target-box strong, .usage-box strong {{
+      color: #1e3a8a;
+      display: block;
+      margin-bottom: 4px;
+    }}
+    
+    .target-box p, .usage-box p {{
+      color: #475569;
+      margin-bottom: 0;
+    }}
+    
+    .data-table {{
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.95rem;
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }}
+    
+    .data-table th, .data-table td {{
+      padding: 12px 14px;
+      border: 1px solid #e2e8f0;
+      text-align: left;
+    }}
+    
+    .data-table th {{
+      background-color: #1e3a8a;
+      color: #ffffff;
+      font-weight: 700;
+    }}
+    
+    .data-table tr:nth-child(even) {{
+      background-color: #f8fafc;
+    }}
+    
+    .tbl-rank {{
+      font-weight: 700;
+      color: #2563eb;
+      white-space: nowrap;
+    }}
+    
+    .tbl-name a {{
+      color: #1e293b;
+      text-decoration: none;
+      font-weight: 600;
+    }}
+    
+    .tbl-name a:hover {{
+      color: #2563eb;
+      text-decoration: underline;
+    }}
+    
+    .tbl-price {{
+      font-weight: 700;
+      color: #e11d48;
+      white-space: nowrap;
+    }}
+    
+    .faq-item {{
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid #e2e8f0;
+    }}
+    
+    .faq-q {{
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }}
+    
+    .faq-q::before {{
+      content: "Q";
+      display: inline-block;
+      background: #2563eb;
+      color: #ffffff;
+      font-size: 0.9rem;
+      font-weight: 800;
+      width: 26px;
+      height: 26px;
+      line-height: 26px;
+      text-align: center;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }}
+    
+    .faq-a {{
+      color: #334155;
+      font-size: 0.98rem;
+      line-height: 1.7;
+      padding-left: 36px;
+    }}
+    
+    .internal-links-box {{
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      margin-top: 40px;
+      box-shadow: var(--shadow-sm);
+    }}
+    
+    .link-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }}
+    
+    .link-card {{
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 14px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #1e293b;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }}
+    
+    .link-card:hover {{
+      background: #eff6ff;
+      border-color: #3b82f6;
+      color: #2563eb;
+      transform: translateY(-2px);
+    }}
+    
+    footer {{
+      text-align: center;
+      margin-top: 60px;
+      color: #64748b;
+      font-size: 0.9rem;
+    }}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="site-logo"><a href="index.html">❄️ 冬コスメ徹底比較ラボ</a></div>
+    <h1>保湿力の強さで肌乾燥とさようなら！多重層カプセルが角層深くまで潤いを巡らせ続ける高保湿リポソームコスメランク10</h1>
+    <div class="header-meta">
+      <span>更新日：2026年11月4日</span> | <span>執筆・監修：冬コスメ徹底比較ラボ 科学スキンケア班</span>
+    </div>
+  </header>
+
+  <div class="container">
+    
+    <div class="lead-box">
+      <p>11月から12月にかけて、本格的な冬将軍の到来とともに吹き荒れる冷たい北風と、オフィスや自宅でフル稼働するエアコン暖房。この過酷な寒冷・低湿度環境下では、皮膚表面から水分が急激に奪われ、どれだけ濃厚なクリームを塗っても夕方には肌の内側がピキピキと突っ張る「インナードライ」に悩まされる方が爆発的に増加します。</p>
+      <p>この真冬の深刻な乾燥トラブルを根底から打破するテクノロジーとして、皮膚科学界・美容医療界で最も熱い注目を集め続けているのが「リポソーム（生体リン脂質による多重層微細カプセル）」です。本記事では、楽天APIからリアルタイムに取得した最新の価格と在庫データをもとに、冬の乾燥肌を救済する最高峰の高保湿リポソームコスメ厳選10選を徹底ランキング形式でご紹介します。</p>
+    </div>
+
+    <div class="toc-box">
+      <div class="toc-title">📑 目次（クリックで各項目へジャンプ）</div>
+      <ul class="toc-list">
+        <li><a href="#science">1. なぜ真冬のインナードライに「リポソーム」が最強なのか？浸透と持続の科学</a></li>
+        <li><a href="#ranking">2. 真冬の高保湿リポソームコスメおすすめ人気ランキング10選</a></li>
+        <li><a href="#comparison">3. 厳選10商品のスペック・価格・配合成分徹底比較表</a></li>
+        <li><a href="#guide">4. 失敗しないリポソームコスメの選び方＆テクスチャー別使い分け</a></li>
+        <li><a href="#howto">5. 効果を最大化するプロ直伝の真冬スキンケアステップ＆相乗効果テクニック</a></li>
+        <li><a href="#faq">6. 高保湿リポソームコスメに関するよくある質問（FAQ）</a></li>
+        <li><a href="#links">7. あわせて読みたい冬の集中高保湿スキンケア特集</a></li>
+      </ul>
+    </div>
+
+    <section id="science" class="content-box">
+      <h2 class="section-title">1. なぜ真冬のインナードライに「リポソーム」が最強なのか？浸透と持続の科学</h2>
+      <p>冬になると「高保湿」と謳われるスキンケアを何重にも重ねているのに、なぜか肌が乾いてしまう。その根本的な原因は、水分と油分を肌の奥深くまで届けられず、角層表面で蒸発・上滑りしていることにあります。</p>
+      
+      <h3>角層ラメラ構造と同一の「生体リン脂質」カプセル</h3>
+      <p>私たちの肌の最外層（角質層）は、細胞間脂質（セラミドや脂肪酸）と水分がミルフィーユのように交互に重なり合う「ラメラ構造」によってバリア機能を維持しています。リポソームは、このラメラ構造を形成するリン脂質と全く同じ成分で人工的に作られた、直径わずか0.1ミクロン（毛穴の数千分の一）の超微細カプセルです。</p>
+      <p>異物として肌に弾かれることなく、塗布した瞬間に角質層と一体化するように溶け込み、傷ついたバリア構造の隙間を瞬時に修復しながら奥深くまで浸透します。</p>
+
+      <h3>真冬の乾燥を24時間防ぐ「徐放性（タマネギ状多重層カプセル）」</h3>
+      <p>リポソームのもう一つの決定的な強みが「多重層構造による徐放性」です。一般的な化粧水や美容液は、塗布直後に潤いを感じても、時間の経過とともに水分が蒸発していきます。しかし多重層バイオリポソームは、タマネギのように層が幾重にも重なっており、外側の層から少しずつ玉ねぎの皮が剥がれるように時間差で美容成分と水分を放出し続けます。</p>
+      <p>朝塗れば夕方の暖房下でも潤いが途切れず、夜塗れば睡眠中の乾燥を完全に防ぎ切ることができるため、11月〜12月の過酷な冬枯れ肌を救う絶対的な切り札となるのです。</p>
+    </section>
+
+    <section id="ranking">
+      <h2 class="section-title">2. 真冬の高保湿リポソームコスメおすすめ人気ランキング10選</h2>
+      {cards_joined}
+    </section>
+
+    <section id="comparison" class="content-box">
+      <h2 class="section-title">3. 厳選10商品のスペック・価格・配合成分徹底比較表</h2>
+      <p>ご紹介したリポソームコスメ10品の種別、参考価格、真冬における保湿価値を一目で比較できるよう一覧表にまとめました。ご自身の肌悩みや予算に合わせて最適な1本をお選びください。</p>
+      
+      <div style="overflow-x: auto;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>順位</th>
+              <th>製品名</th>
+              <th>タイプ</th>
+              <th>楽天参考価格</th>
+              <th>真冬の保湿バリュー</th>
+            </tr>
+          </thead>
+          <tbody>
+            {table_rows_joined}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="guide" class="content-box">
+      <h2 class="section-title">4. 失敗しないリポソームコスメの選び方＆テクスチャー別使い分け</h2>
+      <p>一言でリポソームコスメと言っても、洗顔直後に使うブースターセラムから、濃厚なナイトクリーム、マイクロニードル融合型まで多彩な選択肢があります。真冬の肌状態に応じた選び方のポイントを解説します。</p>
+
+      <h3>① インナードライ・浸透力重視なら「洗顔直後の先行ブースター」</h3>
+      <p>「化粧水が肌に入っていかない」「肌表面はテカるのに内側がつっぱる」という典型的なインナードライ肌には、コスメデコルテのリペアセラムやイニスフリーのような先行導入タイプが最適です。洗顔直後の角層にリポソームを行き渡らせることで、その後のスキンケア全体の浸透力を何倍にも増幅させます。</p>
+
+      <h3>② 朝まで乾かない鉄壁の保護膜を求めるなら「リポソームクリーム」</h3>
+      <p>朝起きたときの目元・口元の乾燥小ジワや粉吹きが深刻な方は、コスメデコルテのリペアクリームやドクターシーラボのエンリッチリフトがベストです。油分と水分がリポソームに包まれており、寝ている間の水分蒸発を物理的・生化学的に遮断します。</p>
+
+      <h3>③ 敏感肌・肌荒れを繰り返すなら「セラミド内包リポソーム」</h3>
+      <p>冷風や寒暖差で肌が赤くなったりヒリつく方は、エトヴォスのようにヒト型セラミドをリポソーム化した低刺激処方を選びましょう。角層バリアの基本成分であるセラミドを効率よく補給でき、健やかな角質層を取り戻せます。</p>
+    </section>
+
+    <section id="howto" class="content-box">
+      <h2 class="section-title">5. 効果を最大化するプロ直伝の真冬スキンケアステップ＆相乗効果テクニック</h2>
+      <p>高機能なリポソームコスメの真価を引き出すためには、塗るタイミングとハンドテクニックが極めて重要です。</p>
+
+      <ol>
+        <li><strong>洗顔後30秒以内のファーストタッチ：</strong> 入浴後や洗顔後は角層の水分が急激に蒸発します。タオルドライしたら間髪入れずにリポソーム先行美容液を手に取り、顔全体に広げましょう。</li>
+        <li><strong>擦らず包み込む「密着ハンドプレス」：</strong> リポソームは手のひらの体温によって角層への親和性が高まります。肌を擦るのではなく、手のひら全体で頬・額・あごを包み込み、10秒間じっくりと温めるように浸透させてください。</li>
+        <li><strong>高保湿化粧水とのサンドイッチ塗布：</strong> 先行リポソームをなじませた直後、高保湿化粧水をたっぷり重ね、仕上げに乳液またはリポソームクリームでフタをします。潤いのサンドイッチ構造を作ることで、真冬のエアコン下でも丸一日うるおいが逃げません。</li>
+      </ol>
+    </section>
+
+    <section id="faq">
+      <h2 class="section-title">6. 高保湿リポソームコスメに関するよくある質問（FAQ）</h2>
+      <div class="faq-list">
+        {''.join([f'''
+        <div class="faq-item">
+          <div class="faq-q">{faq["question"]}</div>
+          <div class="faq-a">{faq["answer"]}</div>
+        </div>
+        ''' for faq in faq_list])}
+      </div>
+    </section>
+
+    <section id="links" class="internal-links-box">
+      <h2 class="section-title" style="margin-top:0;">7. あわせて読みたい冬の集中高保湿スキンケア特集</h2>
+      <p>冬の乾燥・肌荒れ・寒暖差トラブルを乗り越えるために、併せてチェックしたい注目の高保湿特集です。お悩みに合わせた最適なケアを見つけてみてください。</p>
+      
+      <div class="link-grid">
+        <a href="winter-coenzyme-q10.html" class="link-card">⚡ 高濃度コエンザイムQ10コスメ10選</a>
+        <a href="winter-astaxanthin.html" class="link-card">🌹 高保湿アスタキサンチンコスメ10選</a>
+        <a href="winter-ceramide-cream.html" class="link-card">🛡️ 真冬の高保湿セラミドクリーム10選</a>
+        <a href="winter-ceramide-lotion.html" class="link-card">💧 高保湿セラミド化粧水ランキング</a>
+        <a href="winter-panthenol-cream.html" class="link-card">🌿 真冬の高保湿パンテノールクリーム</a>
+        <a href="winter-azulene.html" class="link-card">💙 寒暖差赤ら顔を救う高保湿アズレン</a>
+        <a href="winter-tranexamic-acid.html" class="link-card">✨ 冬の透明ツヤ肌トラネキサム酸</a>
+        <a href="winter-volufiline.html" class="link-card">🧬 目元口元ふっくらボルフィリン</a>
+        <a href="winter-pdrn-serum.html" class="link-card">🐟 韓国で話題のサーモンPDRN美容液</a>
+        <a href="winter-spicule.html" class="link-card">🪡 真冬の浸透スピキュール針美容液</a>
+        <a href="winter-stem-cell.html" class="link-card">👑 最高峰ヒト幹細胞培養液コスメ</a>
+        <a href="winter-lipidure.html" class="link-card">🔬 ヒアルロン酸の2倍保水リピジュア</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 冬コスメ徹底比較ラボ All Rights Reserved. 本サイトに掲載されている商品情報・価格は楽天APIより自動取得された最新データです。</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
+"""
+
+with open("winter-liposome.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print(f"Successfully generated winter-liposome.html! Size: {len(html_content):,} bytes")
