@@ -3,6 +3,9 @@ import json
 import re
 
 files_to_check = [
+    "winter-ectoin.html",
+    "winter-bakuchiol.html",
+    "winter-bifida.html",
     "winter-proteoglycan.html",
     "winter-propolis.html",
     "winter-galactomyces.html",
