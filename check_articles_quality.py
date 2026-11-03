@@ -3,6 +3,9 @@ import json
 import re
 
 files_to_check = [
+    "winter-tranexamic-acid.html",
+    "winter-azulene.html",
+    "winter-volufiline.html",
     "winter-spicule.html",
     "winter-stem-cell.html",
     "winter-lipidure.html",
