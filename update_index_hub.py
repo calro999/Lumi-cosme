@@ -9,29 +9,29 @@ if '<div class="footer-links">' in html:
     html = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, html, flags=re.DOTALL)
 
 # 新規3記事のカード定義
-newest_cards = """      <!-- 米発酵・ライスパワー高保湿 -->
-      <a href="/winter-rice-power" class="hub-card">
-        <span class="hub-card-tag" style="background: #fef3c7; color: #92400e;">🌾 水分保持能改善・セラミド自給力 NEW</span>
-        <h2 class="hub-card-title">🌾 保湿力の強さで肌乾燥とさようなら！自らうるおう力を育む米発酵・ライスパワー高保湿ランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬本番に深刻化するインナードライ・粉吹き乾燥を根本解決！日本で唯一『水分保持能を改善する』医薬部外品認可のライスパワーNo.11や純米コメ発酵液を配合した高保湿スキンケア10選を徹底比較！ONE BY KOSE、米肌、ライスフォース、菊正宗、松山油脂など厳選。</p>
+newest_cards = """      <!-- 薬用ヘパリン類似物質コスメ -->
+      <a href="/winter-heparinoid" class="hub-card">
+        <span class="hub-card-tag" style="background: #e0f2fe; color: #0369a1;">🧪 医薬部外品・保水構造再建 NEW</span>
+        <h2 class="hub-card-title">🧪 保湿力の強さで肌乾燥とさようなら！角層深部の保水構造を立て直す薬用ヘパリン類似物質コスメランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬本番に深刻化するインナードライ・粉吹き乾燥を根本解決！角層深部の水分保持能を立て直す薬用ヘパリン類似物質コスメ10選を徹底比較！カルテHD、アドライズ、ヒルメナイド、ヘパソフト、ピアソンHPなど厳選。</p>
       </a>
 
-      <!-- 高純度椿油 -->
-      <a href="/winter-camellia-oil" class="hub-card">
-        <span class="hub-card-tag" style="background: #ffe4e6; color: #be123c;">🌺 オレイン酸85%・日本伝統ツヤ膜 NEW</span>
-        <h2 class="hub-card-title">🌺 保湿力の強さで肌乾燥とさようなら！日本の冬を潤すオレイン酸85%の極上ツヤ膜・高純度椿油ランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬本番に深刻化する皮脂枯れ・粉吹き乾燥を徹底解決！人の皮脂成分オレイン酸が約85%と極めて酸化しにくい日本古来の最高峰高保湿植物油・純椿油10選を徹底比較！大島椿、黒バラ本舗、かづら清老舗、五島特産、よーじやなど厳選。</p>
+      <!-- 高純度ワセリン -->
+      <a href="/winter-vaseline" class="hub-card">
+        <span class="hub-card-tag" style="background: #d1fae5; color: #047857;">🛡️ 水分蒸発ゼロ・鉄壁保護シールド NEW</span>
+        <h2 class="hub-card-title">🛡️ 保湿力の強さで肌乾燥とさようなら！水分蒸発をゼロに抑えて冬の冷風から守り抜く高純度ワセリンランク10</h2>
+        <p class="hub-card-desc">11月・12月の真冬乾燥に！水分蒸発をゼロに抑えて外気刺激を完全遮断する高純度ワセリン10選を徹底比較！サンホワイト、プロペト、ベビーワセリン、IHADA薬用バームなど厳選。</p>
       </a>
 
-      <!-- 高浸透アミノ酸 -->
-      <a href="/winter-amino-acid" class="hub-card">
-        <span class="hub-card-tag" style="background: #e0f2fe; color: #0284c7;">💧 NMF集中補給・角層内部保水 NEW</span>
-        <h2 class="hub-card-title">💧 保湿力の強さで肌乾燥とさようなら！天然保湿因子NMFを速攻チャージして乾きを断つ高浸透アミノ酸コスメランク10</h2>
-        <p class="hub-card-desc">11月・12月の冬本番に深刻化する角層バリア破壊・インナードライを徹底解決！肌の天然保湿因子NMFの主成分である高浸透アミノ酸を配合した高保湿スキンケア10選を徹底比較！ミノン アミノモイスト、松山油脂、味の素Jino、キュレル、ドクターシーラボなど厳選。</p>
+      <!-- 高濃度プラセンタ原液 -->
+      <a href="/winter-placenta" class="hub-card">
+        <span class="hub-card-tag" style="background: #f3e8ff; color: #7e22ce;">✨ アミノ酸＆成長因子・エイジング保湿 NEW</span>
+        <h2 class="hub-card-title">✨ 保湿力の強さで肌乾燥とさようなら！冬の代謝低下とハリ不足を跳ね返す高濃度プラセンタ原液ランク10</h2>
+        <p class="hub-card-desc">11月・12月の冬枯れ肌に！アミノ酸と成長因子が代謝低下とハリ不足を跳ね返す高濃度プラセンタ原液10選を徹底比較！フラコラ、Bbラボラトリーズ、チューンメーカーズ、KISOなど厳選。</p>
       </a>\n"""
 
 # まだ追加されていなければ hub-grid の直後に挿入
-if '/winter-rice-power' not in html:
+if '/winter-heparinoid' not in html:
     html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + newest_cards)
 
 with open("index.html", "w", encoding="utf-8") as f:
