@@ -475,6 +475,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lumi-cosme.vercel.app/winter-honey</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://lumi-cosme.vercel.app/winter-horse-oil</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -655,6 +661,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lumi-cosme.vercel.app/winter-mugwort</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://lumi-cosme.vercel.app/winter-multi-balm</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -770,6 +782,12 @@
   </url>
   <url>
     <loc>https://lumi-cosme.vercel.app/winter-rice-power</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lumi-cosme.vercel.app/winter-rosehip-oil</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
