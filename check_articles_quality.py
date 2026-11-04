@@ -3,6 +3,9 @@ import json
 import re
 
 files_to_check = [
+    "winter-yuzu-ceramide.html",
+    "winter-sake-kasu.html",
+    "winter-vitamin-e.html",
     "winter-liposome.html",
     "winter-coenzyme-q10.html",
     "winter-astaxanthin.html",
