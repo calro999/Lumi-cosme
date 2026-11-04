@@ -14,6 +14,9 @@ with open("indexnow_key.txt", "r", encoding="utf-8") as f:
 HOST = "lumi-cosme.vercel.app"
 URL_LIST = [
     "https://lumi-cosme.vercel.app/",
+    "https://lumi-cosme.vercel.app/winter-damask-rose",
+    "https://lumi-cosme.vercel.app/winter-evening-primrose",
+    "https://lumi-cosme.vercel.app/winter-moringa-oil",
     "https://lumi-cosme.vercel.app/winter-tamanu-oil",
     "https://lumi-cosme.vercel.app/winter-baobab-oil",
     "https://lumi-cosme.vercel.app/winter-kombucha",
@@ -73,56 +76,180 @@ URL_LIST = [
     "https://lumi-cosme.vercel.app/winter-glutathione-serum",
     "https://lumi-cosme.vercel.app/winter-pdrn-serum",
     "https://lumi-cosme.vercel.app/winter-collagen-mask",
-    "https://lumi-cosme.vercel.app/winter-carbonic-shampoo"
+    "https://lumi-cosme.vercel.app/winter-carbonic-shampoo",
+    "https://lumi-cosme.vercel.app/winter-oil-mist",
+    "https://lumi-cosme.vercel.app/winter-carbonic-bath",
+    "https://lumi-cosme.vercel.app/winter-hot-treatment",
+    "https://lumi-cosme.vercel.app/winter-foot-mask",
+    "https://lumi-cosme.vercel.app/winter-eye-patch",
+    "https://lumi-cosme.vercel.app/winter-nail-serum",
+    "https://lumi-cosme.vercel.app/winter-inbath-body",
+    "https://lumi-cosme.vercel.app/winter-hot-eyemask",
+    "https://lumi-cosme.vercel.app/winter-hand-mask",
+    "https://lumi-cosme.vercel.app/winter-needle-patch",
+    "https://lumi-cosme.vercel.app/winter-bath-salt",
+    "https://lumi-cosme.vercel.app/winter-lip-gloss",
+    "https://lumi-cosme.vercel.app/winter-morning-mask",
+    "https://lumi-cosme.vercel.app/winter-gel-wash",
+    "https://lumi-cosme.vercel.app/winter-lip-primer",
+    "https://lumi-cosme.vercel.app/winter-carbonic-wash",
+    "https://lumi-cosme.vercel.app/winter-control-color",
+    "https://lumi-cosme.vercel.app/winter-multi-balm",
+    "https://lumi-cosme.vercel.app/winter-advent-calendar",
+    "https://lumi-cosme.vercel.app/winter-hyaluronic-serum",
+    "https://lumi-cosme.vercel.app/winter-hand-wash",
+    "https://lumi-cosme.vercel.app/winter-scalp-scrub",
+    "https://lumi-cosme.vercel.app/winter-medicinal-bath",
+    "https://lumi-cosme.vercel.app/winter-wipe-lotion",
+    "https://lumi-cosme.vercel.app/winter-hair-treatment",
+    "https://lumi-cosme.vercel.app/winter-lip-balm",
+    "https://lumi-cosme.vercel.app/winter-carbonic-serum",
+    "https://lumi-cosme.vercel.app/winter-body-cream",
+    "https://lumi-cosme.vercel.app/winter-booster-oil",
+    "https://lumi-cosme.vercel.app/winter-moisture-shampoo",
+    "https://lumi-cosme.vercel.app/winter-vitamin-c-serum",
+    "https://lumi-cosme.vercel.app/winter-makeup-primer",
+    "https://lumi-cosme.vercel.app/winter-cream-foundation",
+    "https://lumi-cosme.vercel.app/winter-cleansing-cream",
+    "https://lumi-cosme.vercel.app/winter-niacinamide-serum",
+    "https://lumi-cosme.vercel.app/winter-lipstick",
+    "https://lumi-cosme.vercel.app/winter-hand-cream",
+    "https://lumi-cosme.vercel.app/winter-retinol-cream",
+    "https://lumi-cosme.vercel.app/winter-ceramide-serum",
+    "https://lumi-cosme.vercel.app/winter-cleansing-gel",
+    "https://lumi-cosme.vercel.app/winter-peel-serum",
+    "https://lumi-cosme.vercel.app/winter-lip-serum",
+    "https://lumi-cosme.vercel.app/winter-cleansing-oil",
+    "https://lumi-cosme.vercel.app/winter-body-milk",
+    "https://lumi-cosme.vercel.app/winter-toner-pad",
+    "https://lumi-cosme.vercel.app/winter-night-cream",
+    "https://lumi-cosme.vercel.app/winter-cleansing-milk",
+    "https://lumi-cosme.vercel.app/winter-hair-mist",
+    "https://lumi-cosme.vercel.app/winter-cleansing-balm",
+    "https://lumi-cosme.vercel.app/winter-scalp-shampoo",
+    "https://lumi-cosme.vercel.app/winter-cica-cream",
+    "https://lumi-cosme.vercel.app/winter-holiday-coffret",
+    "https://lumi-cosme.vercel.app/winter-enzyme-wash",
+    "https://lumi-cosme.vercel.app/winter-tinted-lip-balm",
+    "https://lumi-cosme.vercel.app/winter-eyelash-serum",
+    "https://lumi-cosme.vercel.app/winter-point-makeup-remover",
+    "https://lumi-cosme.vercel.app/winter-massage-cream",
+    "https://lumi-cosme.vercel.app/winter-hand-serum",
+    "https://lumi-cosme.vercel.app/winter-bath-oil",
+    "https://lumi-cosme.vercel.app/winter-body-butter",
+    "https://lumi-cosme.vercel.app/winter-hair-balm",
+    "https://lumi-cosme.vercel.app/winter-hot-cleansing",
+    "https://lumi-cosme.vercel.app/winter-neck-cream",
+    "https://lumi-cosme.vercel.app/winter-lip-scrub",
+    "https://lumi-cosme.vercel.app/winter-bb-cream",
+    "https://lumi-cosme.vercel.app/winter-carbonic-pack",
+    "https://lumi-cosme.vercel.app/winter-uv-cream",
+    "https://lumi-cosme.vercel.app/winter-wrinkle-cream",
+    "https://lumi-cosme.vercel.app/winter-body-wash",
+    "https://lumi-cosme.vercel.app/winter-make-keep-mist",
+    "https://lumi-cosme.vercel.app/winter-lip-oil",
+    "https://lumi-cosme.vercel.app/winter-body-oil",
+    "https://lumi-cosme.vercel.app/winter-liquid-foundation",
+    "https://lumi-cosme.vercel.app/winter-cream-cheek",
+    "https://lumi-cosme.vercel.app/winter-cream-eyeshadow",
+    "https://lumi-cosme.vercel.app/winter-highlighter",
+    "https://lumi-cosme.vercel.app/winter-hair-oil",
+    "https://lumi-cosme.vercel.app/winter-lip-mask",
+    "https://lumi-cosme.vercel.app/winter-hair-milk",
+    "https://lumi-cosme.vercel.app/winter-cushion-foundation",
+    "https://lumi-cosme.vercel.app/winter-body-scrub",
+    "https://lumi-cosme.vercel.app/winter-hydrating-serum",
+    "https://lumi-cosme.vercel.app/winter-concealer",
+    "https://lumi-cosme.vercel.app/winter-lip-tint",
+    "https://lumi-cosme.vercel.app/winter-powder",
+    "https://lumi-cosme.vercel.app/winter-lip-plumper",
+    "https://lumi-cosme.vercel.app/winter-hair-mask",
+    "https://lumi-cosme.vercel.app/winter-stick-serum",
+    "https://lumi-cosme.vercel.app/winter-scalp-serum",
+    "https://lumi-cosme.vercel.app/winter-toneup-base",
+    "https://lumi-cosme.vercel.app/winter-sleeping-mask",
+    "https://lumi-cosme.vercel.app/winter-nail-oil",
+    "https://lumi-cosme.vercel.app/winter-foot-cream",
+    "https://lumi-cosme.vercel.app/winter-emulsion",
+    "https://lumi-cosme.vercel.app/winter-face-oil",
+    "https://lumi-cosme.vercel.app/winter-repair-balm",
+    "https://lumi-cosme.vercel.app/winter-bath-care",
+    "https://lumi-cosme.vercel.app/winter-face-wash",
+    "https://lumi-cosme.vercel.app/winter-face-mist",
+    "https://lumi-cosme.vercel.app/winter-lotion",
+    "https://lumi-cosme.vercel.app/winter-cleansing",
+    "https://lumi-cosme.vercel.app/winter-day-cream",
+    "https://lumi-cosme.vercel.app/winter-moisture-cream",
+    "https://lumi-cosme.vercel.app/winter-serum-booster",
+    "https://lumi-cosme.vercel.app/winter-face-mask",
+    "https://lumi-cosme.vercel.app/winter-eye-cream",
+    "https://lumi-cosme.vercel.app/winter-base-makeup",
+    "https://lumi-cosme.vercel.app/winter-lip-care",
+    "https://lumi-cosme.vercel.app/winter-body-care",
+    "https://lumi-cosme.vercel.app/winter-hair-care",
+    "https://lumi-cosme.vercel.app/winter-hand-care",
+    "https://lumi-cosme.vercel.app/summer-cosme"
 ]
 
-payload = {
-    "host": HOST,
-    "key": KEY,
-    "keyLocation": f"https://{HOST}/{KEY}.txt",
-    "urlList": URL_LIST
-}
-
-data_bytes = json.dumps(payload, ensure_ascii=False).encode('utf-8')
-
-endpoints = [
-    "https://api.indexnow.org/IndexNow",
-    "https://www.bing.com/IndexNow",
-    "https://searchadvisor.naver.com/IndexNow",
+ENDPOINTS = [
+    "https://api.indexnow.org/indexnow",
+    "https://www.bing.com/indexnow",
     "https://yandex.com/indexnow"
 ]
 
-print(f"Submitting IndexNow for {len(URL_LIST)} URLs...")
-print(f"Key: {KEY}")
-print(f"Key location: https://{HOST}/{KEY}.txt")
+def submit():
+    payload = {
+        "host": HOST,
+        "key": KEY,
+        "keyLocation": f"https://{HOST}/{KEY}.txt",
+        "urlList": URL_LIST
+    }
+    
+    data_bytes = json.dumps(payload).encode("utf-8")
+    
+    print(f"=== Submitting {len(URL_LIST)} URLs to IndexNow ===")
+    print(f"Key: {KEY}")
+    print(f"KeyLocation: https://{HOST}/{KEY}.txt")
+    print(f"First 3 URLs:")
+    for u in URL_LIST[:3]:
+        print(f"  - {u}")
+    print(f"...")
 
-for ep in endpoints:
-    print(f"\nSubmitting to: {ep} ...")
-    req = urllib.request.Request(
-        ep,
-        data=data_bytes,
-        headers={
-            "Content-Type": "application/json; charset=utf-8",
-            "User-Agent": "Mozilla/5.0 (compatible; IndexNowBot/1.0)"
-        },
-        method="POST"
-    )
-    try:
-        with urllib.request.urlopen(req, context=ctx, timeout=15) as res:
-            status = res.status
-            body = res.read().decode('utf-8')
-            print(f"  -> SUCCESS! HTTP status: {status}")
-            if body:
-                print(f"  -> Response: {body}")
-    except urllib.error.HTTPError as e:
-        print(f"  -> HTTP Error: {e.code} - {e.reason}")
+    success = False
+    for ep in ENDPOINTS:
+        print(f"\nSubmitting to: {ep} ...")
         try:
-            err_body = e.read().decode('utf-8')
-            print(f"     Body: {err_body}")
-        except:
-            pass
-    except Exception as e:
-        print(f"  -> Connection Error: {e}")
-    time.sleep(1)
+            req = urllib.request.Request(
+                ep,
+                data=data_bytes,
+                headers={
+                    "Content-Type": "application/json; charset=utf-8",
+                    "User-Agent": "LumiCosmeIndexNowBot/2.0"
+                },
+                method="POST"
+            )
+            with urllib.request.urlopen(req, context=ctx, timeout=10) as res:
+                code = res.getcode()
+                body = res.read().decode("utf-8")
+                print(f"  Response: HTTP {code} ({res.reason})")
+                if code in (200, 202):
+                    print(f"  ✓ Success! URLs accepted by {ep}")
+                    success = True
+                else:
+                    print(f"  Response body: {body}")
+        except urllib.error.HTTPError as e:
+            print(f"  HTTP Error {e.code}: {e.reason}")
+            try:
+                err_body = e.read().decode("utf-8")
+                print(f"  Details: {err_body}")
+            except:
+                pass
+            if e.code in (200, 202):
+                success = True
+        except Exception as e:
+            print(f"  Error: {e}")
+            
+    return success
 
-print("\nIndexNow submission completed!")
+if __name__ == "__main__":
+    submit()

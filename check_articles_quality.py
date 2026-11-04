@@ -3,6 +3,9 @@ import json
 import re
 
 files_to_check = [
+    "winter-damask-rose.html",
+    "winter-evening-primrose.html",
+    "winter-moringa-oil.html",
     "winter-tamanu-oil.html",
     "winter-baobab-oil.html",
     "winter-kombucha.html",
