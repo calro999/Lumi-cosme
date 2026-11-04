@@ -3,6 +3,27 @@ import re
 
 ALL_ARTICLES = [
     {
+        "url": "/winter-resurrection-plant",
+        "file": "winter-resurrection-plant.html",
+        "title": "🌵 保湿力の強さで肌乾燥とさようなら！カラカラ砂漠肌を驚異の保水力で満たす復活草・トレハロースコスメランク10",
+        "desc": "11月・12月の暖房乾燥と冬のカラカラ砂漠肌を救う高保湿復活草・トレハロースコスメを徹底厳選！Abib、オルビスユー、VT、松山油脂、魔女工場からミシャまで厳選。",
+        "footer_name": "高保湿復活草・トレハロース"
+    },
+    {
+        "url": "/winter-beta-glucan",
+        "file": "winter-beta-glucan.html",
+        "title": "🔬 保湿力の強さで肌乾燥とさようなら！ヒアルロン酸を超える水分保持力で冬のバリアを立て直す高保湿ベータグルカンコスメランク10",
+        "desc": "11月・12月の寒暖差ストレスと肌バリア破綻を救う高保湿β-グルカンコスメを徹底厳選！ランコム最新ジェニフィック、スパトリートメント、iUNIK、リアルバリア、Dr.Gまで厳選。",
+        "footer_name": "高保湿ベータグルカン"
+    },
+    {
+        "url": "/winter-avocado",
+        "file": "winter-avocado.html",
+        "title": "🥑 保湿力の強さで肌乾燥とさようなら！ガサガサ粉吹き肌をとろける柔軟膜で包み込む濃厚アボカドコスメランク10",
+        "desc": "11月・12月の皮脂減少による角質硬化と粉吹き肌を救う濃厚アボカドコスメを徹底厳選！キールズ、コスメデコルテプリムラテ、生活の木、スキンフード、ロクシタンまで厳選。",
+        "footer_name": "濃厚アボカドコスメ"
+    },
+    {
         "url": "/winter-elastin",
         "file": "winter-elastin.html",
         "title": "🧬 保湿力の強さで肌乾燥とさようなら！寒冷と暖房乾燥でしぼんだ肌に跳ね返すような弾力と濃密な潤いを取り戻す高保湿エラスチンコスメランク10",
@@ -1174,6 +1195,18 @@ def update_links():
 {chr(10).join(related_cards)}
       </div>
     </section>"""
+
+        # footer-links-placeholder の置換
+        if '<div class="footer-links-grid" id="footer-links-placeholder">' in content:
+            placeholder_links = []
+            for a in ALL_ARTICLES:
+                placeholder_links.append(f"""          <a href="{a['file']}" class="footer-link-item">{a['footer_name']}</a>""")
+            content = re.sub(
+                r'<div class="footer-links-grid" id="footer-links-placeholder">.*?</div>',
+                '<div class="footer-links-grid" id="footer-links-placeholder">\n' + "\n".join(placeholder_links) + '\n      </div>',
+                content,
+                flags=re.DOTALL
+            )
 
         # 新デザインの記事用の内部リンクボックス置換
         if '<div class="related-grid" id="related-grid-box">' in content:
