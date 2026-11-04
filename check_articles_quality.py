@@ -3,6 +3,9 @@ import json
 import re
 
 files_to_check = [
+    "winter-manuka-honey.html",
+    "winter-prickly-pear.html",
+    "winter-calendula.html",
     "winter-resurrection-plant.html",
     "winter-beta-glucan.html",
     "winter-avocado.html",
