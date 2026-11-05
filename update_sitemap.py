@@ -20,6 +20,7 @@ html_files = sorted([f for f in glob.glob("*.html") if f != "index.html"])
 
 # 優先度の高い新記事
 newest_slugs = [
+    "winter-mango-butter", "winter-tremella", "winter-collagen",
     "winter-olive-oil", "winter-meadowfoam-oil", "winter-trehalose",
     "winter-murumuru-butter", "winter-cranberry-oil", "winter-emu-oil",
     "winter-ginseng", "winter-cacao-butter", "winter-silk",
