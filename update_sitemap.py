@@ -20,6 +20,13 @@ html_files = sorted([f for f in glob.glob("*.html") if f != "index.html"])
 
 # 優先度の高い新記事
 newest_slugs = [
+    "winter-olive-oil", "winter-meadowfoam-oil", "winter-trehalose",
+    "winter-murumuru-butter", "winter-cranberry-oil", "winter-emu-oil",
+    "winter-ginseng", "winter-cacao-butter", "winter-silk",
+    "winter-apricot-oil", "winter-sweet-almond-oil", "winter-shikon",
+    "winter-seabuckthorn-oil", "winter-black-seed-oil", "winter-hemp-seed-oil",
+    "winter-macadamia-oil", "winter-pomegranate-oil", "winter-rice-bran-oil",
+    "winter-damask-rose", "winter-evening-primrose", "winter-moringa-oil",
     "winter-tamanu-oil", "winter-baobab-oil", "winter-kombucha",
     "winter-manuka-honey", "winter-prickly-pear", "winter-calendula",
     "winter-resurrection-plant", "winter-beta-glucan", "winter-avocado",
