@@ -6,6 +6,21 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://lumi-cosme.vercel.app/winter-apricot-oil</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://lumi-cosme.vercel.app/winter-sweet-almond-oil</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://lumi-cosme.vercel.app/winter-shikon</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://lumi-cosme.vercel.app/winter-seabuckthorn-oil</loc>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
