@@ -11,29 +11,29 @@ elif '<div class="footer-links-grid" id="footer-links-box">' in html:
     html = re.sub(r'<div class="footer-links-grid" id="footer-links-box">.*?</div>', '<div class="footer-links-grid" id="footer-links-box">\n' + footer_links_html + '\n          </div>', html, flags=re.DOTALL)
 
 # 新規3記事のカード定義
-newest_cards = """      <!-- 高保湿セラミド乳液 -->
-      <a href="/winter-ceramide-milk" class="hub-card">
-        <span class="hub-card-tag" style="background: #e0f2fe; color: #0369a1;">🧴 ラメラ液晶乳化・水分油分バリア NEW</span>
-        <h2 class="hub-card-title">🧴 保湿力の強さで肌乾燥とさようなら！角層ラメラ液晶を満たして水分蒸散をブロックする保湿力高めセラミド乳液ランク10</h2>
-        <p class="hub-card-desc">11月・12月の暖房乾燥・インナードライ・角層硬化を救う高保湿セラミド乳液10選を徹底検証！ケアセラ、キュレル、ミノン、エトヴォス、松山油脂までヒト型セラミドとラメラ液晶乳化の科学的根拠と共に紹介。</p>
+newest_cards = """      <!-- 高保湿PDRNクリーム -->
+      <a href="/winter-pdrn-cream" class="hub-card">
+        <span class="hub-card-tag" style="background: #ffe4e6; color: #be123c;">🧬 サーモンDNA・細胞修復・しぼみ肌救済 NEW</span>
+        <h2 class="hub-card-title">🧬 保湿力の強さで肌乾燥とさようなら！サーモンDNAの細胞修復力で真冬のしぼみ肌を底上げする保湿力高めPDRNクリームランク10</h2>
+        <p class="hub-card-desc">11月・12月の暖房乾燥・角層脱水・冬のしぼみ肌を救う高保湿PDRNクリーム10選を徹底検証！VT、メディキューブ、Anua、リジュラン、センテリアン24までサーモンDNAの生化学的根拠とエモリエント密閉技術と共に紹介。</p>
       </a>
 
-      <!-- 高保湿夜用美容液 -->
-      <a href="/winter-night-serum" class="hub-card">
-        <span class="hub-card-tag" style="background: #eef2ff; color: #3730a3;">🌙 時計遺伝子同調・夜間集中修復 NEW</span>
-        <h2 class="hub-card-title">🌙 保湿力の強さで肌乾燥とさようなら！睡眠中の細胞修復と濃密水分チャージを極める保湿力高め夜用美容液・ナイトセラムランク10</h2>
-        <p class="hub-card-desc">11月・12月の寒冷乾燥や暖房ダメージを寝ている間に集中リセット！エスティローダー、コスメデコルテ、YSL、クラランス、キールズまでサーカディアンリズムと持続放出リポソームの科学的根拠と共に紹介。</p>
+      <!-- 高保湿グルタチオンクリーム -->
+      <a href="/winter-glutathione-cream" class="hub-card">
+        <span class="hub-card-tag" style="background: #f3e8ff; color: #7e22ce;">✨ 白玉抗酸化・発光水分シールド NEW</span>
+        <h2 class="hub-card-title">✨ 保湿力の強さで肌乾燥とさようなら！白玉のような発光透明感と濃密水分シールドで真冬の枯れ肌を救う保湿力高めグルタチオンクリームランク10</h2>
+        <p class="hub-card-desc">11月・12月の寒冷乾燥・血行不良による冬の土気色くすみ・乾燥しぼみ肌を救う高保湿グルタチオンクリーム10選を徹底検証！ナンバーズイン、メディキューブ、バイオヒールボ、Dr.Gまで白玉抗酸化ペプチドの生化学的根拠とエモリエント密閉技術と共に紹介。</p>
       </a>
 
-      <!-- 高保湿アイセラム -->
-      <a href="/winter-eye-serum" class="hub-card">
-        <span class="hub-card-tag" style="background: #ecfdf5; color: #047857;">👁️ 極薄目元防護・冷却アプリケーター NEW</span>
-        <h2 class="hub-card-title">👁️ 保湿力の強さで肌乾燥とさようなら！薄膜目元の乾燥小ジワ・くぼみを潤いで押し戻す保湿力高めアイセラム（目元美容液）ランク10</h2>
-        <p class="hub-card-desc">11月・12月の暖房直撃と寒冷乾燥から極薄目元を守る高保湿アイセラム10選を徹底検証！ランコム、エスティローダー、クラランス、ディオール、コスメデコルテまで解剖学的根拠とアプリケーター工学と共に紹介。</p>
+      <!-- 高保湿セラミドリップ -->
+      <a href="/winter-ceramide-lip" class="hub-card">
+        <span class="hub-card-tag" style="background: #fdf2f8; color: #be185d;">💄 唇ラメラ液晶修復・皮むけ根本撃退 NEW</span>
+        <h2 class="hub-card-title">💄 保湿力の強さで肌乾燥とさようなら！めくれる皮むけ・ひび割れを角層ラメラで密閉修復する保湿力高めセラミドリップランク10</h2>
+        <p class="hub-card-desc">11月・12月の寒冷乾燥・エアコン暖房による唇のめくれる皮むけ・ひび割れ・縦ジワを救う高保湿セラミドリップ10選を徹底検証！ケアセラ、キュレル、タカミ、エトヴォス、トリデンまで角層ラメラ液晶修復の生化学的根拠と共に紹介。</p>
       </a>\n"""
 
 # まだ追加されていなければ hub-grid の直後に挿入
-if '/winter-ceramide-milk' not in html:
+if '/winter-pdrn-cream' not in html:
     html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + newest_cards)
 
 with open("index.html", "w", encoding="utf-8") as f:
