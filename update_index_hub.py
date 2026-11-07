@@ -11,29 +11,29 @@ elif '<div class="footer-links-grid" id="footer-links-box">' in html:
     html = re.sub(r'<div class="footer-links-grid" id="footer-links-box">.*?</div>', '<div class="footer-links-grid" id="footer-links-box">\n' + footer_links_html + '\n          </div>', html, flags=re.DOTALL)
 
 # 新規3記事のカード定義
-newest_cards = """      <!-- 高保湿セラミドミスト -->
-      <a href="/winter-ceramide-mist" class="hub-card">
-        <span class="hub-card-tag" style="background: #e0f2fe; color: #0369a1;">🛡️ 暖房砂漠レスキュー・ヒト型セラミド NEW</span>
-        <h2 class="hub-card-title">🛡️ 保湿力の強さで肌乾燥とさようなら！日中の暖房砂漠から角層バリアを守り抜く保湿力高めセラミドミストランク10</h2>
-        <p class="hub-card-desc">11月・12月の暖房乾燥・オフィス砂漠から角層バリアを守る高保湿セラミドミスト10選を徹底検証！キュレル、エトヴォス、CNP、ミノン、ダルバまでヒト型セラミドと微細化技術の科学的根拠と共に紹介。</p>
+newest_cards = """      <!-- 高保湿セラミド乳液 -->
+      <a href="/winter-ceramide-milk" class="hub-card">
+        <span class="hub-card-tag" style="background: #e0f2fe; color: #0369a1;">🧴 ラメラ液晶乳化・水分油分バリア NEW</span>
+        <h2 class="hub-card-title">🧴 保湿力の強さで肌乾燥とさようなら！角層ラメラ液晶を満たして水分蒸散をブロックする保湿力高めセラミド乳液ランク10</h2>
+        <p class="hub-card-desc">11月・12月の暖房乾燥・インナードライ・角層硬化を救う高保湿セラミド乳液10選を徹底検証！ケアセラ、キュレル、ミノン、エトヴォス、松山油脂までヒト型セラミドとラメラ液晶乳化の科学的根拠と共に紹介。</p>
       </a>
 
-      <!-- 高保湿パンテノール美容液 -->
-      <a href="/winter-panthenol-serum" class="hub-card">
-        <span class="hub-card-tag" style="background: #d1fae5; color: #047857;">🧬 プロビタミンB5・細胞間脂質合成修復 NEW</span>
-        <h2 class="hub-card-title">🧬 保湿力の強さで肌乾燥とさようなら！損傷した角層バリアを深部から修復する保湿力高めパンテノール美容液ランク10</h2>
-        <p class="hub-card-desc">11月・12月の寒冷刺激や暖房乾燥で傷んだ角層バリアを深部から修復する高保湿パンテノール（プロビタミンB5）美容液10選を徹底検証！バイオヒールボ、ラロッシュポゼ、ジオーディナリー、魔女工場まで細胞修復の生化学的根拠と共に紹介。</p>
+      <!-- 高保湿夜用美容液 -->
+      <a href="/winter-night-serum" class="hub-card">
+        <span class="hub-card-tag" style="background: #eef2ff; color: #3730a3;">🌙 時計遺伝子同調・夜間集中修復 NEW</span>
+        <h2 class="hub-card-title">🌙 保湿力の強さで肌乾燥とさようなら！睡眠中の細胞修復と濃密水分チャージを極める保湿力高め夜用美容液・ナイトセラムランク10</h2>
+        <p class="hub-card-desc">11月・12月の寒冷乾燥や暖房ダメージを寝ている間に集中リセット！エスティローダー、コスメデコルテ、YSL、クラランス、キールズまでサーカディアンリズムと持続放出リポソームの科学的根拠と共に紹介。</p>
       </a>
 
-      <!-- 高保湿オイルイン化粧水 -->
-      <a href="/winter-oil-in-lotion" class="hub-card">
-        <span class="hub-card-tag" style="background: #fef3c7; color: #b45309;">✨ 水分×油分黄金比・冬の硬化角質柔軟 NEW</span>
-        <h2 class="hub-card-title">✨ 保湿力の強さで肌乾燥とさようなら！水分と上質オイルの黄金比で満たす保湿力高めオイルイン化粧水ランク10</h2>
-        <p class="hub-card-desc">11月・12月の冷え固まった冬の硬化角質をほぐし、水分と良質オイルを同時にチャージする高保湿オイルイン化粧水10選を徹底検証！RMK、SHIRO、アルビオン、カネボウ、コスメデコルテまで二層式乳化処方の科学的根拠と共に紹介。</p>
+      <!-- 高保湿アイセラム -->
+      <a href="/winter-eye-serum" class="hub-card">
+        <span class="hub-card-tag" style="background: #ecfdf5; color: #047857;">👁️ 極薄目元防護・冷却アプリケーター NEW</span>
+        <h2 class="hub-card-title">👁️ 保湿力の強さで肌乾燥とさようなら！薄膜目元の乾燥小ジワ・くぼみを潤いで押し戻す保湿力高めアイセラム（目元美容液）ランク10</h2>
+        <p class="hub-card-desc">11月・12月の暖房直撃と寒冷乾燥から極薄目元を守る高保湿アイセラム10選を徹底検証！ランコム、エスティローダー、クラランス、ディオール、コスメデコルテまで解剖学的根拠とアプリケーター工学と共に紹介。</p>
       </a>\n"""
 
 # まだ追加されていなければ hub-grid の直後に挿入
-if '/winter-ceramide-mist' not in html:
+if '/winter-ceramide-milk' not in html:
     html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + newest_cards)
 
 with open("index.html", "w", encoding="utf-8") as f:
