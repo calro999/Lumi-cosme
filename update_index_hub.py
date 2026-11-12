@@ -13,30 +13,30 @@ elif '<div class="footer-links-grid" id="footer-links-box">' in html:
     html = re.sub(r'<div class="footer-links-grid" id="footer-links-box">.*?</div>', '<div class="footer-links-grid" id="footer-links-box">\n' + footer_links_html + '\n          </div>', html, flags=re.DOTALL)
 
 # 新規3記事のカード定義
-newest_cards = """      <!-- 高保湿セラミドシートマスク -->
-      <a href="/winter-ceramide-mask" class="hub-card">
-        <span class="hub-card-tag" style="background: #e0f2fe; color: #0284c7;">❄️ ナノセラミド・密閉オクルージョン浸透 NEW</span>
-        <h2 class="hub-card-title">❄️ 保湿力の強さで肌乾燥とさようなら！高密度ナノセラミドと濃密マイクロファイバーシートで真冬の寒冷脱水肌を一撃で蘇らせる保湿力高めセラミドシートマスクランク10</h2>
-        <p class="hub-card-desc">11月・12月の寒冷乾燥・粉吹き・暖房インナードライを徹底救済！ミノン、キュレル、トリデン、ドクタージャルト、ルルルンまで高密度ナノセラミドシートマスクの科学的浸透メカニズム・最新実勢価格・口コミを網羅してご紹介。</p>
+brand_new_cards = """      <!-- 高保湿PDRNシートマスク -->
+      <a href="/winter-pdrn-mask" class="hub-card">
+        <span class="hub-card-tag" style="background: #e0f2fe; color: #0369a1;">🧬 サーモンDNA・細胞間再生浸透 NEW</span>
+        <h2 class="hub-card-title">🧬 保湿力の強さで肌乾燥とさようなら！高純度サーモンDNA・PDRNの細胞間再生力とバイオセルロース密着膜で真冬のしぼみ肌を跳ね返す保湿力高めPDRNシートマスクランク10</h2>
+        <p class="hub-card-desc">11月・12月の寒冷乾燥・暖房脱水・肌痩せ・毛穴の開きを一撃再生！リジュラン、VT、メディヒール、アヌア、IOPE、KISOまで最先端高保湿PDRNシートマスクの科学的浸透メカニズム・最新実勢価格・口コミを網羅してご紹介。</p>
       </a>
 
-      <!-- 高保湿リップスリーピングマスク -->
-      <a href="/winter-lip-sleeping-mask" class="hub-card">
-        <span class="hub-card-tag" style="background: #ffe4e6; color: #e11d48;">🌙 就寝中集中密閉・角質自然軟化剥離 NEW</span>
-        <h2 class="hub-card-title">🌙 保湿力の強さで肌乾燥とさようなら！就寝中の濃厚密閉ラッピング処方で真冬のガサガサ皮剥け唇をぷるんと再生する保湿力高めリップスリーピングマスクランク10</h2>
-        <p class="hub-card-desc">11月・12月の夜間暖房と寒冷乾燥による唇の皮剥け・縦ジワ・ひび割れを徹底救済！ラネージュ、トリデン、ニベア、CNP、キュレルまで夜用高密着リップスリーピングマスクの科学的修復メカニズム・最新実勢価格・口コミを網羅してご紹介。</p>
+      <!-- 高保湿レチノールアイクリーム -->
+      <a href="/winter-retinol-eye-cream" class="hub-card">
+        <span class="hub-card-tag" style="background: #f3e8ff; color: #7e22ce;">👁️ 純粋レチノール・目元ちりめんジワ撃退 NEW</span>
+        <h2 class="hub-card-title">👁️ 保湿力の強さで肌乾燥とさようなら！純粋レチノールの角層深部ターンオーバー促進と密着リペアバーム処方で真冬の目元ちりめんジワをふっくら伸ばす保湿力高めレチノールアイクリームランク10</h2>
+        <p class="hub-card-desc">11月・12月の寒冷乾燥・エアコン暖房・まばたき摩擦による目元の小ジワ・ちりめんジワ・たるみを徹底撃退！エリクシール、ポーラ、なめらか本舗、KISO、AHC、アスタリフトまで最新実勢価格・口コミ・科学的シワ改善メカニズムを網羅。</p>
       </a>
 
-      <!-- 高保湿バリア美容液 -->
-      <a href="/winter-barrier-serum" class="hub-card">
-        <span class="hub-card-tag" style="background: #d1fae5; color: #059669;">🧪 微細リポソーム・暖房インナードライ鎮静 NEW</span>
-        <h2 class="hub-card-title">🧪 保湿力の強さで肌乾燥とさようなら！微細リポソーム化バリア成分とパンテノールの生体浸透力で真冬の暖房インナードライを芯から鎮静する保湿力高めバリア美容液ランク10</h2>
-        <p class="hub-card-desc">11月・12月の暖房直撃によるインナードライ・赤み・ピリつきを徹底救済！エストラ、トリデン、dプログラム、キュレル、魔女工場、コーセーまで高保湿バリア美容液の科学的浸透メカニズム・最新実勢価格・口コミを網羅してご紹介。</p>
+      <!-- 高保湿パンテノールバーム -->
+      <a href="/winter-panthenol-balm" class="hub-card">
+        <span class="hub-card-tag" style="background: #dcfce7; color: #047857;">🛡️ 高濃度パンテノール・寒冷粉吹き緊急鎮静 NEW</span>
+        <h2 class="hub-card-title">🛡️ 保湿力の強さで肌乾燥とさようなら！高濃度パンテノールの生体組織修復力と濃密密閉バリア膜で真冬のヒリヒリ粉吹き肌を緊急鎮静する保湿力高めパンテノールバームランク10</h2>
+        <p class="hub-card-desc">11月・12月の寒冷乾燥・木枯らし・急激な暖房寒暖差による肌のヒリつき・粉吹き・赤みを緊急鎮静！ラロッシュポゼ、アベンヌ、エストラ、イハダ、キュレル、キールズまで最新実勢価格・口コミ・科学的生体修復メカニズムを網羅。</p>
       </a>\n"""
 
 # まだ追加されていなければ hub-grid の直後に挿入
-if '/winter-ceramide-mask' not in html:
-    html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + newest_cards)
+if '/winter-pdrn-mask' not in html:
+    html = html.replace('<div class="hub-grid">\n', '<div class="hub-grid">\n' + brand_new_cards)
 
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html)
@@ -48,52 +48,52 @@ print("Successfully updated index.html with 3 newest cards and latest footer lin
 if os.path.exists("winter-face-mask.html"):
     with open("winter-face-mask.html", "r", encoding="utf-8") as f:
         mask_html = f.read()
-    if "/winter-ceramide-mask" not in mask_html:
+    if "/winter-pdrn-mask" not in mask_html:
         guide_banner = """
     <div style="background:linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);border:2px solid #0284c7;border-radius:12px;padding:24px;margin:32px 0;">
-      <h3 style="color:#0369a1;margin-bottom:8px;font-size:1.2rem;">❄️ 11月・12月の寒冷砂漠肌に！高保湿セラミドシートマスク特集</h3>
-      <p style="color:#334155;margin-bottom:16px;font-size:0.95rem;">通常のフェイスマスクでは追いつかない冬の粉吹き・寒冷脱水には、高密度ナノセラミドをたっぷり浸透させた高密着シートが効果的です。ミノンやキュレル、トリデンなど厳選10選を詳しく解説！</p>
-      <a href="/winter-ceramide-mask" style="display:inline-block;background:#0284c7;color:#fff;font-weight:700;padding:10px 20px;border-radius:6px;text-decoration:none;">高保湿セラミドシートマスクランキング10選を見る →</a>
+      <h3 style="color:#0369a1;margin-bottom:8px;font-size:1.2rem;">🧬 最先端美容医療発想！高保湿PDRNシートマスク特集</h3>
+      <p style="color:#334155;margin-bottom:16px;font-size:0.95rem;">寒冷による肌痩せ・しぼみ肌・たるみ毛穴を根本から立て直すサーモンDNA由来PDRN配合マスクを徹底検証！リジュラン、VT、メディヒール、アヌアなど話題の10選を詳しく解説！</p>
+      <a href="/winter-pdrn-mask" style="display:inline-block;background:#0284c7;color:#fff;font-weight:700;padding:10px 20px;border-radius:6px;text-decoration:none;">高保湿PDRNシートマスクランキング10選を見る →</a>
     </div>
 """
         if "</main>" in mask_html:
             mask_html = mask_html.replace("</main>", guide_banner + "\n  </main>")
         with open("winter-face-mask.html", "w", encoding="utf-8") as f:
             f.write(mask_html)
-        print("Updated winter-face-mask.html with guide banner!")
+        print("Updated winter-face-mask.html with PDRN mask guide banner!")
 
-# B. winter-lip-care.html への誘導追加
-if os.path.exists("winter-lip-care.html"):
-    with open("winter-lip-care.html", "r", encoding="utf-8") as f:
-        lip_html = f.read()
-    if "/winter-lip-sleeping-mask" not in lip_html:
+# B. winter-eye-cream.html への誘導追加
+if os.path.exists("winter-eye-cream.html"):
+    with open("winter-eye-cream.html", "r", encoding="utf-8") as f:
+        eye_html = f.read()
+    if "/winter-retinol-eye-cream" not in eye_html:
         guide_banner = """
-    <div style="background:linear-gradient(135deg, #ffe4e6 0%, #fecdd3 100%);border:2px solid #e11d48;border-radius:12px;padding:24px;margin:32px 0;">
-      <h3 style="color:#881337;margin-bottom:8px;font-size:1.2rem;">🌙 寝ている間に集中密閉再生！高保湿リップスリーピングマスク特集</h3>
-      <p style="color:#4c0519;margin-bottom:16px;font-size:0.95rem;">日中のリップ塗り直しだけでは治らない真冬のガサガサ皮剥け・縦ジワには、就寝中の8時間密閉ラッピングが必須！ラネージュやトリデン、ニベアなど人気10選を徹底検証！</p>
-      <a href="/winter-lip-sleeping-mask" style="display:inline-block;background:#e11d48;color:#fff;font-weight:700;padding:10px 20px;border-radius:6px;text-decoration:none;">高保湿リップスリーピングマスクランキング10選を見る →</a>
+    <div style="background:linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);border:2px solid #9333ea;border-radius:12px;padding:24px;margin:32px 0;">
+      <h3 style="color:#581c87;margin-bottom:8px;font-size:1.2rem;">👁️ 真冬の目元ちりめんジワを集中修復！高保湿レチノールアイクリーム特集</h3>
+      <p style="color:#3b0764;margin-bottom:16px;font-size:0.95rem;">皮膚の薄い目元の乾燥小ジワ・まぶたのたるみには、純粋レチノールと密着リペアバーム処方が効果的！エリクシールやPOLA、なめらか本舗、KISOなど厳選10選を徹底検証！</p>
+      <a href="/winter-retinol-eye-cream" style="display:inline-block;background:#9333ea;color:#fff;font-weight:700;padding:10px 20px;border-radius:6px;text-decoration:none;">高保湿レチノールアイクリームランキング10選を見る →</a>
     </div>
 """
-        if "</main>" in lip_html:
-            lip_html = lip_html.replace("</main>", guide_banner + "\n  </main>")
-        with open("winter-lip-care.html", "w", encoding="utf-8") as f:
-            f.write(lip_html)
-        print("Updated winter-lip-care.html with guide banner!")
+        if "</main>" in eye_html:
+            eye_html = eye_html.replace("</main>", guide_banner + "\n  </main>")
+        with open("winter-eye-cream.html", "w", encoding="utf-8") as f:
+            f.write(eye_html)
+        print("Updated winter-eye-cream.html with retinol eye cream guide banner!")
 
-# C. winter-barrier-cream.html への誘導追加
-if os.path.exists("winter-barrier-cream.html"):
-    with open("winter-barrier-cream.html", "r", encoding="utf-8") as f:
-        barrier_html = f.read()
-    if "/winter-barrier-serum" not in barrier_html:
+# C. winter-repair-balm.html への誘導追加
+if os.path.exists("winter-repair-balm.html"):
+    with open("winter-repair-balm.html", "r", encoding="utf-8") as f:
+        balm_html = f.read()
+    if "/winter-panthenol-balm" not in balm_html:
         guide_banner = """
-    <div style="background:linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);border:2px solid #059669;border-radius:12px;padding:24px;margin:32px 0;">
-      <h3 style="color:#064e3b;margin-bottom:8px;font-size:1.2rem;">🧪 クリームの前に仕込む！高保湿バリア美容液特集</h3>
-      <p style="color:#065f46;margin-bottom:16px;font-size:0.95rem;">バリアクリームでフタをする前に、角層深部に微細リポソーム化セラミドやパンテノールを満たすことで、暖房インナードライを根本解決！エストラやdプログラムなど厳選10選を公開中！</p>
-      <a href="/winter-barrier-serum" style="display:inline-block;background:#059669;color:#fff;font-weight:700;padding:10px 20px;border-radius:6px;text-decoration:none;">高保湿バリア美容液ランキング10選を見る →</a>
+    <div style="background:linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);border:2px solid #059669;border-radius:12px;padding:24px;margin:32px 0;">
+      <h3 style="color:#064e3b;margin-bottom:8px;font-size:1.2rem;">🛡️ 真冬の粉吹き・赤み・ヒリつきを緊急鎮静！高保湿パンテノールバーム特集</h3>
+      <p style="color:#065f46;margin-bottom:16px;font-size:0.95rem;">木枯らしや急激な暖房寒暖差で角層バリアが崩壊した肌に、プロビタミンB5（高純度パンテノール）と濃密シールド膜が素早く浸透！ラロッシュポゼやアベンヌ、イハダなど厳選10選を公開中！</p>
+      <a href="/winter-panthenol-balm" style="display:inline-block;background:#059669;color:#fff;font-weight:700;padding:10px 20px;border-radius:6px;text-decoration:none;">高保湿パンテノールバームランキング10選を見る →</a>
     </div>
 """
-        if "</main>" in barrier_html:
-            barrier_html = barrier_html.replace("</main>", guide_banner + "\n  </main>")
-        with open("winter-barrier-cream.html", "w", encoding="utf-8") as f:
-            f.write(barrier_html)
-        print("Updated winter-barrier-cream.html with guide banner!")
+        if "</main>" in balm_html:
+            balm_html = balm_html.replace("</main>", guide_banner + "\n  </main>")
+        with open("winter-repair-balm.html", "w", encoding="utf-8") as f:
+            f.write(balm_html)
+        print("Updated winter-repair-balm.html with panthenol balm guide banner!")
