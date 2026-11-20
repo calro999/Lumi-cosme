@@ -20,6 +20,7 @@ html_files = sorted([f for f in glob.glob("*.html") if f != "index.html"])
 
 # 優先度の高い新記事
 newest_slugs = [
+    "winter-all-in-one", "winter-vitamin-c-lotion", "winter-mens-skincare",
     "winter-cica-mask", "winter-glutathione-mask", "winter-hyaluronic-lotion",
     "winter-hyaluronic-mask", "winter-ceramide-booster", "winter-collagen-serum",
     "winter-pdrn-mask", "winter-retinol-eye-cream", "winter-panthenol-balm",

@@ -3,6 +3,27 @@ import re
 
 ALL_ARTICLES = [
     {
+        "url": "/winter-all-in-one",
+        "file": "winter-all-in-one.html",
+        "title": "真冬の朝5秒で角層までうるおう！乾燥知らずの高保湿オールインワンジェル＆クリーム厳選ランキング10【11月・12月】",
+        "desc": "11月・12月の忙しい朝や極寒の夜でもこれ1つで乾燥知らず！カルテHD、アクアレーベル、ドクターシーラボ、カナデル、メディプラスゲルなど、モロモロが出にくく朝まで潤う高保湿オールインワン10選を徹底比較。",
+        "footer_name": "高保湿オールインワン"
+    },
+    {
+        "url": "/winter-vitamin-c-lotion",
+        "file": "winter-vitamin-c-lotion.html",
+        "title": "冬のくすみも乾燥毛穴もまとめて潤す！しっとり高保湿ビタミンC化粧水おすすめランキング10選【11月・12月版】",
+        "desc": "冬でもつっぱらない高保湿ビタミンC誘導体化粧水10選！VC100、ナンバーズイン5番、メラノCCしっとり、オバジC、ドクターケイまで、潤いと透明感を両立する名品を成分・質感・価格で徹底比較。",
+        "footer_name": "高保湿ビタミンC化粧水"
+    },
+    {
+        "url": "/winter-mens-skincare",
+        "file": "winter-mens-skincare.html",
+        "title": "髭剃り負けと冬の粉吹きを一掃！メンズ高保湿スキンケア人気ランキング10選【11月・12月の乾燥対策＆ギフトにも】",
+        "desc": "11月・12月の寒風と髭剃りによる乾燥・カミソリ負けを徹底ケア！オルビスミスター、資生堂メン、バルクオム、NULL、クワトロボタニコ、アスタリフトメンなど自分用にも12月のギフトにも喜ばれる厳選10選。",
+        "footer_name": "メンズ高保湿スキンケア"
+    },
+    {
         "url": "/winter-cica-mask",
         "file": "winter-cica-mask.html",
         "title": "🌿 保湿力の強さで肌乾燥とさようなら！高純度ツボクサエキス・CICAの濃厚鎮静ヴェールと密着シートで真冬の寒暖差赤み・暖房荒れを速攻鎮静する保湿力高めCICAシートマスクランク10",
@@ -1735,13 +1756,13 @@ def update_links():
             content = re.sub(r'<section id="related-hub".*?</section>', new_related_section, content, flags=re.DOTALL)
         elif '<section id="internal-links"' in content:
             content = re.sub(r'(<section id="internal-links".*?</section>)', r'\1\n\n    ' + new_related_section, content, flags=re.DOTALL)
-        elif '</main>' in content:
+        elif '</main>' in content and '<div class="internal-links-box">' not in content and '<div class="related-grid" id="related-grid-box">' not in content:
             content = content.replace('</main>', '    ' + new_related_section + '\n  </main>')
         
         # フッターリンクの置換
         if '<div class="footer-links">' in content:
             content = re.sub(r'<div class="footer-links">.*?</div>', footer_links_html, content, flags=re.DOTALL)
-        elif '<div class="footer-inner">' in content:
+        elif '<div class="footer-inner">' in content and '<div class="footer-links-grid" id="footer-links-box">' not in content:
             content = re.sub(r'(<div class="footer-inner">\s*<div class="footer-logo">)', r'\1\n    ' + footer_links_html + '\n', content, flags=re.DOTALL)
             if '<div class="footer-links">' not in content:
                 content = content.replace('<div class="footer-inner">', '<div class="footer-inner">\n    ' + footer_links_html)
